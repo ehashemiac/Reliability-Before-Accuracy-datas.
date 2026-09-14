@@ -1,0 +1,61 @@
+{
+  "response_body": {
+    "id": "gen-1789030479-DSsEPFrcCwPKrXNLtNpy",
+    "object": "chat.completion",
+    "created": 1789030479,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "length",
+        "native_finish_reason": "length",
+        "message": {
+          "role": "assistant",
+          "content": "{\n{\n  \"recommendation_id\": \"IDX-AEG-GN851XT\",\n  \"claims\": [\n    {\n      \"record_id\": \"IDX-AEG-GN851XT\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": 0",
+          "refusal": null,
+          "reasoning": "We need to output JSON schema requested? The user didn't specify what JSON schema. The instruction: \"Return only the JSON schema requested.\" But they didn't request a specific schema. Possibly they want a ranking? The prompt: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\"\n\nThus we need to rank candidates based on some criteria? Not given. Possibly they want to rank by energy efficiency (lowest energy per cycle) then water, noise, etc. But we need to infer? The typical task: rank dishwashers by energy per cycle (lower better), water per cycle (lower better), noise (lower better), programme duration (shorter better). However we have missing fields? All records have all fields present? Let's check each: capacity_ps is present for all (14). energy_per_cycle_kwh present for all. water_per_cycle_l present for all. noise_dba present for all. programme_duration_min present for all. So no missing fields. So we can rank.\n\nWe need to output JSON schema requested. Perhaps they expect something like:\n\n{\n  \"ranking\": [\n    {\"id\": \"...\", \"score\": ...},\n    ...\n  ]\n}\n\nBut not sure.\n\nGiven lack of explicit instruction, maybe we should output a JSON array of IDs sorted by some composite score: lower energy, lower water, lower noise, shorter duration. We could compute a simple sum of normalized values? But we cannot invent weighting. Could just rank by energy_per_cycle_kwh primary, then water, then noise, then duration.\n\nLet's do that.\n\nList records with IDs:\n\nEPREL-1580699: energy 0.848, water 10.5, noise 44, duration 264\nEPREL-1656051: energy 0.543, water 9.5, noise 44, duration 295\nEPREL-581126: energy 0.951, water 9.5, noise 44, duration 220\nIDX-AEG-GN851XT: energy 0.49, water 8.4, noise 38, duration 310\nIDX-BOSCH-SMS6ECI13E: energy 0.54, water 9.0, noise 38, duration 295\nIDX-BOSCH-SMU6YCS0ME: energy 0.54, water 9.0, noise 40, duration 295\nIDX-SIEMENS-SX65YX07CE: energy 0.54, water 9.0, noise 40, duration 295\nIDX-SIEMENS-SX87EX01CE: energy 0.49, water 9.0, noise 42, duration 295\n\nNow rank by energy ascending (lowest best). Ties: energy 0.49 for AEG and Siemens SX87EX01CE. Then compare water: AEG water 8.4 vs Siemens 9.0 => AEG better. So AEG first, then Siemens SX87EX01CE.\n\nNext energy 0.543 (Bosch SMD6YCX01G) vs 0.54 (several). Actually 0.54 < 0.543, so the 0.54 group comes before 0.543. So after the 0.49 group, we have energy 0.54 group: Bosch SMS6ECI13E, Bosch SMU6YCS0ME, Siemens SX65YX07CE. All have same energy 0.54, water 9.0, noise varies: 38,40,40. Duration same 295. So rank by noise ascending: Bosch SMS6ECI13E (38) first, then the two with 40 (Bosch SMU6YCS0ME and Siemens SX65YX07CE). For those tie, maybe duration same, water same, so we could keep original order or maybe alphabetical? Not defined. We'll keep as they appear: Bosch SMU6YCS0ME then Siemens SX65YX07CE.\n\nNext energy 0.543 (Bosch SMD6YCX01G) water 9.5 noise 44 duration 295.\n\nNext energy 0.848 (Samsung DW60CG550B00) water 10.5 noise 44 duration 264.\n\nNext energy 0.951 (Beko KBDIN184E0Q) water 9.5 noise 44 duration 220.\n\nThus final ranking list.\n\nNow output JSON. Perhaps schema: {\"ranking\": [{\"id\":\"...\", \"rank\":1}, ...]}. Let's do that.\n\nWe must not invent missing values; we have all.\n\nReturn only JSON.\n\nLet's produce.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output JSON schema requested? The user didn't specify what JSON schema. The instruction: \"Return only the JSON schema requested.\" But they didn't request a specific schema. Possibly they want a ranking? The prompt: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\"\n\nThus we need to rank candidates based on some criteria? Not given. Possibly they want to rank by energy efficiency (lowest energy per cycle) then water, noise, etc. But we need to infer? The typical task: rank dishwashers by energy per cycle (lower better), water per cycle (lower better), noise (lower better), programme duration (shorter better). However we have missing fields? All records have all fields present? Let's check each: capacity_ps is present for all (14). energy_per_cycle_kwh present for all. water_per_cycle_l present for all. noise_dba present for all. programme_duration_min present for all. So no missing fields. So we can rank.\n\nWe need to output JSON schema requested. Perhaps they expect something like:\n\n{\n  \"ranking\": [\n    {\"id\": \"...\", \"score\": ...},\n    ...\n  ]\n}\n\nBut not sure.\n\nGiven lack of explicit instruction, maybe we should output a JSON array of IDs sorted by some composite score: lower energy, lower water, lower noise, shorter duration. We could compute a simple sum of normalized values? But we cannot invent weighting. Could just rank by energy_per_cycle_kwh primary, then water, then noise, then duration.\n\nLet's do that.\n\nList records with IDs:\n\nEPREL-1580699: energy 0.848, water 10.5, noise 44, duration 264\nEPREL-1656051: energy 0.543, water 9.5, noise 44, duration 295\nEPREL-581126: energy 0.951, water 9.5, noise 44, duration 220\nIDX-AEG-GN851XT: energy 0.49, water 8.4, noise 38, duration 310\nIDX-BOSCH-SMS6ECI13E: energy 0.54, water 9.0, noise 38, duration 295\nIDX-BOSCH-SMU6YCS0ME: energy 0.54, water 9.0, noise 40, duration 295\nIDX-SIEMENS-SX65YX07CE: energy 0.54, water 9.0, noise 40, duration 295\nIDX-SIEMENS-SX87EX01CE: energy 0.49, water 9.0, noise 42, duration 295\n\nNow rank by energy ascending (lowest best). Ties: energy 0.49 for AEG and Siemens SX87EX01CE. Then compare water: AEG water 8.4 vs Siemens 9.0 => AEG better. So AEG first, then Siemens SX87EX01CE.\n\nNext energy 0.543 (Bosch SMD6YCX01G) vs 0.54 (several). Actually 0.54 < 0.543, so the 0.54 group comes before 0.543. So after the 0.49 group, we have energy 0.54 group: Bosch SMS6ECI13E, Bosch SMU6YCS0ME, Siemens SX65YX07CE. All have same energy 0.54, water 9.0, noise varies: 38,40,40. Duration same 295. So rank by noise ascending: Bosch SMS6ECI13E (38) first, then the two with 40 (Bosch SMU6YCS0ME and Siemens SX65YX07CE). For those tie, maybe duration same, water same, so we could keep original order or maybe alphabetical? Not defined. We'll keep as they appear: Bosch SMU6YCS0ME then Siemens SX65YX07CE.\n\nNext energy 0.543 (Bosch SMD6YCX01G) water 9.5 noise 44 duration 295.\n\nNext energy 0.848 (Samsung DW60CG550B00) water 10.5 noise 44 duration 264.\n\nNext energy 0.951 (Beko KBDIN184E0Q) water 9.5 noise 44 duration 220.\n\nThus final ranking list.\n\nNow output JSON. Perhaps schema: {\"ranking\": [{\"id\":\"...\", \"rank\":1}, ...]}. Let's do that.\n\nWe must not invent missing values; we have all.\n\nReturn only JSON.\n\nLet's produce.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 668,
+      "completion_tokens": 1200,
+      "total_tokens": 1868,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 850,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "raw_text": "{\n{\n  \"recommendation_id\": \"IDX-AEG-GN851XT\",\n  \"claims\": [\n    {\n      \"record_id\": \"IDX-AEG-GN851XT\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": 0",
+  "meta": {
+    "attempt": 1,
+    "provider": null
+  }
+}

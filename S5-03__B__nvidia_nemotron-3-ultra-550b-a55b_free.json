@@ -1,0 +1,14 @@
+{
+  "response_body": {
+    "id": "gen-1788963888-UkIfCxbanSd72UYtHsM0",
+    "error": {
+      "message": "Upstream error from Nvidia: Service temporarily overloaded",
+      "code": 502
+    }
+  },
+  "raw_text": null,
+  "meta": {
+    "attempt": 1,
+    "provider": null
+  }
+}

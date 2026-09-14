@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1789030581-4A9DJnCMjmQqeZioSyVq",
+    "object": "chat.completion",
+    "created": 1789030581,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to output a decision object JSON with criteria, hard_constraints, missing_data_policy, shock_id. The user says: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\"\n\nWe have no scenario provided. So we cannot infer criteria, constraints, shock_id. We must abstain? The instruction: \"Do not invent values. Abstain when missing information prevents a defensible ranking.\" Since we have no info, we should output something that reflects missing data? But the schema requires fields. We cannot leave them empty because they are required. However we could set empty arrays? criteria requires minItems 4, so we need at least 4 criteria objects. But we have no info to fill them; we cannot invent. So we must abstain: maybe we cannot produce a valid decision object. The instruction: \"Return only the requested JSON schema.\" Actually they want the decision object, not the schema. But if we cannot produce, maybe we should output null? But schema requires fields. The instruction: \"Abstain when missing information prevents a defensible ranking.\" So we should output something indicating abstention, maybe an empty object? But that would violate required fields. However the instruction might be to output nothing? But they said \"Return only the requested JSON schema.\" That is confusing: they want the decision object, not the schema. But they say \"Return only the requested JSON schema.\" Possibly they mean return only the JSON (no extra text). So we need to output a JSON that follows the schema, but we cannot fill missing info. Perhaps we can set criteria as an empty array? But minItems 4 prevents that. Could we set criteria with placeholder names and unknown direction/weight? That would be inventing. Not allowed.\n\nThus the correct response is to indicate inability to produce a decision object. Maybe we output JSON with null for shock_id and empty arrays? But that violates minItems. Could we set criteria to an array of 4 objects with null values? But direction must be enum, weight number, name string. We could set them to empty strings and zero? That would be inventing? Possibly acceptable as placeholders? But they said do not invent values. Empty string is a value, but it's not invented from scenario; it's just a default. Might be considered inventing? Safer to abstain: maybe we output a JSON with a field indicating abstention? But schema doesn't have that.\n\nGiven the instruction, I think we should output nothing? But they said return only the requested JSON schema. Possibly they expect us to output the schema itself? Actually they said \"Decision-object schema:\" then gave schema. Then they ask: \"Return only the requested JSON schema.\" That could mean we should output the schema (the one they gave) as JSON. But they also said \"Convert the scenario into the exact decision object.\" No scenario given. So we cannot convert. So we should output the schema? Hmm.\n\nThe typical pattern: In these tasks, if insufficient info, we output JSON with missing_data_policy: \"abstain\" and maybe empty criteria and hard_constraints? But they'd violate minItems. However maybe the schema is not strictly enforced in output; they just want us to follow instructions. I'd output:\n\n{\n  \"criteria\": [],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nEven though criteria minItems 4 violated, but we cannot invent. I think that's the best we can do.\n\nLet's output that.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output a decision object JSON with criteria, hard_constraints, missing_data_policy, shock_id. The user says: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\"\n\nWe have no scenario provided. So we cannot infer criteria, constraints, shock_id. We must abstain? The instruction: \"Do not invent values. Abstain when missing information prevents a defensible ranking.\" Since we have no info, we should output something that reflects missing data? But the schema requires fields. We cannot leave them empty because they are required. However we could set empty arrays? criteria requires minItems 4, so we need at least 4 criteria objects. But we have no info to fill them; we cannot invent. So we must abstain: maybe we cannot produce a valid decision object. The instruction: \"Return only the requested JSON schema.\" Actually they want the decision object, not the schema. But if we cannot produce, maybe we should output null? But schema requires fields. The instruction: \"Abstain when missing information prevents a defensible ranking.\" So we should output something indicating abstention, maybe an empty object? But that would violate required fields. However the instruction might be to output nothing? But they said \"Return only the requested JSON schema.\" That is confusing: they want the decision object, not the schema. But they say \"Return only the requested JSON schema.\" Possibly they mean return only the JSON (no extra text). So we need to output a JSON that follows the schema, but we cannot fill missing info. Perhaps we can set criteria as an empty array? But minItems 4 prevents that. Could we set criteria with placeholder names and unknown direction/weight? That would be inventing. Not allowed.\n\nThus the correct response is to indicate inability to produce a decision object. Maybe we output JSON with null for shock_id and empty arrays? But that violates minItems. Could we set criteria to an array of 4 objects with null values? But direction must be enum, weight number, name string. We could set them to empty strings and zero? That would be inventing? Possibly acceptable as placeholders? But they said do not invent values. Empty string is a value, but it's not invented from scenario; it's just a default. Might be considered inventing? Safer to abstain: maybe we output a JSON with a field indicating abstention? But schema doesn't have that.\n\nGiven the instruction, I think we should output nothing? But they said return only the requested JSON schema. Possibly they expect us to output the schema itself? Actually they said \"Decision-object schema:\" then gave schema. Then they ask: \"Return only the requested JSON schema.\" That could mean we should output the schema (the one they gave) as JSON. But they also said \"Convert the scenario into the exact decision object.\" No scenario given. So we cannot convert. So we should output the schema? Hmm.\n\nThe typical pattern: In these tasks, if insufficient info, we output JSON with missing_data_policy: \"abstain\" and maybe empty criteria and hard_constraints? But they'd violate minItems. However maybe the schema is not strictly enforced in output; they just want us to follow instructions. I'd output:\n\n{\n  \"criteria\": [],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nEven though criteria minItems 4 violated, but we cannot invent. I think that's the best we can do.\n\nLet's output that.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 339,
+      "completion_tokens": 882,
+      "total_tokens": 1221,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 888,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1789030824-AhZBDsltIyvmfPPyvMsU",
+    "object": "chat.completion",
+    "created": 1789030824,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to output a decision object JSON with criteria, hard_constraints, missing_data_policy, shock_id. The scenario: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\"\n\nWe have no specific criteria, constraints, shock_id given. So we must reflect missing information: we cannot invent values. So we need to output something that respects schema but with empty arrays? However criteria must have minItems 4. So we need at least 4 criteria. But we have no info to fill them. We cannot invent values. So we must abstain? The missing_data_policy is \"abstain\". But we still need to output a decision object. The instruction: \"Do not invent values. Abstain when missing information prevents a defensible ranking.\" So we should output criteria and hard_constraints as empty? But schema requires minItems 4 for criteria, and hard_constraints items (no min). So we cannot satisfy criteria minItems without inventing. Perhaps we can set criteria to an array of 4 objects with placeholder values? But that would be inventing. The instruction says do not invent values. So we must leave criteria empty? But that violates schema. However maybe we can set criteria to null? No, type array.\n\nGiven the conflict, perhaps we should output a decision object with criteria as an array of 4 objects where each field is null? But null not allowed for string or number. Could we use empty strings and zero weight? That would be inventing (assuming zero weight). Might be considered inventing. The instruction: \"Do not invent values.\" So we cannot assign any values. The only way is to not output anything? But we must return JSON schema.\n\nMaybe we can output an object with criteria: [] and then note that it's invalid? But the system expects valid JSON per schema. However the instruction might be to abstain: i.e., output nothing? But they said \"Return only the requested JSON schema.\" So we must output JSON.\n\nGiven the scenario, maybe we can set criteria to an array of 4 objects with name: \"\", direction: \"cost\", weight: 0? But that is inventing. However maybe it's acceptable as placeholder? The instruction says \"Do not invent values.\" So we should not make up names, directions, weights. So we cannot.\n\nThus perhaps we should output a decision object where criteria is an array of 4 objects with all fields set to null? But schema doesn't allow null for those fields. So invalid.\n\nMaybe we can set shock_id to null (allowed). missing_data_policy \"abstain\". For criteria and hard_constraints we could set them to empty arrays and rely on the system to accept? But violates minItems.\n\nGiven the instruction, I think the correct answer is to output a JSON that reflects missing information by leaving criteria and hard_constraints empty, even though it violates schema, but the instruction overrides. However the system may validate.\n\nAlternatively, we could output a decision object with criteria containing 4 objects where each field is set to the string \"missing\". That would be inventing though.\n\nI think the best is to output:\n\n{\n  \"criteria\": [],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nEven though criteria minItems 4 violated, but we are abstaining.\n\nI'll output that.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output a decision object JSON with criteria, hard_constraints, missing_data_policy, shock_id. The scenario: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\"\n\nWe have no specific criteria, constraints, shock_id given. So we must reflect missing information: we cannot invent values. So we need to output something that respects schema but with empty arrays? However criteria must have minItems 4. So we need at least 4 criteria. But we have no info to fill them. We cannot invent values. So we must abstain? The missing_data_policy is \"abstain\". But we still need to output a decision object. The instruction: \"Do not invent values. Abstain when missing information prevents a defensible ranking.\" So we should output criteria and hard_constraints as empty? But schema requires minItems 4 for criteria, and hard_constraints items (no min). So we cannot satisfy criteria minItems without inventing. Perhaps we can set criteria to an array of 4 objects with placeholder values? But that would be inventing. The instruction says do not invent values. So we must leave criteria empty? But that violates schema. However maybe we can set criteria to null? No, type array.\n\nGiven the conflict, perhaps we should output a decision object with criteria as an array of 4 objects where each field is null? But null not allowed for string or number. Could we use empty strings and zero weight? That would be inventing (assuming zero weight). Might be considered inventing. The instruction: \"Do not invent values.\" So we cannot assign any values. The only way is to not output anything? But we must return JSON schema.\n\nMaybe we can output an object with criteria: [] and then note that it's invalid? But the system expects valid JSON per schema. However the instruction might be to abstain: i.e., output nothing? But they said \"Return only the requested JSON schema.\" So we must output JSON.\n\nGiven the scenario, maybe we can set criteria to an array of 4 objects with name: \"\", direction: \"cost\", weight: 0? But that is inventing. However maybe it's acceptable as placeholder? The instruction says \"Do not invent values.\" So we should not make up names, directions, weights. So we cannot.\n\nThus perhaps we should output a decision object where criteria is an array of 4 objects with all fields set to null? But schema doesn't allow null for those fields. So invalid.\n\nMaybe we can set shock_id to null (allowed). missing_data_policy \"abstain\". For criteria and hard_constraints we could set them to empty arrays and rely on the system to accept? But violates minItems.\n\nGiven the instruction, I think the correct answer is to output a JSON that reflects missing information by leaving criteria and hard_constraints empty, even though it violates schema, but the instruction overrides. However the system may validate.\n\nAlternatively, we could output a decision object with criteria containing 4 objects where each field is set to the string \"missing\". That would be inventing though.\n\nI think the best is to output:\n\n{\n  \"criteria\": [],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nEven though criteria minItems 4 violated, but we are abstaining.\n\nI'll output that.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 339,
+      "completion_tokens": 846,
+      "total_tokens": 1185,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 838,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    },\n    {\n      \"name\": \"\",\n      \"direction\": \"cost\",\n      \"weight\": 0\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}
