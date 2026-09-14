@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788966192-9hAR6KaUcG7z17ImPX0N",
+    "object": "chat.completion",
+    "created": 1788966192,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"programme duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object JSON with criteria, hard_constraints, missing_data_policy, shock_id. The scenario: \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\"\n\nWe need to infer criteria: energy, water, noise, programme duration. Lower is better => direction \"cost\" (since lower is cost). We need weights: \"according to the supplied weights\" but not given explicitly. Possibly we need to assume equal weights? Or maybe the weights are supplied elsewhere? The user didn't give explicit numbers. The instruction: \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, we might set weight as null? But weight must be a number. Could we set weight to 1 for each? Or maybe we need to leave weight unspecified? The schema requires weight. We need to infer from scenario: Balanced sustainable procurement, lower energy, water, noise and programme duration are preferred according to the supplied weights. Since no explicit weights, maybe we assume equal weight (0.25 each) summing to 1. Or we could set weight to 1 each (not normalized). Usually weights sum to 1. I'd choose equal weights: 0.25 each.\n\nHard constraints: none supplied. So empty array.\n\nMissing_data_policy: \"abstain\" (given in schema enum). So set that.\n\nShock_id: maybe null if none. So set null.\n\nThus JSON:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"water\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"noise\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"programme duration\",\"direction\":\"cost\",\"weight\":0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":null\n}\n\nCheck schema: criteria items require name, direction, weight. Good. Hard_constraints items require field, operator, value. Empty array ok. missing_data_policy string enum \"abstain\". shock_id can be string or null. null ok.\n\nReturn only JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object JSON with criteria, hard_constraints, missing_data_policy, shock_id. The scenario: \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\"\n\nWe need to infer criteria: energy, water, noise, programme duration. Lower is better => direction \"cost\" (since lower is cost). We need weights: \"according to the supplied weights\" but not given explicitly. Possibly we need to assume equal weights? Or maybe the weights are supplied elsewhere? The user didn't give explicit numbers. The instruction: \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, we might set weight as null? But weight must be a number. Could we set weight to 1 for each? Or maybe we need to leave weight unspecified? The schema requires weight. We need to infer from scenario: Balanced sustainable procurement, lower energy, water, noise and programme duration are preferred according to the supplied weights. Since no explicit weights, maybe we assume equal weight (0.25 each) summing to 1. Or we could set weight to 1 each (not normalized). Usually weights sum to 1. I'd choose equal weights: 0.25 each.\n\nHard constraints: none supplied. So empty array.\n\nMissing_data_policy: \"abstain\" (given in schema enum). So set that.\n\nShock_id: maybe null if none. So set null.\n\nThus JSON:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"water\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"noise\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"programme duration\",\"direction\":\"cost\",\"weight\":0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":null\n}\n\nCheck schema: criteria items require name, direction, weight. Good. Hard_constraints items require field, operator, value. Empty array ok. missing_data_policy string enum \"abstain\". shock_id can be string or null. null ok.\n\nReturn only JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 620,
+      "total_tokens": 952,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 502,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"programme duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

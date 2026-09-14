@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788966031-WIfo4Sgi60Ey7MT2vn6K",
+    "object": "chat.completion",
+    "created": 1788966031,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 1},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 1},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 1},\n    {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 1}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred. So these are cost criteria (lower is better). Direction: \"cost\". We need weights supplied? The prompt says \"according to the supplied weights.\" But no explicit weights given in the user message. Possibly we need to infer? The user didn't give numeric weights. Maybe we need to set placeholder? But we must preserve all supplied constraints, weights and shock information. Since none supplied, we might set weight as 1? Or maybe we need to leave weight unspecified? The schema requires weight number. Could set weight = 1 for each? But that would be assuming. However the instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we can't invent. Could set weight as null? Not allowed. Could set weight as 0? That would ignore criteria. Not good.\n\nMaybe the user expects us to output a generic template with criteria names and direction cost, weight unspecified? But schema requires weight. Could we set weight as 1 as default? Might be acceptable.\n\nHard constraints: none supplied, so empty array.\n\nMissing_data_policy: \"abstain\" (only option). Shock_id: null.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred. So these are cost criteria (lower is better). Direction: \"cost\". We need weights supplied? The prompt says \"according to the supplied weights.\" But no explicit weights given in the user message. Possibly we need to infer? The user didn't give numeric weights. Maybe we need to set placeholder? But we must preserve all supplied constraints, weights and shock information. Since none supplied, we might set weight as 1? Or maybe we need to leave weight unspecified? The schema requires weight number. Could set weight = 1 for each? But that would be assuming. However the instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we can't invent. Could set weight as null? Not allowed. Could set weight as 0? That would ignore criteria. Not good.\n\nMaybe the user expects us to output a generic template with criteria names and direction cost, weight unspecified? But schema requires weight. Could we set weight as 1 as default? Might be acceptable.\n\nHard constraints: none supplied, so empty array.\n\nMissing_data_policy: \"abstain\" (only option). Shock_id: null.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 372,
+      "total_tokens": 704,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 307,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 1},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 1},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 1},\n    {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 1}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

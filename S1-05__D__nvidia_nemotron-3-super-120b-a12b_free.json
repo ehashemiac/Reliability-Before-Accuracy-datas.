@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788966355-qTbhFMJNJejZv1nLsSO6",
+    "object": "chat.completion",
+    "created": 1788966355,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"programme duration\", \"direction\": \"cost\", \"weight\": 0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred according to supplied weights. The scenario says \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" So we need to list criteria: energy, water, noise, programme duration. Direction: lower is better => cost (since cost direction means lower is better). Weight: not given explicitly; \"according to the supplied weights\" but not given numbers. Possibly we need to infer that weights are supplied elsewhere? The user didn't give numeric weights. Might need to set weight as null? But schema requires number. Could we set weight to 1 for each? Balanced suggests equal weights. So weight = 0.25 each? Balanced sustainable procurement: lower energy, water, noise and programme duration are preferred according to the supplied weights. Since not given, we assume equal weights. Provide weight numbers that sum to 1? Not required but typical. We'll set weight: 0.25 each.\n\nHard constraints: none given. So empty array.\n\nMissing_data_policy: \"abstain\".\n\nShock_id: null.\n\nReturn JSON only.\n\nLet's craft:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"water\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"noise\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"programme duration\",\"direction\":\"cost\",\"weight\":0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":null\n}\n\nCheck schema: criteria items require name, direction, weight. Good. Hard_constraints array items require field, operator, value. Empty array ok. missing_data_policy string enum \"abstain\". shock_id can be string or null. null ok.\n\nReturn only JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred according to supplied weights. The scenario says \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" So we need to list criteria: energy, water, noise, programme duration. Direction: lower is better => cost (since cost direction means lower is better). Weight: not given explicitly; \"according to the supplied weights\" but not given numbers. Possibly we need to infer that weights are supplied elsewhere? The user didn't give numeric weights. Might need to set weight as null? But schema requires number. Could we set weight to 1 for each? Balanced suggests equal weights. So weight = 0.25 each? Balanced sustainable procurement: lower energy, water, noise and programme duration are preferred according to the supplied weights. Since not given, we assume equal weights. Provide weight numbers that sum to 1? Not required but typical. We'll set weight: 0.25 each.\n\nHard constraints: none given. So empty array.\n\nMissing_data_policy: \"abstain\".\n\nShock_id: null.\n\nReturn JSON only.\n\nLet's craft:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"water\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"noise\",\"direction\":\"cost\",\"weight\":0.25},\n    {\"name\":\"programme duration\",\"direction\":\"cost\",\"weight\":0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":null\n}\n\nCheck schema: criteria items require name, direction, weight. Good. Hard_constraints array items require field, operator, value. Empty array ok. missing_data_policy string enum \"abstain\". shock_id can be string or null. null ok.\n\nReturn only JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 542,
+      "total_tokens": 874,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 452,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"programme duration\", \"direction\": \"cost\", \"weight\": 0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

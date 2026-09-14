@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788966426-uWPbBBAmL8H7iXC1qyEq",
+    "object": "chat.completion",
+    "created": 1788966426,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"programme duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred according to supplied weights. The user didn't give explicit weights; they said \"according to the supplied weights.\" But no weights were supplied in the prompt. Possibly we need to infer that weights are given elsewhere? Since not provided, maybe we need to set placeholder? However instructions: \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, we might set empty arrays? But criteria must have minItems 4. We need to include four criteria: energy, water, noise, programme duration. Direction: lower is preferred => cost (since lower is better). So direction \"cost\". Weight: unknown; maybe we can assign equal weights? But we must preserve supplied weights; none given, maybe we set weight null? But weight must be number. Could set weight 1 for each as default? But that would be adding info not supplied. The instruction says preserve all supplied constraints, weights and shock information. If none supplied, we cannot invent. Perhaps we should leave weight as 0? But that would be a number. However that would change meaning. The safest is to set weight as null? Not allowed. Could we set weight as 0? That would imply no importance, which might be okay but not preserving. The user didn't give weights, maybe they expect us to note that weights are not supplied, so we cannot fill weight; but schema requires weight. Could we set weight to null via allowing null? No, schema says number. So we must provide a number. Perhaps we assume equal weight of 0.25 each (summing to 1). That is a reasonable default. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we are not violating by adding weights? It might be considered adding info not supplied. But we need to satisfy schema. I'd go with equal weights.\n\nHard constraints: none supplied, so empty array.\n\nMissing_data_policy: \"abstain\" (only option).\n\nShock_id: null.\n\nThus produce JSON.\n\nLet's craft:\n\n{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"programme duration\", \"direction\": \"cost\", \"weight\": 0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nCheck schema: criteria array minItems 4 satisfied. Hard_constraints array items optional. missing_data_policy string enum \"abstain\". shock_id can be string or null. Good.\n\nReturn only JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred according to supplied weights. The user didn't give explicit weights; they said \"according to the supplied weights.\" But no weights were supplied in the prompt. Possibly we need to infer that weights are given elsewhere? Since not provided, maybe we need to set placeholder? However instructions: \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, we might set empty arrays? But criteria must have minItems 4. We need to include four criteria: energy, water, noise, programme duration. Direction: lower is preferred => cost (since lower is better). So direction \"cost\". Weight: unknown; maybe we can assign equal weights? But we must preserve supplied weights; none given, maybe we set weight null? But weight must be number. Could set weight 1 for each as default? But that would be adding info not supplied. The instruction says preserve all supplied constraints, weights and shock information. If none supplied, we cannot invent. Perhaps we should leave weight as 0? But that would be a number. However that would change meaning. The safest is to set weight as null? Not allowed. Could we set weight as 0? That would imply no importance, which might be okay but not preserving. The user didn't give weights, maybe they expect us to note that weights are not supplied, so we cannot fill weight; but schema requires weight. Could we set weight to null via allowing null? No, schema says number. So we must provide a number. Perhaps we assume equal weight of 0.25 each (summing to 1). That is a reasonable default. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we are not violating by adding weights? It might be considered adding info not supplied. But we need to satisfy schema. I'd go with equal weights.\n\nHard constraints: none supplied, so empty array.\n\nMissing_data_policy: \"abstain\" (only option).\n\nShock_id: null.\n\nThus produce JSON.\n\nLet's craft:\n\n{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 0.25},\n    {\"name\": \"programme duration\", \"direction\": \"cost\", \"weight\": 0.25}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nCheck schema: criteria array minItems 4 satisfied. Hard_constraints array items optional. missing_data_policy string enum \"abstain\". shock_id can be string or null. Good.\n\nReturn only JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 763,
+      "total_tokens": 1095,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 661,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"programme duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

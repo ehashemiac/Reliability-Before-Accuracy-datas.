@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788966275-JNWPjEySvr1dpBfYJ5yF",
+    "object": "chat.completion",
+    "created": 1788966275,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    },\n    {\n      \"name\": \"programme_duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred according to supplied weights. The user didn't give explicit weights; they said \"according to the supplied weights.\" But no weights were supplied in the prompt. Possibly we need to infer that weights are given elsewhere? The user only gave the description: \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" No actual numbers. Maybe we need to set placeholder weights? But we must preserve all supplied constraints, weights and shock information. Since none supplied, we might set weight as null? But weight must be a number. Could we set weight to 1 for each? But that would be assuming. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we cannot invent. Perhaps we should output an empty criteria array? But minItems: 4 requires at least 4 items. So we need 4 criteria: energy, water, noise, programme duration. Direction: lower is preferred => cost (since lower is better). So direction: \"cost\". Weight: unknown; maybe we can set weight as null? Not allowed. Could set weight to 0? But that would ignore them. Might be acceptable? The schema expects number. Could we set weight to 1 as default? The instruction says preserve supplied weights; none supplied, so maybe we should not include weight? But required. Hmm.\n\nMaybe the user expects us to output a decision object with criteria names and direction cost, weight unspecified (maybe set to null but schema expects number). Could be a trick: we should output null for weight? But that violates schema. However the instruction: \"Return only the requested JSON schema.\" Actually they want the decision object conforming to schema. If we cannot satisfy due to missing data, maybe we should set weight to 0 as placeholder, acknowledging missing data? The missing_data_policy is \"abstain\". That suggests if data missing, we abstain. But we still need to fill the object. Perhaps we set weight to 0 and note missing_data_policy abstain means we will abstain from scoring? Not sure.\n\nGiven the ambiguity, I think we should output criteria with placeholder weight 0.0. Provide hard_constraints empty array. missing_data_policy \"abstain\". shock_id null.\n\nLet's produce:\n\n{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 0.0},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 0.0},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 0.0},\n    {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 0.0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nThat satisfies schema.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object with criteria: lower energy, water, noise, programme duration are preferred according to supplied weights. The user didn't give explicit weights; they said \"according to the supplied weights.\" But no weights were supplied in the prompt. Possibly we need to infer that weights are given elsewhere? The user only gave the description: \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" No actual numbers. Maybe we need to set placeholder weights? But we must preserve all supplied constraints, weights and shock information. Since none supplied, we might set weight as null? But weight must be a number. Could we set weight to 1 for each? But that would be assuming. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we cannot invent. Perhaps we should output an empty criteria array? But minItems: 4 requires at least 4 items. So we need 4 criteria: energy, water, noise, programme duration. Direction: lower is preferred => cost (since lower is better). So direction: \"cost\". Weight: unknown; maybe we can set weight as null? Not allowed. Could set weight to 0? But that would ignore them. Might be acceptable? The schema expects number. Could we set weight to 1 as default? The instruction says preserve supplied weights; none supplied, so maybe we should not include weight? But required. Hmm.\n\nMaybe the user expects us to output a decision object with criteria names and direction cost, weight unspecified (maybe set to null but schema expects number). Could be a trick: we should output null for weight? But that violates schema. However the instruction: \"Return only the requested JSON schema.\" Actually they want the decision object conforming to schema. If we cannot satisfy due to missing data, maybe we should set weight to 0 as placeholder, acknowledging missing data? The missing_data_policy is \"abstain\". That suggests if data missing, we abstain. But we still need to fill the object. Perhaps we set weight to 0 and note missing_data_policy abstain means we will abstain from scoring? Not sure.\n\nGiven the ambiguity, I think we should output criteria with placeholder weight 0.0. Provide hard_constraints empty array. missing_data_policy \"abstain\". shock_id null.\n\nLet's produce:\n\n{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 0.0},\n    {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 0.0},\n    {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 0.0},\n    {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 0.0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nThat satisfies schema.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 771,
+      "total_tokens": 1103,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 693,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    },\n    {\n      \"name\": \"programme_duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.0\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

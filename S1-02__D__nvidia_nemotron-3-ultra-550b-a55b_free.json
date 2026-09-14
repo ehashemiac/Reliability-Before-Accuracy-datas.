@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788908788-2gcwelWkcfaAo4cu3AJA",
+    "object": "chat.completion",
+    "created": 1788908788,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"programme_duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "The user wants me to parse a scenario about \"Balanced sustainable procurement\" with preferences for lower energy, water, noise, and programme duration according to supplied weights. However, the user hasn't provided specific weights, constraints, or shock information. They've only given a general description.\n\nLooking at the schema, I need to produce a decision object with:\n1. criteria array (min 4 items) with name, direction (cost/benefit), weight\n2. hard_constraints array with field, operator, value\n3. missing_data_policy (must be \"abstain\")\n4. shock_id (string or null)\n\nThe user says \"according to the supplied weights\" but hasn't supplied any weights. They mention \"Lower energy, water, noise and programme duration are preferred\" - these are four criteria, all should be \"cost\" direction (since lower is better). But no weights given.\n\nAlso no hard constraints mentioned, no shock_id mentioned.\n\nI need to infer or use defaults? The instruction says \"Preserve all supplied constraints, weights and shock information.\" But none were supplied except the general description.\n\nPerhaps I should create a decision object with the four criteria mentioned, assign equal weights or placeholder weights? But the schema requires weights as numbers. The user didn't specify weights.\n\nMaybe the user expects me to create a template with the four criteria and default weights? But the instruction says \"Convert the scenario into the exact decision object.\" The scenario is vague.\n\nI think I need to make reasonable assumptions: four criteria: energy, water, noise, programme duration. All direction \"cost\". Weights? Not supplied. Could assume equal weights of 0.25 each? But the user said \"according to the supplied weights\" - none supplied.\n\nHard constraints: none mentioned. Could be empty array.\n\nMissing_data_policy: \"abstain\" (only option).\n\nShock_id: null.\n\nI'll create the object with these four criteria, equal weights (0.25 each), empty hard_constraints, missing_data_policy \"abstain\", shock_id null.\n\nBut the schema requires criteria minItems 4, which matches.\n\nLet's produce JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to parse a scenario about \"Balanced sustainable procurement\" with preferences for lower energy, water, noise, and programme duration according to supplied weights. However, the user hasn't provided specific weights, constraints, or shock information. They've only given a general description.\n\nLooking at the schema, I need to produce a decision object with:\n1. criteria array (min 4 items) with name, direction (cost/benefit), weight\n2. hard_constraints array with field, operator, value\n3. missing_data_policy (must be \"abstain\")\n4. shock_id (string or null)\n\nThe user says \"according to the supplied weights\" but hasn't supplied any weights. They mention \"Lower energy, water, noise and programme duration are preferred\" - these are four criteria, all should be \"cost\" direction (since lower is better). But no weights given.\n\nAlso no hard constraints mentioned, no shock_id mentioned.\n\nI need to infer or use defaults? The instruction says \"Preserve all supplied constraints, weights and shock information.\" But none were supplied except the general description.\n\nPerhaps I should create a decision object with the four criteria mentioned, assign equal weights or placeholder weights? But the schema requires weights as numbers. The user didn't specify weights.\n\nMaybe the user expects me to create a template with the four criteria and default weights? But the instruction says \"Convert the scenario into the exact decision object.\" The scenario is vague.\n\nI think I need to make reasonable assumptions: four criteria: energy, water, noise, programme duration. All direction \"cost\". Weights? Not supplied. Could assume equal weights of 0.25 each? But the user said \"according to the supplied weights\" - none supplied.\n\nHard constraints: none mentioned. Could be empty array.\n\nMissing_data_policy: \"abstain\" (only option).\n\nShock_id: null.\n\nI'll create the object with these four criteria, equal weights (0.25 each), empty hard_constraints, missing_data_policy \"abstain\", shock_id null.\n\nBut the schema requires criteria minItems 4, which matches.\n\nLet's produce JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 595,
+      "total_tokens": 927,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 530,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"water\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"noise\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    },\n    {\n      \"name\": \"programme_duration\",\n      \"direction\": \"cost\",\n      \"weight\": 0.25\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

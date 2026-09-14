@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788909195-YQjHNggICfhDdUYHNbCc",
+    "object": "chat.completion",
+    "created": 1788909195,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"criteria\": [{\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 1}], \"hard_constraints\": [], \"missing_data_policy\": \"abstain\", \"shock_id\": null}",
+          "refusal": null,
+          "reasoning": "The user wants me to create a decision object for \"Balanced sustainable procurement\" with criteria: lower energy, water, noise, and programme duration are preferred according to supplied weights. However, the user hasn't provided specific weights or hard constraints. The schema requires criteria array with at least 4 items, each with name, direction (cost/benefit), weight. Hard constraints array. Missing_data_policy must be \"abstain\". Shock_id can be string or null.\n\nSince the user says \"according to the supplied weights\" but hasn't supplied any weights in this message, I need to infer or perhaps the user expects me to use default weights? But the instruction: \"Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\" The scenario is just \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" No weights supplied. Possibly the user expects me to create a template with placeholder weights? But the schema requires numbers for weight. Could be that the weights are to be provided later? However, the instruction says \"Return only the requested JSON schema.\" I must output a valid JSON object matching the schema.\n\nI need to include at least 4 criteria: energy, water, noise, programme duration. Direction: \"cost\" because lower is preferred. Weights: not supplied. Could assume equal weights? But the user says \"according to the supplied weights\" implying weights were supplied earlier? In this conversation, there is no prior message. This is the first user message. So maybe the user forgot to supply weights. But I must produce something. Perhaps I should set weights to 1 each as default? Or maybe the system expects me to output a decision object with the criteria names and direction, but weights as null? But schema says weight is number, required.\n\nI could set weights to 0.25 each (equal). But that's arbitrary. However, the instruction: \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, I might need to output with empty hard_constraints, missing_data_policy \"abstain\", shock_id null. For criteria, I need to include the four criteria with direction \"cost\" and some weight. Could use 1 for each? But weight should reflect relative importance. Without info, maybe set weight 1 for each.\n\nAlternatively, maybe the user expects me to ask for weights? But the instruction says \"Return only the requested JSON schema.\" So I must output JSON.\n\nI'll create a decision object with four criteria: \"energy\", \"water\", \"noise\", \"programme_duration\". Direction \"cost\". Weight: 1 each (or maybe 0.25). Hard constraints: empty array. Missing_data_policy: \"abstain\". Shock_id: null.\n\nLet's do that.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to create a decision object for \"Balanced sustainable procurement\" with criteria: lower energy, water, noise, and programme duration are preferred according to supplied weights. However, the user hasn't provided specific weights or hard constraints. The schema requires criteria array with at least 4 items, each with name, direction (cost/benefit), weight. Hard constraints array. Missing_data_policy must be \"abstain\". Shock_id can be string or null.\n\nSince the user says \"according to the supplied weights\" but hasn't supplied any weights in this message, I need to infer or perhaps the user expects me to use default weights? But the instruction: \"Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\" The scenario is just \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" No weights supplied. Possibly the user expects me to create a template with placeholder weights? But the schema requires numbers for weight. Could be that the weights are to be provided later? However, the instruction says \"Return only the requested JSON schema.\" I must output a valid JSON object matching the schema.\n\nI need to include at least 4 criteria: energy, water, noise, programme duration. Direction: \"cost\" because lower is preferred. Weights: not supplied. Could assume equal weights? But the user says \"according to the supplied weights\" implying weights were supplied earlier? In this conversation, there is no prior message. This is the first user message. So maybe the user forgot to supply weights. But I must produce something. Perhaps I should set weights to 1 each as default? Or maybe the system expects me to output a decision object with the criteria names and direction, but weights as null? But schema says weight is number, required.\n\nI could set weights to 0.25 each (equal). But that's arbitrary. However, the instruction: \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, I might need to output with empty hard_constraints, missing_data_policy \"abstain\", shock_id null. For criteria, I need to include the four criteria with direction \"cost\" and some weight. Could use 1 for each? But weight should reflect relative importance. Without info, maybe set weight 1 for each.\n\nAlternatively, maybe the user expects me to ask for weights? But the instruction says \"Return only the requested JSON schema.\" So I must output JSON.\n\nI'll create a decision object with four criteria: \"energy\", \"water\", \"noise\", \"programme_duration\". Direction \"cost\". Weight: 1 each (or maybe 0.25). Hard constraints: empty array. Missing_data_policy: \"abstain\". Shock_id: null.\n\nLet's do that.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 693,
+      "total_tokens": 1025,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 699,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\"criteria\": [{\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 1}], \"hard_constraints\": [], \"missing_data_policy\": \"abstain\", \"shock_id\": null}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

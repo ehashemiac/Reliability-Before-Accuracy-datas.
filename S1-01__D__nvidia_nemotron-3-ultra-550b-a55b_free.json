@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788908357-OfEbeGCDHO3YzNRH3CVI",
+    "object": "chat.completion",
+    "created": 1788908357,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\"criteria\": [{\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 1}], \"hard_constraints\": [], \"missing_data_policy\": \"abstain\", \"shock_id\": null}",
+          "refusal": null,
+          "reasoning": "The user wants me to create a decision object for \"Balanced sustainable procurement\" with criteria: lower energy, water, noise, and programme duration are preferred according to supplied weights. However, the user hasn't provided specific weights or hard constraints. The schema requires criteria array with at least 4 items, each with name, direction (cost/benefit), weight. Hard constraints array. Missing_data_policy must be \"abstain\". Shock_id can be string or null.\n\nSince the user says \"according to the supplied weights\" but hasn't supplied any weights in this message, I need to infer or perhaps the user expects me to use default weights? But the instruction says \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, maybe I should create a generic decision object with placeholder weights? However, the schema requires weights as numbers. I could assume equal weights? But the user might have provided weights in a previous context? This is a fresh conversation.\n\nThe user says: \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" This suggests there are four criteria: energy, water, noise, programme duration. All are \"cost\" direction (lower is better). Weights not supplied. Hard constraints not supplied. Shock_id not supplied.\n\nI need to output a JSON object matching the schema. I'll assume equal weights of 1 each, or maybe 0.25 each? The schema doesn't require weights to sum to 1. I'll use weight 1 for each. Hard constraints empty array. Missing_data_policy \"abstain\". Shock_id null.\n\nBut the user might expect me to ask for missing info? The instruction: \"Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\" Since none supplied, I'll create with default values.\n\nI'll create criteria array with four items: \"energy\", \"water\", \"noise\", \"programme_duration\". Direction \"cost\". Weight 1 each.\n\nHard constraints empty array.\n\nMissing_data_policy \"abstain\".\n\nShock_id null.\n\nLet's output JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to create a decision object for \"Balanced sustainable procurement\" with criteria: lower energy, water, noise, and programme duration are preferred according to supplied weights. However, the user hasn't provided specific weights or hard constraints. The schema requires criteria array with at least 4 items, each with name, direction (cost/benefit), weight. Hard constraints array. Missing_data_policy must be \"abstain\". Shock_id can be string or null.\n\nSince the user says \"according to the supplied weights\" but hasn't supplied any weights in this message, I need to infer or perhaps the user expects me to use default weights? But the instruction says \"Preserve all supplied constraints, weights and shock information.\" Since none supplied, maybe I should create a generic decision object with placeholder weights? However, the schema requires weights as numbers. I could assume equal weights? But the user might have provided weights in a previous context? This is a fresh conversation.\n\nThe user says: \"Balanced sustainable procurement. Lower energy, water, noise and programme duration are preferred according to the supplied weights.\" This suggests there are four criteria: energy, water, noise, programme duration. All are \"cost\" direction (lower is better). Weights not supplied. Hard constraints not supplied. Shock_id not supplied.\n\nI need to output a JSON object matching the schema. I'll assume equal weights of 1 each, or maybe 0.25 each? The schema doesn't require weights to sum to 1. I'll use weight 1 for each. Hard constraints empty array. Missing_data_policy \"abstain\". Shock_id null.\n\nBut the user might expect me to ask for missing info? The instruction: \"Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\" Since none supplied, I'll create with default values.\n\nI'll create criteria array with four items: \"energy\", \"water\", \"noise\", \"programme_duration\". Direction \"cost\". Weight 1 each.\n\nHard constraints empty array.\n\nMissing_data_policy \"abstain\".\n\nShock_id null.\n\nLet's output JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 332,
+      "completion_tokens": 548,
+      "total_tokens": 880,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 529,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\"criteria\": [{\"name\": \"energy\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"water\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"noise\", \"direction\": \"cost\", \"weight\": 1}, {\"name\": \"programme_duration\", \"direction\": \"cost\", \"weight\": 1}], \"hard_constraints\": [], \"missing_data_policy\": \"abstain\", \"shock_id\": null}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}
