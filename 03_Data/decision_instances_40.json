@@ -1,0 +1,2678 @@
+{
+  "seed": 20260907,
+  "pool_size": 44,
+  "n_instances": 40,
+  "instance_unit": "decision task",
+  "instances": [
+    {
+      "instance_id": "S1-01",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1806358",
+        "EPREL-2038560",
+        "EPREL-2250705",
+        "EPREL-2250711",
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN55ES16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-02",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "EPREL-2250705",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SN65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-03",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1546635",
+        "EPREL-1576176",
+        "EPREL-1641027",
+        "EPREL-2250711",
+        "EPREL-295434",
+        "EPREL-581126",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-04",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1273558",
+        "EPREL-1576176",
+        "EPREL-1641027",
+        "EPREL-1656051",
+        "EPREL-2180764",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-SIEMENS-SN95EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-05",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-1806358",
+        "EPREL-2180764",
+        "EPREL-2350311",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-06",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1586891",
+        "EPREL-2064127",
+        "EPREL-2180764",
+        "EPREL-2250705",
+        "EPREL-295434",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-07",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1576176",
+        "EPREL-1656051",
+        "EPREL-1806358",
+        "EPREL-2250705",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-08",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1586891",
+        "EPREL-1641027",
+        "EPREL-2068965",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-09",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-1576176",
+        "EPREL-1580699",
+        "EPREL-2186751",
+        "EPREL-2253240",
+        "EPREL-581126",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S1-10",
+      "scenario_id": "S1",
+      "candidate_ids": [
+        "EPREL-1641027",
+        "EPREL-1656051",
+        "EPREL-2064127",
+        "EPREL-2068965",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-01",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1273558",
+        "EPREL-1806358",
+        "EPREL-2180764",
+        "EPREL-227529",
+        "EPREL-295434",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-NEFF-S189ECX0ME"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-02",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-2064127",
+        "EPREL-415960",
+        "EPREL-581126",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-PHILCO-PD1467BIX"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-03",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1546635",
+        "EPREL-1576176",
+        "EPREL-1586891",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-04",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-2068965",
+        "EPREL-227529",
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-05",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1576176",
+        "EPREL-2038560",
+        "EPREL-2068965",
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-06",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1273558",
+        "EPREL-1405065",
+        "EPREL-1576176",
+        "EPREL-2064127",
+        "EPREL-2350311",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS4EVW11E"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-07",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-2088104",
+        "EPREL-2180764",
+        "EPREL-2253240",
+        "EPREL-295434",
+        "EPREL-415960",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS8YCI04E"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S2-08",
+      "scenario_id": "S2",
+      "candidate_ids": [
+        "EPREL-1273558",
+        "EPREL-1546635",
+        "EPREL-1580699",
+        "EPREL-2250705",
+        "EPREL-295434",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [
+        {
+          "field": "noise_dba",
+          "operator": "<=",
+          "value": 42
+        }
+      ],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum"
+    },
+    {
+      "instance_id": "S3-01",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-2186751",
+        "EPREL-2250711",
+        "EPREL-415960",
+        "EPREL-581126",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-02",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-227529",
+        "EPREL-581126",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-03",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-04",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-1580699",
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-05",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-1546635",
+        "EPREL-2186751",
+        "EPREL-2350311",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-06",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-07",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-1656051",
+        "EPREL-2064127",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S3-08",
+      "scenario_id": "S3",
+      "candidate_ids": [
+        "EPREL-1580699",
+        "EPREL-1586891",
+        "EPREL-2064127",
+        "EPREL-2250705",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": "R1_energy_importance_shock",
+      "reference_method": "weighted_sum",
+      "criteria_t0": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "criteria_t1_shocked": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.49
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.1176923076923077
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.19615384615384615
+        }
+      ]
+    },
+    {
+      "instance_id": "S4-01",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-2038560",
+        "EPREL-2088104",
+        "EPREL-2250705",
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S4-02",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-1656051",
+        "EPREL-2180764",
+        "EPREL-295434",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S4-03",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-1580699",
+        "EPREL-1682839",
+        "EPREL-2186751",
+        "EPREL-415960",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S4-04",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-1580699",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S4-05",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-2038560",
+        "EPREL-2250705",
+        "EPREL-227529",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S4-06",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-1806358",
+        "EPREL-2180764",
+        "EPREL-2186751",
+        "EPREL-2350311",
+        "EPREL-295434",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-NEFF-S289ECX0ME"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S4-07",
+      "scenario_id": "S4",
+      "candidate_ids": [
+        "EPREL-1546635",
+        "EPREL-1586891",
+        "EPREL-1656051",
+        "EPREL-2180764",
+        "EPREL-2186751",
+        "EPREL-2250705",
+        "EPREL-581126",
+        "IDX-BOSCH-SMS6YCW15E"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "weight_perturbations": [
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.315
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.1580769230769231
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.26346153846153847
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.385
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.14192307692307693
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.23653846153846153
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.28
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.16615384615384615
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2769230769230769
+          }
+        ],
+        [
+          {
+            "name": "energy_per_cycle_kwh",
+            "direction": "cost",
+            "weight": 0.42
+          },
+          {
+            "name": "water_per_cycle_l",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          },
+          {
+            "name": "noise_dba",
+            "direction": "cost",
+            "weight": 0.13384615384615386
+          },
+          {
+            "name": "programme_duration_min",
+            "direction": "cost",
+            "weight": 0.2230769230769231
+          }
+        ]
+      ]
+    },
+    {
+      "instance_id": "S5-01",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1656051",
+        "EPREL-2250711",
+        "EPREL-295434",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-PHILCO-PD1467BIX"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1656051": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-2250711": [
+          "programme_duration_min"
+        ]
+      }
+    },
+    {
+      "instance_id": "S5-02",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1273558",
+        "EPREL-1576176",
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "EPREL-227529",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SN65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1273558": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-1576176": [
+          "programme_duration_min"
+        ]
+      }
+    },
+    {
+      "instance_id": "S5-03",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1405065",
+        "EPREL-1576176",
+        "EPREL-1586891",
+        "EPREL-2253240",
+        "EPREL-2350311",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-NEFF-S189ECX0ME"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1405065": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-1576176": [
+          "programme_duration_min"
+        ]
+      }
+    },
+    {
+      "instance_id": "S5-04",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1580699",
+        "EPREL-1656051",
+        "EPREL-581126",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1580699": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-1656051": [
+          "programme_duration_min"
+        ]
+      }
+    },
+    {
+      "instance_id": "S5-05",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1580699",
+        "EPREL-1806358",
+        "EPREL-2088104",
+        "EPREL-2253240",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1580699": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-1806358": [
+          "programme_duration_min"
+        ]
+      }
+    },
+    {
+      "instance_id": "S5-06",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1546635",
+        "EPREL-2253240",
+        "EPREL-227529",
+        "EPREL-2350311",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX87EX01CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1546635": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-2253240": [
+          "programme_duration_min"
+        ]
+      }
+    },
+    {
+      "instance_id": "S5-07",
+      "scenario_id": "S5",
+      "candidate_ids": [
+        "EPREL-1273558",
+        "EPREL-1586891",
+        "EPREL-1806358",
+        "EPREL-2186751",
+        "EPREL-227529",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-SIEMENS-SX65YX07CE"
+      ],
+      "capacity_band_ps": [
+        14,
+        14
+      ],
+      "criteria": [
+        {
+          "name": "energy_per_cycle_kwh",
+          "direction": "cost",
+          "weight": 0.35
+        },
+        {
+          "name": "water_per_cycle_l",
+          "direction": "cost",
+          "weight": 0.25
+        },
+        {
+          "name": "noise_dba",
+          "direction": "cost",
+          "weight": 0.15
+        },
+        {
+          "name": "programme_duration_min",
+          "direction": "cost",
+          "weight": 0.25
+        }
+      ],
+      "hard_constraints": [],
+      "missing_data_policy": "abstain",
+      "shock_id": null,
+      "reference_method": "weighted_sum",
+      "fields_removed_from": {
+        "EPREL-1273558": [
+          "energy_per_cycle_kwh"
+        ],
+        "EPREL-1586891": [
+          "programme_duration_min"
+        ]
+      }
+    }
+  ]
+}

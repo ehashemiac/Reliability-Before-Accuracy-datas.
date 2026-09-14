@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "criteria": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "cost",
+              "benefit"
+            ]
+          },
+          "weight": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "name",
+          "direction",
+          "weight"
+        ]
+      }
+    },
+    "hard_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "<=",
+              ">=",
+              "==",
+              "<",
+              ">"
+            ]
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "field",
+          "operator",
+          "value"
+        ]
+      }
+    },
+    "missing_data_policy": {
+      "type": "string",
+      "enum": [
+        "abstain"
+      ]
+    },
+    "shock_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "criteria",
+    "hard_constraints",
+    "missing_data_policy",
+    "shock_id"
+  ]
+}
