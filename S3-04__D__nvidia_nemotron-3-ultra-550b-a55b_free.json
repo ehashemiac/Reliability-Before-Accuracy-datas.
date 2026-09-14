@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788955896-Fmlw0GyMAR2pD6PmbBcT",
+    "object": "chat.completion",
+    "created": 1788955896,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "length",
+        "native_finish_reason": "length",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"{\n  \"criteria\": [\n    {\n      \"name",
+          "refusal": null,
+          "reasoning": "The user wants me to parse a scenario about an energy-importance shock and return a decision object in a specific JSON schema. Let me analyze the scenario:\n\n1. At t0, energy weight = 0.35\n2. At t1, energy weight increases to 0.49\n3. Other weights are proportionally renormalized\n4. I need to explicitly identify the shock and return the t1 decision object\n\nHowever, the user hasn't provided the full t0 decision object with all criteria, weights, hard constraints, etc. They only mentioned the energy weight change. I need to infer or assume the other criteria based on typical energy decision contexts, but the instruction says \"Preserve all supplied constraints, weights and shock information\" and \"Convert the scenario into the exact decision object.\"\n\nSince only the energy weight change is supplied, I need to construct a plausible decision object. But wait - the schema requires at least 4 criteria (minItems: 4). The user mentions \"other weights are proportionally renormalized\" which implies there are other criteria besides energy.\n\nLet me think: The scenario is about \"Energy-importance shock\" comparing t0 and t1. At t0, energy weight = 0.35. At t1, energy weight = 0.49. Other weights proportionally renormalized.\n\nI need to create a decision object for t1. But I don't know the other criteria names, directions, or their t0 weights. The user says \"Preserve all supplied constraints, weights and shock information\" - but only energy weight info is supplied.\n\nPerhaps I should assume a standard set of criteria for energy decisions? Common criteria might be: cost, emissions, reliability, energy (or energy security). But the user hasn't specified.\n\nWait, re-reading: \"Explicitly identify the shock and return the t1 decision object.\" The shock_id field should identify the shock. The shock is \"energy-importance shock\" or similar.\n\nSince the user hasn't provided the full t0 object, I need to make reasonable assumptions. But the instruction says \"Do NOT rank products. Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\"\n\nThe only supplied information is:\n- Energy weight at t0: 0.35\n- Energy weight at t1: 0.49\n- Other weights proportionally renormalized\n- Shock type: Energy-importance shock\n\nI need to create a decision object with at least 4 criteria. Let me assume typical criteria for an energy decision context. Since energy weight increased, and others renormalized proportionally, I need to define the other criteria and their t0 weights such that they sum to 0.65 (since energy is 0.35), then renormalize them to sum to 0.51 (since energy is 0.49 at t1).\n\nLet me assume 3 other criteria (to make 4 total). Let's say:\n- Cost (cost direction)\n- Emissions (cost direction)\n- Reliability (benefit direction)\n\nAt t0, their weights sum to 0.65. I need to assign them relative weights. Since not specified, I'll assume equal weights for simplicity: each 0.65/3 ≈ 0.21667.\n\nAt t1, energy = 0.49, remaining sum = 0.51. The other three are proportionally renormalized, meaning their relative proportions stay the same. So each gets (0.51/0.65) * 0.21667 = 0.51/3 = 0.17 each.\n\nBut the user might expect me to use generic names. However, the schema requires specific names. Since not supplied, I'll use generic names: \"energy\", \"cost\", \"emissions\", \"reliability\".\n\nDirections: energy could be benefit (more energy security is better) or cost? Typically energy importance might be benefit. Cost is cost, emissions is cost, reliability is benefit.\n\nHard constraints: none supplied, so empty array.\n\nMissing_data_policy: \"abstain\" (only option in enum).\n\nShock_id: \"energy-importance-shock\" or similar.\n\nLet me construct the t1 decision object.\n\nCriteria at t1:\n1. name: \"energy\", direction: \"benefit\", weight: 0.49\n2. name: \"cost\", direction: \"cost\", weight: 0.17\n3. name: \"emissions\", direction: \"cost\", weight: 0.17\n4. name: \"reliability\", direction: \"benefit\", weight: 0.17\n\nSum = 0.49 + 0.17*3 = 0.49 + 0.51 = 1.0. Good.\n\nHard constraints: empty array.\n\nMissing_data_policy: \"abstain\"\n\nShock_id: \"energy-importance-shock\"\n\nBut wait, the user said \"Compare t0 and t1\" but only asks to \"return the t1 decision object\". So I only need to output t1.\n\nAlso, the shock_id should explicitly identify the shock. \"energy-importance-shock\" seems appropriate.\n\nLet me double-check the schema: criteria array minItems 4, each with name, direction (cost/benefit), weight (number). Hard_constraints array of objects with field, operator (<=, >=, ==, <, >), value (number). Missing_data_policy enum [\"abstain\"]. Shock_id string or null.\n\nI'll output the JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to parse a scenario about an energy-importance shock and return a decision object in a specific JSON schema. Let me analyze the scenario:\n\n1. At t0, energy weight = 0.35\n2. At t1, energy weight increases to 0.49\n3. Other weights are proportionally renormalized\n4. I need to explicitly identify the shock and return the t1 decision object\n\nHowever, the user hasn't provided the full t0 decision object with all criteria, weights, hard constraints, etc. They only mentioned the energy weight change. I need to infer or assume the other criteria based on typical energy decision contexts, but the instruction says \"Preserve all supplied constraints, weights and shock information\" and \"Convert the scenario into the exact decision object.\"\n\nSince only the energy weight change is supplied, I need to construct a plausible decision object. But wait - the schema requires at least 4 criteria (minItems: 4). The user mentions \"other weights are proportionally renormalized\" which implies there are other criteria besides energy.\n\nLet me think: The scenario is about \"Energy-importance shock\" comparing t0 and t1. At t0, energy weight = 0.35. At t1, energy weight = 0.49. Other weights proportionally renormalized.\n\nI need to create a decision object for t1. But I don't know the other criteria names, directions, or their t0 weights. The user says \"Preserve all supplied constraints, weights and shock information\" - but only energy weight info is supplied.\n\nPerhaps I should assume a standard set of criteria for energy decisions? Common criteria might be: cost, emissions, reliability, energy (or energy security). But the user hasn't specified.\n\nWait, re-reading: \"Explicitly identify the shock and return the t1 decision object.\" The shock_id field should identify the shock. The shock is \"energy-importance shock\" or similar.\n\nSince the user hasn't provided the full t0 object, I need to make reasonable assumptions. But the instruction says \"Do NOT rank products. Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\"\n\nThe only supplied information is:\n- Energy weight at t0: 0.35\n- Energy weight at t1: 0.49\n- Other weights proportionally renormalized\n- Shock type: Energy-importance shock\n\nI need to create a decision object with at least 4 criteria. Let me assume typical criteria for an energy decision context. Since energy weight increased, and others renormalized proportionally, I need to define the other criteria and their t0 weights such that they sum to 0.65 (since energy is 0.35), then renormalize them to sum to 0.51 (since energy is 0.49 at t1).\n\nLet me assume 3 other criteria (to make 4 total). Let's say:\n- Cost (cost direction)\n- Emissions (cost direction)\n- Reliability (benefit direction)\n\nAt t0, their weights sum to 0.65. I need to assign them relative weights. Since not specified, I'll assume equal weights for simplicity: each 0.65/3 ≈ 0.21667.\n\nAt t1, energy = 0.49, remaining sum = 0.51. The other three are proportionally renormalized, meaning their relative proportions stay the same. So each gets (0.51/0.65) * 0.21667 = 0.51/3 = 0.17 each.\n\nBut the user might expect me to use generic names. However, the schema requires specific names. Since not supplied, I'll use generic names: \"energy\", \"cost\", \"emissions\", \"reliability\".\n\nDirections: energy could be benefit (more energy security is better) or cost? Typically energy importance might be benefit. Cost is cost, emissions is cost, reliability is benefit.\n\nHard constraints: none supplied, so empty array.\n\nMissing_data_policy: \"abstain\" (only option in enum).\n\nShock_id: \"energy-importance-shock\" or similar.\n\nLet me construct the t1 decision object.\n\nCriteria at t1:\n1. name: \"energy\", direction: \"benefit\", weight: 0.49\n2. name: \"cost\", direction: \"cost\", weight: 0.17\n3. name: \"emissions\", direction: \"cost\", weight: 0.17\n4. name: \"reliability\", direction: \"benefit\", weight: 0.17\n\nSum = 0.49 + 0.17*3 = 0.49 + 0.51 = 1.0. Good.\n\nHard constraints: empty array.\n\nMissing_data_policy: \"abstain\"\n\nShock_id: \"energy-importance-shock\"\n\nBut wait, the user said \"Compare t0 and t1\" but only asks to \"return the t1 decision object\". So I only need to output t1.\n\nAlso, the shock_id should explicitly identify the shock. \"energy-importance-shock\" seems appropriate.\n\nLet me double-check the schema: criteria array minItems 4, each with name, direction (cost/benefit), weight (number). Hard_constraints array of objects with field, operator (<=, >=, ==, <, >), value (number). Missing_data_policy enum [\"abstain\"]. Shock_id string or null.\n\nI'll output the JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 365,
+      "completion_tokens": 1200,
+      "total_tokens": 1565,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1175,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"{\n  \"criteria\": [\n    {\n      \"name",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

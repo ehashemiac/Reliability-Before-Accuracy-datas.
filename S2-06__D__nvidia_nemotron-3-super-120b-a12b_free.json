@@ -1,0 +1,17 @@
+{
+  "parser_body": {
+    "id": "gen-1788975459-vY8s8yyTNSK83DEq56HV",
+    "error": {
+      "message": "Upstream error from Nvidia: Service temporarily overloaded",
+      "code": 502
+    }
+  },
+  "parser_text": null,
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

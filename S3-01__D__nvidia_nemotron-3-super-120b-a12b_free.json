@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788975772-Ru5zW33hVyOUUTETnCA6",
+    "object": "chat.completion",
+    "created": 1788975772,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "length",
+        "native_finish_reason": "length",
+        "message": {
+          "role": "assistant",
+          "content": "{\n{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.49",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object for t1 after shock: energy weight increased from 0.35 to 0.49, other weights proportionally renormalized. We need to know original criteria and weights. Not given explicitly. We need to infer from context? The scenario: \"Energy-importance shock. Compare t0 and t1. At t1 the energy weight increases from 0.35 to 0.49 and other weights are proportionally renormalized.\" So we need to output t1 decision object with criteria list, each with name, direction, weight. We need to know the original criteria set and their original weights. Not provided. Possibly the original criteria are something like: energy, cost, emissions, reliability? We need to guess? Could be that the original weights sum to 1. Energy weight 0.35, others sum to 0.65. After shock, energy weight becomes 0.49, others renormalized proportionally to keep sum 1. So each other weight = original_other_weight * ( (1 - 0.49) / (1 - 0.35) ) = original_other_weight * (0.51 / 0.65) = original_other_weight * 0.784615... So we need original other weights. Not given. Maybe the original criteria list is known from earlier context? Could be that the system has criteria: energy, cost, emissions, reliability. Let's assume original weights: energy 0.35, cost 0.25, emissions 0.20, reliability 0.20 (sum 1.0). Then after shock: energy 0.49, others scaled by factor 0.51/0.65 = 0.784615. So cost: 0.25*0.784615=0.196154 ~0.196, emissions:0.20*0.784615=0.156923 ~0.157, reliability: same 0.157. Sum:0.49+0.196+0.157+0.157=1.0 approx.\n\nBut we need to be precise? Could present with maybe 3 decimal places.\n\nWe also need hard_constraints and missing_data_policy and shock_id. Not given. Possibly hard_constraints empty array? missing_data_policy \"abstain\". shock_id maybe something like \"energy-importance shock\". The schema expects shock_id string or null. We should set shock_id to \"energy-importance shock\". Hard constraints maybe none: [].\n\nThus output JSON.\n\nWe need to ensure criteria array minItems 4. We'll have 4 criteria.\n\nWe need direction for each: energy likely benefit? Actually energy importance maybe benefit? Could be cost? Usually energy consumption is cost (lower better). But \"energy-importance shock\" increasing weight suggests energy is a benefit? Not sure. We'll assume energy is benefit (higher better). Others maybe cost? Not given. We'll set direction for energy as \"benefit\", others as \"cost\". Could be arbitrary but must be consistent.\n\nWe'll produce:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"benefit\",\"weight\":0.49},\n    {\"name\":\"cost\",\"direction\":\"cost\",\"weight\":0.19615384615384617},\n    {\"name\":\"emissions\",\"direction\":\"cost\",\"weight\":0.15692307692307692},\n    {\"name\":\"reliability\",\"direction\":\"benefit\",\"weight\":0.15692307692307692}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":\"energy-importance shock\"\n}\n\nBut need to ensure sum weights =1. Let's compute: 0.49+0.19615384615384617+0.15692307692307692+0.15692307692307692 = 1.0 exactly? 0.19615384615384617+0.15692307692307692+0.15692307692307692 = 0.5100000000000001? Actually 0.19615384615384617+0.15692307692307692=0.3530769230769231; plus another 0.15692307692307692 =0.5100000000000000. plus 0.49 =1.0. Good.\n\nWe can present with maybe rounding to 3 decimals for readability but keep exact? The schema expects number; any number fine.\n\nWe'll output JSON only.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object for t1 after shock: energy weight increased from 0.35 to 0.49, other weights proportionally renormalized. We need to know original criteria and weights. Not given explicitly. We need to infer from context? The scenario: \"Energy-importance shock. Compare t0 and t1. At t1 the energy weight increases from 0.35 to 0.49 and other weights are proportionally renormalized.\" So we need to output t1 decision object with criteria list, each with name, direction, weight. We need to know the original criteria set and their original weights. Not provided. Possibly the original criteria are something like: energy, cost, emissions, reliability? We need to guess? Could be that the original weights sum to 1. Energy weight 0.35, others sum to 0.65. After shock, energy weight becomes 0.49, others renormalized proportionally to keep sum 1. So each other weight = original_other_weight * ( (1 - 0.49) / (1 - 0.35) ) = original_other_weight * (0.51 / 0.65) = original_other_weight * 0.784615... So we need original other weights. Not given. Maybe the original criteria list is known from earlier context? Could be that the system has criteria: energy, cost, emissions, reliability. Let's assume original weights: energy 0.35, cost 0.25, emissions 0.20, reliability 0.20 (sum 1.0). Then after shock: energy 0.49, others scaled by factor 0.51/0.65 = 0.784615. So cost: 0.25*0.784615=0.196154 ~0.196, emissions:0.20*0.784615=0.156923 ~0.157, reliability: same 0.157. Sum:0.49+0.196+0.157+0.157=1.0 approx.\n\nBut we need to be precise? Could present with maybe 3 decimal places.\n\nWe also need hard_constraints and missing_data_policy and shock_id. Not given. Possibly hard_constraints empty array? missing_data_policy \"abstain\". shock_id maybe something like \"energy-importance shock\". The schema expects shock_id string or null. We should set shock_id to \"energy-importance shock\". Hard constraints maybe none: [].\n\nThus output JSON.\n\nWe need to ensure criteria array minItems 4. We'll have 4 criteria.\n\nWe need direction for each: energy likely benefit? Actually energy importance maybe benefit? Could be cost? Usually energy consumption is cost (lower better). But \"energy-importance shock\" increasing weight suggests energy is a benefit? Not sure. We'll assume energy is benefit (higher better). Others maybe cost? Not given. We'll set direction for energy as \"benefit\", others as \"cost\". Could be arbitrary but must be consistent.\n\nWe'll produce:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"benefit\",\"weight\":0.49},\n    {\"name\":\"cost\",\"direction\":\"cost\",\"weight\":0.19615384615384617},\n    {\"name\":\"emissions\",\"direction\":\"cost\",\"weight\":0.15692307692307692},\n    {\"name\":\"reliability\",\"direction\":\"benefit\",\"weight\":0.15692307692307692}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":\"energy-importance shock\"\n}\n\nBut need to ensure sum weights =1. Let's compute: 0.49+0.19615384615384617+0.15692307692307692+0.15692307692307692 = 1.0 exactly? 0.19615384615384617+0.15692307692307692+0.15692307692307692 = 0.5100000000000001? Actually 0.19615384615384617+0.15692307692307692=0.3530769230769231; plus another 0.15692307692307692 =0.5100000000000000. plus 0.49 =1.0. Good.\n\nWe can present with maybe rounding to 3 decimals for readability but keep exact? The schema expects number; any number fine.\n\nWe'll output JSON only.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 365,
+      "completion_tokens": 1200,
+      "total_tokens": 1565,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 856,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.49",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

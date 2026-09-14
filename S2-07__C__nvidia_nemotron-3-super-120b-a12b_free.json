@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788975548-PUtVYa0Qkv9L3khtydzR",
+    "object": "chat.completion",
+    "created": 1788975548,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\"name\": \"c1\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"c2\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"c3\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"c4\", \"direction\": \"cost\", \"weight\": 0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to output a decision object with criteria, hard_constraints, missing_data_policy, shock_id. The user gave a scenario: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specific data given. So we need to produce a generic decision object? Probably we need to reflect that we have no criteria or constraints? But schema requires at least 4 criteria items (minItems:4). Hard_constraints can be empty? It doesn't specify minItems, so can be empty array. missing_data_policy must be \"abstain\". shock_id can be string or null; we can set null.\n\nWe need to fill criteria with placeholder names? But we must preserve all supplied constraints, weights and shock information. Since none supplied, we can set empty? But criteria must have at least 4 items. Could we set dummy criteria with zero weight? Might be acceptable. However, we should not invent data not supplied. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we could leave criteria empty? But schema requires minItems 4, so we must include something. Perhaps we can interpret that we need to output a decision object template with empty criteria? But that would violate schema. Maybe we can set criteria with placeholder names and zero weight, direction cost? But that would be adding info not supplied. However, the instruction says do not rank products, convert scenario into exact decision object. The scenario only says constraint-sensitive procurement, select best option while satisfying hard constraints. No specifics. So maybe we should output an object with empty criteria array? But that would violate schema; maybe the schema is just a guideline, but we must follow it. The system expects valid JSON per schema. So we need to satisfy minItems 4. We could include four criteria with name like \"c1\", direction \"cost\", weight 0. Similarly hard_constraints empty. missing_data_policy \"abstain\". shock_id null.\n\nThus produce JSON:\n\n{\n  \"criteria\": [\n    {\"name\":\"c1\",\"direction\":\"cost\",\"weight\":0},\n    {\"name\":\"c2\",\"direction\":\"cost\",\"weight\":0},\n    {\"name\":\"c3\",\"direction\":\"cost\",\"weight\":0},\n    {\"name\":\"c4\",\"direction\":\"cost\",\"weight\":0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":null\n}\n\nMake sure no extra fields.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output a decision object with criteria, hard_constraints, missing_data_policy, shock_id. The user gave a scenario: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specific data given. So we need to produce a generic decision object? Probably we need to reflect that we have no criteria or constraints? But schema requires at least 4 criteria items (minItems:4). Hard_constraints can be empty? It doesn't specify minItems, so can be empty array. missing_data_policy must be \"abstain\". shock_id can be string or null; we can set null.\n\nWe need to fill criteria with placeholder names? But we must preserve all supplied constraints, weights and shock information. Since none supplied, we can set empty? But criteria must have at least 4 items. Could we set dummy criteria with zero weight? Might be acceptable. However, we should not invent data not supplied. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we could leave criteria empty? But schema requires minItems 4, so we must include something. Perhaps we can interpret that we need to output a decision object template with empty criteria? But that would violate schema. Maybe we can set criteria with placeholder names and zero weight, direction cost? But that would be adding info not supplied. However, the instruction says do not rank products, convert scenario into exact decision object. The scenario only says constraint-sensitive procurement, select best option while satisfying hard constraints. No specifics. So maybe we should output an object with empty criteria array? But that would violate schema; maybe the schema is just a guideline, but we must follow it. The system expects valid JSON per schema. So we need to satisfy minItems 4. We could include four criteria with name like \"c1\", direction \"cost\", weight 0. Similarly hard_constraints empty. missing_data_policy \"abstain\". shock_id null.\n\nThus produce JSON:\n\n{\n  \"criteria\": [\n    {\"name\":\"c1\",\"direction\":\"cost\",\"weight\":0},\n    {\"name\":\"c2\",\"direction\":\"cost\",\"weight\":0},\n    {\"name\":\"c3\",\"direction\":\"cost\",\"weight\":0},\n    {\"name\":\"c4\",\"direction\":\"cost\",\"weight\":0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":null\n}\n\nMake sure no extra fields.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 334,
+      "completion_tokens": 638,
+      "total_tokens": 972,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 601,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\"name\": \"c1\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"c2\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"c3\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"c4\", \"direction\": \"cost\", \"weight\": 0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

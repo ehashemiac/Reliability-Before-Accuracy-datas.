@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788975340-o9USvW3WXHuylAJvyhZZ",
+    "object": "chat.completion",
+    "created": 1788975340,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\"name\": \"Cost\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Quality\", \"direction\": \"benefit\", \"weight\": 0},\n    {\"name\": \"Delivery Time\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Risk\", \"direction\": \"cost\", \"weight\": 0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to output a decision object with criteria, hard_constraints, missing_data_policy, shock_id. The user gave a scenario: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specific data given. So we need to produce a JSON that matches schema but with placeholder? The instruction: \"Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\" There are no explicit constraints, weights, shock info given. Possibly we need to output empty arrays? But criteria must have minItems 4. So we need at least 4 criteria objects. Hard_constraints can be empty array? It's allowed (no min). missing_data_policy must be \"abstain\". shock_id can be null or string. Since no shock info, maybe null.\n\nWe need to infer criteria names, direction, weight from scenario? The scenario is generic: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specifics. Could we set dummy criteria? Probably we need to reflect that we have no criteria? But schema requires at least 4. Maybe we can set placeholder criteria with zero weight? But weight must be number; could be 0. Direction could be \"cost\" or \"benefit\". We need to preserve supplied constraints, weights and shock information. Since none supplied, we can set empty? But minItems 4 forces us to include something. Could we interpret that the scenario implies we need to consider cost, benefit, etc? Not clear.\n\nMaybe we should output an error? But instruction: Return only the requested JSON schema. So we must output JSON that conforms. Possibly we can set criteria as empty but that violates minItems. Could we set criteria with 4 items where name, direction, weight are null? No, they must be string/string/number.\n\nWe could set generic criteria like \"Cost\", \"Quality\", \"Delivery Time\", \"Risk\" with direction cost/benefit and weight 1 each. Hard_constraints empty. missing_data_policy \"abstain\". shock_id null.\n\nThat seems reasonable: preserve all supplied constraints (none), weights (none) - we assign default weight 1? But that adds info not supplied. However we have no choice to satisfy schema. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we preserve none; adding default weights might be considered adding info not supplied. But we need to satisfy schema; maybe we can set weight to 0 to indicate no weight supplied? That still adds info (0). But maybe acceptable.\n\nAlternatively, we could set weight to null? Not allowed. So we must put a number.\n\nGiven the ambiguity, I'll output a decision object with four generic criteria, weight 0, direction cost (or benefit). Hard_constraints empty. missing_data_policy \"abstain\". shock_id null.\n\nLet's craft JSON:\n\n{\n  \"criteria\": [\n    {\"name\": \"Cost\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Quality\", \"direction\": \"benefit\", \"weight\": 0},\n    {\"name\": \"Delivery Time\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Risk\", \"direction\": \"cost\", \"weight\": 0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nCheck schema: criteria array minItems 4 satisfied. Each criteria has name, direction, weight. direction enum: \"cost\" or \"benefit\". Good. hard_constraints array items each with field, operator, value. Empty array ok. missing_data_policy string enum \"abstain\". shock_id can be null. AdditionalProperties false: we have only those keys. Good.\n\nReturn only JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output a decision object with criteria, hard_constraints, missing_data_policy, shock_id. The user gave a scenario: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specific data given. So we need to produce a JSON that matches schema but with placeholder? The instruction: \"Convert the scenario into the exact decision object. Preserve all supplied constraints, weights and shock information.\" There are no explicit constraints, weights, shock info given. Possibly we need to output empty arrays? But criteria must have minItems 4. So we need at least 4 criteria objects. Hard_constraints can be empty array? It's allowed (no min). missing_data_policy must be \"abstain\". shock_id can be null or string. Since no shock info, maybe null.\n\nWe need to infer criteria names, direction, weight from scenario? The scenario is generic: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specifics. Could we set dummy criteria? Probably we need to reflect that we have no criteria? But schema requires at least 4. Maybe we can set placeholder criteria with zero weight? But weight must be number; could be 0. Direction could be \"cost\" or \"benefit\". We need to preserve supplied constraints, weights and shock information. Since none supplied, we can set empty? But minItems 4 forces us to include something. Could we interpret that the scenario implies we need to consider cost, benefit, etc? Not clear.\n\nMaybe we should output an error? But instruction: Return only the requested JSON schema. So we must output JSON that conforms. Possibly we can set criteria as empty but that violates minItems. Could we set criteria with 4 items where name, direction, weight are null? No, they must be string/string/number.\n\nWe could set generic criteria like \"Cost\", \"Quality\", \"Delivery Time\", \"Risk\" with direction cost/benefit and weight 1 each. Hard_constraints empty. missing_data_policy \"abstain\". shock_id null.\n\nThat seems reasonable: preserve all supplied constraints (none), weights (none) - we assign default weight 1? But that adds info not supplied. However we have no choice to satisfy schema. The instruction: \"Preserve all supplied constraints, weights and shock information.\" If none supplied, we preserve none; adding default weights might be considered adding info not supplied. But we need to satisfy schema; maybe we can set weight to 0 to indicate no weight supplied? That still adds info (0). But maybe acceptable.\n\nAlternatively, we could set weight to null? Not allowed. So we must put a number.\n\nGiven the ambiguity, I'll output a decision object with four generic criteria, weight 0, direction cost (or benefit). Hard_constraints empty. missing_data_policy \"abstain\". shock_id null.\n\nLet's craft JSON:\n\n{\n  \"criteria\": [\n    {\"name\": \"Cost\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Quality\", \"direction\": \"benefit\", \"weight\": 0},\n    {\"name\": \"Delivery Time\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Risk\", \"direction\": \"cost\", \"weight\": 0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}\n\nCheck schema: criteria array minItems 4 satisfied. Each criteria has name, direction, weight. direction enum: \"cost\" or \"benefit\". Good. hard_constraints array items each with field, operator, value. Empty array ok. missing_data_policy string enum \"abstain\". shock_id can be null. AdditionalProperties false: we have only those keys. Good.\n\nReturn only JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 334,
+      "completion_tokens": 934,
+      "total_tokens": 1268,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 915,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\"name\": \"Cost\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Quality\", \"direction\": \"benefit\", \"weight\": 0},\n    {\"name\": \"Delivery Time\", \"direction\": \"cost\", \"weight\": 0},\n    {\"name\": \"Risk\", \"direction\": \"cost\", \"weight\": 0}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

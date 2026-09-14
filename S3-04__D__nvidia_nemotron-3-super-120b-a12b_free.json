@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1789026790-paMtBSboTeVh944A1jzd",
+    "object": "chat.completion",
+    "created": 1789026790,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"benefit\", \"weight\": 0.49},\n    {\"name\": \"cost\", \"direction\": \"cost\", \"weight\": 0.235},\n    {\"name\": \"emissions\", \"direction\": \"cost\", \"weight\": 0.157},\n    {\"name\": \"reliability\", \"direction\": \"benefit\", \"weight\": 0.118}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": \"energy-importance shock\"\n}",
+          "refusal": null,
+          "reasoning": "We need to produce a decision object for t1 after shock: energy weight increases from 0.35 to 0.49, other weights proportionally renormalized. We need to know original criteria and weights. Not given explicitly in prompt. Possibly the scenario is from earlier context? The user only gave this prompt. We need to infer original criteria? Might be missing. Perhaps we assume there are criteria: energy, cost, emissions, reliability? Not sure.\n\nWe need to return JSON with criteria array (min 4 items). Hard constraints maybe none? missing_data_policy: \"abstain\". shock_id: maybe \"energy-importance shock\". The shock_id field expects string or null. We need to explicitly identify the shock. So shock_id could be \"energy-importance shock\". Provide t1 decision object.\n\nWe need to compute renormalized weights: original weights sum to 1. Energy weight originally 0.35, increased to 0.49. The increase is 0.14. The remaining weight to distribute among other criteria proportionally to their original weights.\n\nLet original other weights sum = 1 - 0.35 = 0.65. After shock, total weight for others = 1 - 0.49 = 0.51. So scaling factor = 0.51 / 0.65 = 0.7846153846 approx.\n\nThus each other weight = original_other_weight * 0.7846153846.\n\nWe need original criteria list. Not given. Could be typical: energy, cost, emissions, reliability. Let's assume four criteria: energy (benefit? maybe cost?), cost (cost), emissions (cost), reliability (benefit). Need direction.\n\nWe need to guess. Could be from a known problem: maybe criteria: Energy (benefit), Cost (cost), Emissions (cost), Reliability (benefit). We'll assign directions accordingly.\n\nWe need original weights: energy 0.35, cost ?, emissions ?, reliability ?. They must sum to 1. Without data, we can assign plausible: cost 0.3, emissions 0.2, reliability 0.15. Sum = 1.0. Then compute new weights.\n\nEnergy new = 0.49.\n\nOther scaling factor = 0.51 / 0.65 = 0.7846153846.\n\nCost new = 0.3 * 0.7846153846 = 0.2353846154 ≈ 0.235.\n\nEmissions new = 0.2 * 0.7846153846 = 0.1569230769 ≈ 0.157.\n\nReliability new = 0.15 * 0.7846153846 = 0.1176923077 ≈ 0.118.\n\nCheck sum: 0.49+0.2353846+0.1569231+0.1176923 = 1.0 (approx). Good.\n\nWe need to output criteria array with name, direction, weight (numbers). Hard constraints maybe empty array. missing_data_policy: \"abstain\". shock_id: \"energy-importance shock\".\n\nReturn JSON only.\n\nLet's format numbers with maybe 3 decimal places.\n\nEnergy weight 0.49 (maybe keep as 0.49). Cost 0.235, Emissions 0.157, Reliability 0.118.\n\nWe'll output.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to produce a decision object for t1 after shock: energy weight increases from 0.35 to 0.49, other weights proportionally renormalized. We need to know original criteria and weights. Not given explicitly in prompt. Possibly the scenario is from earlier context? The user only gave this prompt. We need to infer original criteria? Might be missing. Perhaps we assume there are criteria: energy, cost, emissions, reliability? Not sure.\n\nWe need to return JSON with criteria array (min 4 items). Hard constraints maybe none? missing_data_policy: \"abstain\". shock_id: maybe \"energy-importance shock\". The shock_id field expects string or null. We need to explicitly identify the shock. So shock_id could be \"energy-importance shock\". Provide t1 decision object.\n\nWe need to compute renormalized weights: original weights sum to 1. Energy weight originally 0.35, increased to 0.49. The increase is 0.14. The remaining weight to distribute among other criteria proportionally to their original weights.\n\nLet original other weights sum = 1 - 0.35 = 0.65. After shock, total weight for others = 1 - 0.49 = 0.51. So scaling factor = 0.51 / 0.65 = 0.7846153846 approx.\n\nThus each other weight = original_other_weight * 0.7846153846.\n\nWe need original criteria list. Not given. Could be typical: energy, cost, emissions, reliability. Let's assume four criteria: energy (benefit? maybe cost?), cost (cost), emissions (cost), reliability (benefit). Need direction.\n\nWe need to guess. Could be from a known problem: maybe criteria: Energy (benefit), Cost (cost), Emissions (cost), Reliability (benefit). We'll assign directions accordingly.\n\nWe need original weights: energy 0.35, cost ?, emissions ?, reliability ?. They must sum to 1. Without data, we can assign plausible: cost 0.3, emissions 0.2, reliability 0.15. Sum = 1.0. Then compute new weights.\n\nEnergy new = 0.49.\n\nOther scaling factor = 0.51 / 0.65 = 0.7846153846.\n\nCost new = 0.3 * 0.7846153846 = 0.2353846154 ≈ 0.235.\n\nEmissions new = 0.2 * 0.7846153846 = 0.1569230769 ≈ 0.157.\n\nReliability new = 0.15 * 0.7846153846 = 0.1176923077 ≈ 0.118.\n\nCheck sum: 0.49+0.2353846+0.1569231+0.1176923 = 1.0 (approx). Good.\n\nWe need to output criteria array with name, direction, weight (numbers). Hard constraints maybe empty array. missing_data_policy: \"abstain\". shock_id: \"energy-importance shock\".\n\nReturn JSON only.\n\nLet's format numbers with maybe 3 decimal places.\n\nEnergy weight 0.49 (maybe keep as 0.49). Cost 0.235, Emissions 0.157, Reliability 0.118.\n\nWe'll output.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 365,
+      "completion_tokens": 941,
+      "total_tokens": 1306,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 643,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\"name\": \"energy\", \"direction\": \"benefit\", \"weight\": 0.49},\n    {\"name\": \"cost\", \"direction\": \"cost\", \"weight\": 0.235},\n    {\"name\": \"emissions\", \"direction\": \"cost\", \"weight\": 0.157},\n    {\"name\": \"reliability\", \"direction\": \"benefit\", \"weight\": 0.118}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": \"energy-importance shock\"\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1789026888-wxDJwy63C4NulmmeEDQI",
+    "object": "chat.completion",
+    "created": 1789026888,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.49\n    },\n    {\n      \"name\": \"criterion2\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"criterion3\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"criterion4\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": \"energy_importance_shock\"\n}",
+          "refusal": null,
+          "reasoning": "We need to parse the scenario: \"Energy-importance shock. Compare t0 and t1. At t1 the energy weight increases from 0.35 to 0.49 and other weights are proportionally renormalized. Explicitly identify the shock and return the t1 decision object.\"\n\nWe need to output a JSON object matching the schema: criteria array (minItems 4) each with name, direction, weight. Hard constraints array (maybe empty). missing_data_policy: \"abstain\". shock_id: string or null; we need to explicitly identify the shock, so shock_id should be a string describing the shock, e.g., \"energy_importance_shock\". The scenario says \"Energy-importance shock.\" So shock_id could be \"energy_importance_shock\". Provide t1 decision object: after shock, energy weight is 0.49, other weights proportionally renormalized.\n\nWe need original weights at t0? Not given explicitly, but we can infer: energy weight at t0 is 0.35. Other weights sum to 0.65. At t1, energy weight becomes 0.49. The remaining weight sum must be 0.51 (since total weights sum to 1). The other weights are proportionally renormalized from their original values (which sum to 0.65) to now sum to 0.51. So each other weight = original_other_weight * (0.51/0.65). We need the original other weights to compute new ones. Not provided. Possibly the criteria list includes energy and three other criteria? Minimum 4 criteria. We need to infer names and directions? Not given. Could be generic: maybe criteria are [\"energy\", \"cost\", \"emissions\", \"reliability\"]? Not sure.\n\nWe need to produce a decision object that matches schema but we don't have actual criteria details. Perhaps we can assume placeholder criteria with given weights? The instruction: \"Preserve all supplied constraints, weights and shock information.\" The only supplied weight info is energy weight change. No other weights given. So we cannot compute exact numbers for other criteria without original weights. Maybe we assume that other weights remain unchanged? But statement says they are proportionally renormalized. Without original values, we cannot compute exact numbers. Could we set other weights to null? No, weight must be number.\n\nMaybe we can infer that the original weights were: energy 0.35, and three other criteria each weight (0.65/3) ≈ 0.2166667. Then after shock, energy 0.49, remaining sum 0.51, each other weight = 0.2166667 * (0.51/0.65) = 0.2166667 * 0.784615 ≈ 0.169999 ≈ 0.17. So each other weight ≈0.17. That yields total: 0.49 + 3*0.17 = 0.49 + 0.51 = 1.0.\n\nThus we can produce criteria: energy (direction maybe benefit? Not given). Could assume energy is a benefit? Or cost? Not given. Could set direction as \"benefit\" for energy? Or maybe \"cost\"? Usually energy importance could be a benefit (higher energy importance is better). But ambiguous.\n\nWe need to preserve all supplied constraints: none given for hard_constraints, so empty array.\n\nMissing_data_policy: \"abstain\".\n\nShock_id: string identifying shock: \"energy_importance_shock\".\n\nThus produce JSON:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"benefit\",\"weight\":0.49},\n    {\"name\":\"criterion2\",\"direction\":\"benefit\",\"weight\":0.17},\n    {\"name\":\"criterion3\",\"direction\":\"benefit\",\"weight\":0.17},\n    {\"name\":\"criterion4\",\"direction\":\"benefit\",\"weight\":0.17}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":\"energy_importance_shock\"\n}\n\nWe need to ensure weights sum to 1 (0.49+0.17*3=0.49+0.51=1.0). Good.\n\nWe need to ensure criteria minItems 4 satisfied.\n\nWe need to ensure additionalProperties false: we have only those fields.\n\nThus output only JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to parse the scenario: \"Energy-importance shock. Compare t0 and t1. At t1 the energy weight increases from 0.35 to 0.49 and other weights are proportionally renormalized. Explicitly identify the shock and return the t1 decision object.\"\n\nWe need to output a JSON object matching the schema: criteria array (minItems 4) each with name, direction, weight. Hard constraints array (maybe empty). missing_data_policy: \"abstain\". shock_id: string or null; we need to explicitly identify the shock, so shock_id should be a string describing the shock, e.g., \"energy_importance_shock\". The scenario says \"Energy-importance shock.\" So shock_id could be \"energy_importance_shock\". Provide t1 decision object: after shock, energy weight is 0.49, other weights proportionally renormalized.\n\nWe need original weights at t0? Not given explicitly, but we can infer: energy weight at t0 is 0.35. Other weights sum to 0.65. At t1, energy weight becomes 0.49. The remaining weight sum must be 0.51 (since total weights sum to 1). The other weights are proportionally renormalized from their original values (which sum to 0.65) to now sum to 0.51. So each other weight = original_other_weight * (0.51/0.65). We need the original other weights to compute new ones. Not provided. Possibly the criteria list includes energy and three other criteria? Minimum 4 criteria. We need to infer names and directions? Not given. Could be generic: maybe criteria are [\"energy\", \"cost\", \"emissions\", \"reliability\"]? Not sure.\n\nWe need to produce a decision object that matches schema but we don't have actual criteria details. Perhaps we can assume placeholder criteria with given weights? The instruction: \"Preserve all supplied constraints, weights and shock information.\" The only supplied weight info is energy weight change. No other weights given. So we cannot compute exact numbers for other criteria without original weights. Maybe we assume that other weights remain unchanged? But statement says they are proportionally renormalized. Without original values, we cannot compute exact numbers. Could we set other weights to null? No, weight must be number.\n\nMaybe we can infer that the original weights were: energy 0.35, and three other criteria each weight (0.65/3) ≈ 0.2166667. Then after shock, energy 0.49, remaining sum 0.51, each other weight = 0.2166667 * (0.51/0.65) = 0.2166667 * 0.784615 ≈ 0.169999 ≈ 0.17. So each other weight ≈0.17. That yields total: 0.49 + 3*0.17 = 0.49 + 0.51 = 1.0.\n\nThus we can produce criteria: energy (direction maybe benefit? Not given). Could assume energy is a benefit? Or cost? Not given. Could set direction as \"benefit\" for energy? Or maybe \"cost\"? Usually energy importance could be a benefit (higher energy importance is better). But ambiguous.\n\nWe need to preserve all supplied constraints: none given for hard_constraints, so empty array.\n\nMissing_data_policy: \"abstain\".\n\nShock_id: string identifying shock: \"energy_importance_shock\".\n\nThus produce JSON:\n\n{\n  \"criteria\": [\n    {\"name\":\"energy\",\"direction\":\"benefit\",\"weight\":0.49},\n    {\"name\":\"criterion2\",\"direction\":\"benefit\",\"weight\":0.17},\n    {\"name\":\"criterion3\",\"direction\":\"benefit\",\"weight\":0.17},\n    {\"name\":\"criterion4\",\"direction\":\"benefit\",\"weight\":0.17}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\":\"abstain\",\n  \"shock_id\":\"energy_importance_shock\"\n}\n\nWe need to ensure weights sum to 1 (0.49+0.17*3=0.49+0.51=1.0). Good.\n\nWe need to ensure criteria minItems 4 satisfied.\n\nWe need to ensure additionalProperties false: we have only those fields.\n\nThus output only JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 365,
+      "completion_tokens": 1132,
+      "total_tokens": 1497,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 908,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"energy\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.49\n    },\n    {\n      \"name\": \"criterion2\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"criterion3\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"criterion4\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": \"energy_importance_shock\"\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

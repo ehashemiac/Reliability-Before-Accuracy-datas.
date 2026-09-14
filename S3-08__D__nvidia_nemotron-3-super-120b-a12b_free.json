@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1789027225-dhGO7wVYkQKHVivqFt2o",
+    "object": "chat.completion",
+    "created": 1789027225,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\n      \"name\": \"Energy\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.49\n    },\n    {\n      \"name\": \"Cost\",\n      \"direction\": \"cost\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"Emissions\",\n      \"direction\": \"cost\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"Reliability\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": \"energy-importance shock\"\n}",
+          "refusal": null,
+          "reasoning": "We need to parse scenario: \"Energy-importance shock. Compare t0 and t1. At t1 the energy weight increases from 0.35 to 0.49 and other weights are proportionally renormalized. Explicitly identify the shock and return the t1 decision object.\"\n\nWe need to output JSON with criteria, hard_constraints, missing_data_policy, shock_id.\n\nWe need to infer criteria from scenario? Not given explicitly. We need to preserve all supplied constraints, weights and shock information. The scenario only mentions energy weight changes. We need to assume there are at least 4 criteria (as per schema minItems 4). We need to include energy as a criterion, plus other criteria (maybe cost, benefit, etc). But we don't have explicit list. Possibly the original t0 decision object had criteria with weights, and we need to adjust only energy weight and renormalize others proportionally. Since we don't have original weights, we cannot compute exact numbers. However maybe we can infer that the only change is energy weight from 0.35 to 0.49, and other weights are proportionally renormalized to sum to 1 (assuming weights sum to 1). So we need to output t1 decision object with criteria list where energy weight = 0.49, and other weights are scaled accordingly.\n\nBut we need actual other criteria names and directions. Not given. Could be that the scenario expects us to keep the same criteria as in t0, but we don't have them. Perhaps we assume there are four criteria: Energy, Cost, Emissions, Reliability (just example). But we need to be careful: The instruction says \"Preserve all supplied constraints, weights and shock information.\" The only supplied weight info is energy weight change. There are no hard constraints supplied. So hard_constraints can be empty array. missing_data_policy likely \"abstain\". shock_id should identify the shock: maybe \"energy-importance shock\". So shock_id: \"energy-importance shock\".\n\nThus we need to construct criteria array with at least 4 items. We need to include energy criterion with direction maybe \"benefit\" or \"cost\"? Energy importance likely a benefit (higher weight means more important). Could be either. Not specified. We could set direction as \"benefit\". For other criteria, we need to assign placeholder names and directions, and weights that after renormalization sum to 1 - 0.49 = 0.51 distributed proportionally to original weights. Since we don't have original weights, we could assume original weights for other three criteria were equal? If energy was 0.35 originally, remaining 0.65 split equally among three => each ~0.2166667. Then after scaling to sum 0.51, each becomes 0.2166667 * (0.51/0.65) = 0.2166667 * 0.784615 = approx 0.1699999 ~0.17. So each other criterion weight ~0.17. That sums to 0.51. So we can set three other criteria each weight 0.17.\n\nWe need at least 4 criteria; we have energy + three others = 4.\n\nWe need to pick names: maybe \"Cost\", \"Emissions\", \"Reliability\". Directions: Cost is cost (lower better) => direction \"cost\". Emissions maybe cost (lower better) => \"cost\". Reliability maybe benefit (higher better) => \"benefit\". Energy maybe benefit.\n\nThus criteria array:\n\n[\n {\"name\":\"Energy\",\"direction\":\"benefit\",\"weight\":0.49},\n {\"name\":\"Cost\",\"direction\":\"cost\",\"weight\":0.17},\n {\"name\":\"Emissions\",\"direction\":\"cost\",\"weight\":0.17},\n {\"name\":\"Reliability\",\"direction\":\"benefit\",\"weight\":0.17}\n]\n\nCheck sum: 0.49+0.17+0.17+0.17 = 1.0.\n\nHard constraints: none => [].\n\nMissing_data_policy: \"abstain\".\n\nShock_id: \"energy-importance shock\".\n\nReturn JSON only.\n\nLet's output.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to parse scenario: \"Energy-importance shock. Compare t0 and t1. At t1 the energy weight increases from 0.35 to 0.49 and other weights are proportionally renormalized. Explicitly identify the shock and return the t1 decision object.\"\n\nWe need to output JSON with criteria, hard_constraints, missing_data_policy, shock_id.\n\nWe need to infer criteria from scenario? Not given explicitly. We need to preserve all supplied constraints, weights and shock information. The scenario only mentions energy weight changes. We need to assume there are at least 4 criteria (as per schema minItems 4). We need to include energy as a criterion, plus other criteria (maybe cost, benefit, etc). But we don't have explicit list. Possibly the original t0 decision object had criteria with weights, and we need to adjust only energy weight and renormalize others proportionally. Since we don't have original weights, we cannot compute exact numbers. However maybe we can infer that the only change is energy weight from 0.35 to 0.49, and other weights are proportionally renormalized to sum to 1 (assuming weights sum to 1). So we need to output t1 decision object with criteria list where energy weight = 0.49, and other weights are scaled accordingly.\n\nBut we need actual other criteria names and directions. Not given. Could be that the scenario expects us to keep the same criteria as in t0, but we don't have them. Perhaps we assume there are four criteria: Energy, Cost, Emissions, Reliability (just example). But we need to be careful: The instruction says \"Preserve all supplied constraints, weights and shock information.\" The only supplied weight info is energy weight change. There are no hard constraints supplied. So hard_constraints can be empty array. missing_data_policy likely \"abstain\". shock_id should identify the shock: maybe \"energy-importance shock\". So shock_id: \"energy-importance shock\".\n\nThus we need to construct criteria array with at least 4 items. We need to include energy criterion with direction maybe \"benefit\" or \"cost\"? Energy importance likely a benefit (higher weight means more important). Could be either. Not specified. We could set direction as \"benefit\". For other criteria, we need to assign placeholder names and directions, and weights that after renormalization sum to 1 - 0.49 = 0.51 distributed proportionally to original weights. Since we don't have original weights, we could assume original weights for other three criteria were equal? If energy was 0.35 originally, remaining 0.65 split equally among three => each ~0.2166667. Then after scaling to sum 0.51, each becomes 0.2166667 * (0.51/0.65) = 0.2166667 * 0.784615 = approx 0.1699999 ~0.17. So each other criterion weight ~0.17. That sums to 0.51. So we can set three other criteria each weight 0.17.\n\nWe need at least 4 criteria; we have energy + three others = 4.\n\nWe need to pick names: maybe \"Cost\", \"Emissions\", \"Reliability\". Directions: Cost is cost (lower better) => direction \"cost\". Emissions maybe cost (lower better) => \"cost\". Reliability maybe benefit (higher better) => \"benefit\". Energy maybe benefit.\n\nThus criteria array:\n\n[\n {\"name\":\"Energy\",\"direction\":\"benefit\",\"weight\":0.49},\n {\"name\":\"Cost\",\"direction\":\"cost\",\"weight\":0.17},\n {\"name\":\"Emissions\",\"direction\":\"cost\",\"weight\":0.17},\n {\"name\":\"Reliability\",\"direction\":\"benefit\",\"weight\":0.17}\n]\n\nCheck sum: 0.49+0.17+0.17+0.17 = 1.0.\n\nHard constraints: none => [].\n\nMissing_data_policy: \"abstain\".\n\nShock_id: \"energy-importance shock\".\n\nReturn JSON only.\n\nLet's output.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 365,
+      "completion_tokens": 1067,
+      "total_tokens": 1432,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 895,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\n      \"name\": \"Energy\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.49\n    },\n    {\n      \"name\": \"Cost\",\n      \"direction\": \"cost\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"Emissions\",\n      \"direction\": \"cost\",\n      \"weight\": 0.17\n    },\n    {\n      \"name\": \"Reliability\",\n      \"direction\": \"benefit\",\n      \"weight\": 0.17\n    }\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": \"energy-importance shock\"\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}

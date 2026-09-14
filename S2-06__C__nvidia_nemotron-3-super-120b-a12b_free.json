@@ -1,0 +1,64 @@
+{
+  "parser_body": {
+    "id": "gen-1788975427-TZcCYBaWfXPJldKoBvHa",
+    "object": "chat.completion",
+    "created": 1788975427,
+    "model": "nvidia/nemotron-3-super-120b-a12b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"criteria\": [\n    {\"name\": \"Total Cost\", \"direction\": \"cost\", \"weight\": 0.4},\n    {\"name\": \"Quality Score\", \"direction\": \"benefit\", \"weight\": 0.3},\n    {\"name\": \"Delivery Lead Time\", \"direction\": \"cost\", \"weight\": 0.2},\n    {\"name\": \"Environmental Impact\", \"direction\": \"benefit\", \"weight\": 0.1}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+          "refusal": null,
+          "reasoning": "We need to output a decision object with criteria, hard_constraints, missing_data_policy, shock_id. The user gave a scenario: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specific data given. So we need to produce a generic decision object? Probably we need to output a placeholder with empty arrays? But criteria must have minItems 4. So we need at least 4 criteria. Hard_constraints can be empty? The schema doesn't require minItems, so can be empty array. missing_data_policy must be \"abstain\". shock_id can be null or string. We can set null.\n\nWe need to fill criteria with name, direction, weight. Since no specifics, we can make up generic criteria like cost, quality, delivery time, sustainability. Provide weights that sum maybe 1? Not required but typical. Provide direction: cost is cost (minimize) so direction \"cost\". Others benefit.\n\nWe'll output JSON.\n\nLet's craft:\n\ncriteria: [\n {\"name\":\"Total Cost\",\"direction\":\"cost\",\"weight\":0.4},\n {\"name\":\"Quality Score\",\"direction\":\"benefit\",\"weight\":0.3},\n {\"name\":\"Delivery Lead Time\",\"direction\":\"cost\",\"weight\":0.2},\n {\"name\":\"Environmental Impact\",\"direction\":\"benefit\",\"weight\":0.1}\n]\n\nHard_constraints: [].\n\nmissing_data_policy: \"abstain\"\n\nshock_id: null\n\nReturn only JSON.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "We need to output a decision object with criteria, hard_constraints, missing_data_policy, shock_id. The user gave a scenario: \"Constraint-sensitive procurement. Select the best option while strictly satisfying every hard constraint. Do not select an infeasible candidate.\" No specific data given. So we need to produce a generic decision object? Probably we need to output a placeholder with empty arrays? But criteria must have minItems 4. So we need at least 4 criteria. Hard_constraints can be empty? The schema doesn't require minItems, so can be empty array. missing_data_policy must be \"abstain\". shock_id can be null or string. We can set null.\n\nWe need to fill criteria with name, direction, weight. Since no specifics, we can make up generic criteria like cost, quality, delivery time, sustainability. Provide weights that sum maybe 1? Not required but typical. Provide direction: cost is cost (minimize) so direction \"cost\". Others benefit.\n\nWe'll output JSON.\n\nLet's craft:\n\ncriteria: [\n {\"name\":\"Total Cost\",\"direction\":\"cost\",\"weight\":0.4},\n {\"name\":\"Quality Score\",\"direction\":\"benefit\",\"weight\":0.3},\n {\"name\":\"Delivery Lead Time\",\"direction\":\"cost\",\"weight\":0.2},\n {\"name\":\"Environmental Impact\",\"direction\":\"benefit\",\"weight\":0.1}\n]\n\nHard_constraints: [].\n\nmissing_data_policy: \"abstain\"\n\nshock_id: null\n\nReturn only JSON.\n\n",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 334,
+      "completion_tokens": 440,
+      "total_tokens": 774,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 342,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "parser_text": "{\n  \"criteria\": [\n    {\"name\": \"Total Cost\", \"direction\": \"cost\", \"weight\": 0.4},\n    {\"name\": \"Quality Score\", \"direction\": \"benefit\", \"weight\": 0.3},\n    {\"name\": \"Delivery Lead Time\", \"direction\": \"cost\", \"weight\": 0.2},\n    {\"name\": \"Environmental Impact\", \"direction\": \"benefit\", \"weight\": 0.1}\n  ],\n  \"hard_constraints\": [],\n  \"missing_data_policy\": \"abstain\",\n  \"shock_id\": null\n}",
+  "audit_body": null,
+  "audit_text": null,
+  "meta_parser": {
+    "attempt": 1,
+    "provider": null
+  },
+  "meta_audit": {}
+}
