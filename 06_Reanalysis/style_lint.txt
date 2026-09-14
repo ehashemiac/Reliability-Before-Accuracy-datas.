@@ -1,0 +1,14 @@
+[style_lint] direct run-formatting runs: 315
+[style_lint] direct paragraph-formatting paragraphs: 172
+[style_lint] top fonts by char count: Times New Roman(19952)
+[style_lint] heading-like paragraphs not using Heading styles (first 10):
+  - #3: style='Normal' text='Abstract'
+  - #173: style='Normal' text='Scenario'
+  - #174: style='Normal' text='Purpose'
+  - #175: style='Normal' text='Tasks'
+  - #176: style='Normal' text='Weight design'
+  - #177: style='Normal' text='Constraint / perturbation'
+  - #203: style='Normal' text='Arm'
+  - #204: style='Normal' text='Architecture'
+  - #205: style='Normal' text='Operational role'
+  - #311: style='Normal' text='Comparison'

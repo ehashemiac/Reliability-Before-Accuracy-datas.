@@ -1,0 +1,8 @@
+model,comparison,n_instances,c_only,other_only,p_exact,super_only,ultra_only
+nvidia/nemotron-3-super-120b-a12b:free,C-A,40,27.0,0.0,1.4901161193847656e-08,,
+nvidia/nemotron-3-super-120b-a12b:free,C-B,40,27.0,0.0,1.4901161193847656e-08,,
+nvidia/nemotron-3-super-120b-a12b:free,C-D,40,34.0,0.0,1.1641532182693481e-10,,
+nvidia/nemotron-3-ultra-550b-a55b:free,C-A,40,15.0,3.0,0.007537841796875,,
+nvidia/nemotron-3-ultra-550b-a55b:free,C-B,40,14.0,1.0,0.0009765625,,
+nvidia/nemotron-3-ultra-550b-a55b:free,C-D,40,15.0,0.0,6.103515625e-05,,
+paired across arms,Super-Ultra,160,,,8.364584573428147e-06,34.0,6.0

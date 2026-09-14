@@ -1,0 +1,9 @@
+model_id,architecture_arm,success,n,rate
+nvidia/nemotron-3-super-120b-a12b:free,A,7,40,0.175
+nvidia/nemotron-3-super-120b-a12b:free,B,7,40,0.175
+nvidia/nemotron-3-super-120b-a12b:free,C,34,40,0.85
+nvidia/nemotron-3-super-120b-a12b:free,D,0,40,0.0
+nvidia/nemotron-3-ultra-550b-a55b:free,A,3,40,0.075
+nvidia/nemotron-3-ultra-550b-a55b:free,B,2,40,0.05
+nvidia/nemotron-3-ultra-550b-a55b:free,C,15,40,0.375
+nvidia/nemotron-3-ultra-550b-a55b:free,D,0,40,0.0

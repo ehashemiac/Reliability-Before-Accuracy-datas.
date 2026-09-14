@@ -1,0 +1,5 @@
+architecture_arm,success,n,rate
+A,10,80,0.125
+B,9,80,0.1125
+C,49,80,0.6125
+D,0,80,0.0

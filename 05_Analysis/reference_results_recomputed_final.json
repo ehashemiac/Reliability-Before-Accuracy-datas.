@@ -1,0 +1,2564 @@
+{
+  "S1-01": {
+    "base": {
+      "reference_score": {
+        "EPREL-1806358": 0.4083333333333333,
+        "EPREL-2038560": 0.38884686836518034,
+        "EPREL-2250705": 0.296576433121019,
+        "EPREL-2250711": 0.296576433121019,
+        "EPREL-2350311": 0.715625,
+        "IDX-BOSCH-SBV6YCX0ME": 0.3924097664543523,
+        "IDX-NEFF-S289ECX0ME": 0.4674097664543523,
+        "IDX-SIEMENS-SN55ES16CE": 0.42887473460721864
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN55ES16CE",
+        "EPREL-1806358",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "EPREL-2038560",
+        "EPREL-2250705",
+        "EPREL-2250711"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1806358",
+        "EPREL-2038560",
+        "EPREL-2250705",
+        "EPREL-2250711",
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN55ES16CE"
+      ]
+    }
+  },
+  "S1-02": {
+    "base": {
+      "reference_score": {
+        "EPREL-1641027": 0.4794519519519521,
+        "EPREL-2064127": 0.4687500000000001,
+        "EPREL-2250705": 0.6510923423423423,
+        "EPREL-415960": 0.3302364864864866,
+        "IDX-BOSCH-SMS6ECI13E": 0.8490653153153153,
+        "IDX-BOSCH-SMS6YCI15E": 0.7990653153153152,
+        "IDX-PHILCO-PD1467BIX": 0.34625,
+        "IDX-SIEMENS-SN65YX07CE": 0.7990653153153152
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "EPREL-2250705",
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "IDX-PHILCO-PD1467BIX",
+        "EPREL-415960"
+      ],
+      "reference_top1": "IDX-BOSCH-SMS6ECI13E",
+      "feasible_ids": [
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "EPREL-2250705",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SN65YX07CE"
+      ]
+    }
+  },
+  "S1-03": {
+    "base": {
+      "reference_score": {
+        "EPREL-1546635": 0.4082140274765004,
+        "EPREL-1576176": 0.6639877078814173,
+        "EPREL-1641027": 0.4501952277657267,
+        "EPREL-2250711": 0.5103723788864785,
+        "EPREL-295434": 0.53352856109906,
+        "EPREL-581126": 0.28,
+        "IDX-BOSCH-SBV6YCX0ME": 0.6703723788864787,
+        "IDX-SIEMENS-SX65EX16CE": 0.6483333333333334
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SBV6YCX0ME",
+        "EPREL-1576176",
+        "IDX-SIEMENS-SX65EX16CE",
+        "EPREL-295434",
+        "EPREL-2250711",
+        "EPREL-1641027",
+        "EPREL-1546635",
+        "EPREL-581126"
+      ],
+      "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+      "feasible_ids": [
+        "EPREL-1546635",
+        "EPREL-1576176",
+        "EPREL-1641027",
+        "EPREL-2250711",
+        "EPREL-295434",
+        "EPREL-581126",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65EX16CE"
+      ]
+    }
+  },
+  "S1-04": {
+    "base": {
+      "reference_score": {
+        "EPREL-1273558": 0.4510666666666666,
+        "EPREL-1576176": 0.5996666666666666,
+        "EPREL-1641027": 0.3,
+        "EPREL-1656051": 0.27579999999999993,
+        "EPREL-2180764": 0.5188666666666666,
+        "IDX-BOSCH-SBV6YCX0ME": 0.6299999999999999,
+        "IDX-BOSCH-SMD6ECX17E": 0.65,
+        "IDX-SIEMENS-SN95EX16CE": 0.65
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-SIEMENS-SN95EX16CE",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "EPREL-1576176",
+        "EPREL-2180764",
+        "EPREL-1273558",
+        "EPREL-1641027",
+        "EPREL-1656051"
+      ],
+      "reference_top1": "IDX-BOSCH-SMD6ECX17E",
+      "feasible_ids": [
+        "EPREL-1273558",
+        "EPREL-1576176",
+        "EPREL-1641027",
+        "EPREL-1656051",
+        "EPREL-2180764",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-SIEMENS-SN95EX16CE"
+      ]
+    }
+  },
+  "S1-05": {
+    "base": {
+      "reference_score": {
+        "EPREL-1405065": 0.125,
+        "EPREL-1806358": 0.7272144522144521,
+        "EPREL-2180764": 0.5590909090909091,
+        "EPREL-2350311": 0.803125,
+        "IDX-AEG-GU8200A2SNW": 0.7502695221445219,
+        "IDX-BOSCH-SMS4EVW11E": 0.5609265734265734,
+        "IDX-BOSCH-SMS8YCI04E": 0.5567599067599066,
+        "IDX-BOSCH-SMU6YCS0ME": 0.5567599067599066
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-AEG-GU8200A2SNW",
+        "EPREL-1806358",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-2180764",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-1405065"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1405065",
+        "EPREL-1806358",
+        "EPREL-2180764",
+        "EPREL-2350311",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ]
+    }
+  },
+  "S1-06": {
+    "base": {
+      "reference_score": {
+        "EPREL-1586891": 0.8988844621513944,
+        "EPREL-2064127": 0.41,
+        "EPREL-2180764": 0.6103813318155947,
+        "EPREL-2250705": 0.5773260205929527,
+        "EPREL-295434": 0.3463636363636363,
+        "IDX-BOSCH-SMI6ECS17E": 0.7093847984684638,
+        "IDX-BOSCH-SMS6YCW15E": 0.6996636829306152,
+        "IDX-SIEMENS-SX65YX07CE": 0.6996636829306152
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-2180764",
+        "EPREL-2250705",
+        "EPREL-2064127",
+        "EPREL-295434"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1586891",
+        "EPREL-2064127",
+        "EPREL-2180764",
+        "EPREL-2250705",
+        "EPREL-295434",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    }
+  },
+  "S1-07": {
+    "base": {
+      "reference_score": {
+        "EPREL-1576176": 0.6238857938718663,
+        "EPREL-1656051": 0.2983286908077994,
+        "EPREL-1806358": 0.7988857938718662,
+        "EPREL-2250705": 0.46375348189415017,
+        "EPREL-415960": 0.203125,
+        "IDX-BOSCH-SMS6YCW15E": 0.6512534818941503,
+        "IDX-NEFF-S289ECX0ME": 0.7012534818941504,
+        "IDX-SIEMENS-SN95EX16CE": 0.65
+      },
+      "reference_ranking": [
+        "EPREL-1806358",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SN95EX16CE",
+        "EPREL-1576176",
+        "EPREL-2250705",
+        "EPREL-1656051",
+        "EPREL-415960"
+      ],
+      "reference_top1": "EPREL-1806358",
+      "feasible_ids": [
+        "EPREL-1576176",
+        "EPREL-1656051",
+        "EPREL-1806358",
+        "EPREL-2250705",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ]
+    }
+  },
+  "S1-08": {
+    "base": {
+      "reference_score": {
+        "EPREL-1586891": 0.8243589743589742,
+        "EPREL-1641027": 0.31703296703296713,
+        "EPREL-2068965": 0.5548443223443223,
+        "EPREL-2088104": 0.5548443223443223,
+        "IDX-BOSCH-SMI6ECS17E": 0.5428571428571429,
+        "IDX-BOSCH-SMS6ECI13E": 0.5755494505494505,
+        "IDX-PHILCO-PD1467BIX": 0.25,
+        "IDX-SIEMENS-SX65EX16CE": 0.5428571428571429
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "IDX-BOSCH-SMS6ECI13E",
+        "EPREL-2068965",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-SIEMENS-SX65EX16CE",
+        "EPREL-1641027",
+        "IDX-PHILCO-PD1467BIX"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1586891",
+        "EPREL-1641027",
+        "EPREL-2068965",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ]
+    }
+  },
+  "S1-09": {
+    "base": {
+      "reference_score": {
+        "EPREL-1405065": 0.28657502473195906,
+        "EPREL-1576176": 0.6583907181626161,
+        "EPREL-1580699": 0.2745443972086308,
+        "EPREL-2186751": 0.6963050453196438,
+        "EPREL-2253240": 0.42372262773722624,
+        "EPREL-581126": 0.4118772893772894,
+        "IDX-NEFF-S289ECX0ME": 0.6979166666666666,
+        "IDX-SIEMENS-SX65YX07CE": 0.6679166666666666
+      },
+      "reference_ranking": [
+        "IDX-NEFF-S289ECX0ME",
+        "EPREL-2186751",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-1576176",
+        "EPREL-2253240",
+        "EPREL-581126",
+        "EPREL-1405065",
+        "EPREL-1580699"
+      ],
+      "reference_top1": "IDX-NEFF-S289ECX0ME",
+      "feasible_ids": [
+        "EPREL-1405065",
+        "EPREL-1576176",
+        "EPREL-1580699",
+        "EPREL-2186751",
+        "EPREL-2253240",
+        "EPREL-581126",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    }
+  },
+  "S1-10": {
+    "base": {
+      "reference_score": {
+        "EPREL-1641027": 0.3,
+        "EPREL-1656051": 0.43646590110147643,
+        "EPREL-2064127": 0.375,
+        "EPREL-2068965": 0.7732306069838293,
+        "EPREL-2088104": 0.7732306069838293,
+        "IDX-BOSCH-SMS4EVW11E": 0.6254980079681274,
+        "IDX-BOSCH-SMS6ECI13E": 0.8406491680337473,
+        "IDX-BOSCH-SMU6YCS0ME": 0.7906491680337473
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-2068965",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-1656051",
+        "EPREL-2064127",
+        "EPREL-1641027"
+      ],
+      "reference_top1": "IDX-BOSCH-SMS6ECI13E",
+      "feasible_ids": [
+        "EPREL-1641027",
+        "EPREL-1656051",
+        "EPREL-2064127",
+        "EPREL-2068965",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ]
+    }
+  },
+  "S2-01": {
+    "base": {
+      "reference_score": {
+        "EPREL-1273558": 0.4822006472491909,
+        "EPREL-1806358": 0.6197043248014122,
+        "EPREL-2180764": 0.4852346278317151,
+        "EPREL-227529": 0.25,
+        "IDX-AEG-GU8200A2SNW": 0.7374999999999999,
+        "IDX-BOSCH-SMS8YCI04E": 0.5386363636363636,
+        "IDX-NEFF-S189ECX0ME": 0.6136363636363636
+      },
+      "reference_ranking": [
+        "IDX-AEG-GU8200A2SNW",
+        "EPREL-1806358",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-BOSCH-SMS8YCI04E",
+        "EPREL-2180764",
+        "EPREL-1273558",
+        "EPREL-227529"
+      ],
+      "reference_top1": "IDX-AEG-GU8200A2SNW",
+      "feasible_ids": [
+        "EPREL-1273558",
+        "EPREL-1806358",
+        "EPREL-2180764",
+        "EPREL-227529",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-NEFF-S189ECX0ME"
+      ]
+    }
+  },
+  "S2-02": {
+    "base": {
+      "reference_score": {
+        "IDX-BOSCH-SMS6ECI13E": 1.0,
+        "IDX-BOSCH-SMS6YCW15E": 0.85,
+        "IDX-NEFF-S189ECX0ME": 1.0
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-BOSCH-SMS6YCW15E"
+      ],
+      "reference_top1": "IDX-BOSCH-SMS6ECI13E",
+      "feasible_ids": [
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-NEFF-S189ECX0ME"
+      ]
+    }
+  },
+  "S2-03": {
+    "base": {
+      "reference_score": {
+        "EPREL-1546635": 0.22884615384615387,
+        "EPREL-1576176": 0.4063930233190933,
+        "EPREL-1586891": 0.8569066147859921,
+        "IDX-BOSCH-SMU6YCS0ME": 0.5455429784223558,
+        "IDX-SIEMENS-SX65YX07CE": 0.5455429784223558,
+        "IDX-SIEMENS-SX87EX01CE": 0.4636363636363636
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE",
+        "EPREL-1576176",
+        "EPREL-1546635"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1546635",
+        "EPREL-1576176",
+        "EPREL-1586891",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S2-04": {
+    "base": {
+      "reference_score": {
+        "EPREL-2068965": 0.45532974643085433,
+        "EPREL-227529": 0.25,
+        "EPREL-2350311": 0.7374999999999999,
+        "IDX-BOSCH-SBV6YCX0ME": 0.545738333688472,
+        "IDX-BOSCH-SMS6YCI15E": 0.545738333688472,
+        "IDX-SIEMENS-SX65EX16CE": 0.4442147879821009
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCI15E",
+        "EPREL-2068965",
+        "IDX-SIEMENS-SX65EX16CE",
+        "EPREL-227529"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-2068965",
+        "EPREL-227529",
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SX65EX16CE"
+      ]
+    }
+  },
+  "S2-05": {
+    "base": {
+      "reference_score": {
+        "EPREL-1576176": 0.25,
+        "EPREL-2038560": 0.38363853503184703,
+        "EPREL-2068965": 0.38363853503184703,
+        "EPREL-2350311": 0.8312499999999999,
+        "IDX-BOSCH-SBV6YCX0ME": 0.384076433121019,
+        "IDX-BOSCH-SMU6YCS0ME": 0.384076433121019,
+        "IDX-SIEMENS-SX65YX07CE": 0.384076433121019,
+        "IDX-SIEMENS-SX87EX01CE": 0.34554140127388533
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-2038560",
+        "EPREL-2068965",
+        "IDX-SIEMENS-SX87EX01CE",
+        "EPREL-1576176"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1576176",
+        "EPREL-2038560",
+        "EPREL-2068965",
+        "EPREL-2350311",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S2-06": {
+    "base": {
+      "reference_score": {
+        "EPREL-1273558": 0.4022292993630573,
+        "EPREL-1576176": 0.3461538461538461,
+        "EPREL-2350311": 0.79375,
+        "IDX-BOSCH-SMD6ECX17E": 0.4416952474277314,
+        "IDX-BOSCH-SMI6ECS17E": 0.4416952474277314
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMI6ECS17E",
+        "EPREL-1273558",
+        "EPREL-1576176"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1273558",
+        "EPREL-1576176",
+        "EPREL-2350311",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMI6ECS17E"
+      ]
+    }
+  },
+  "S2-07": {
+    "base": {
+      "reference_score": {
+        "EPREL-2088104": 0.40625,
+        "EPREL-2180764": 0.29410377358490564,
+        "IDX-BOSCH-SMI6ECS17E": 0.6,
+        "IDX-BOSCH-SMS6ECI13E": 0.41981132075471694,
+        "IDX-BOSCH-SMS8YCI04E": 0.344811320754717
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "EPREL-2088104",
+        "IDX-BOSCH-SMS8YCI04E",
+        "EPREL-2180764"
+      ],
+      "reference_top1": "IDX-BOSCH-SMI6ECS17E",
+      "feasible_ids": [
+        "EPREL-2088104",
+        "EPREL-2180764",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS8YCI04E"
+      ]
+    }
+  },
+  "S2-08": {
+    "base": {
+      "reference_score": {
+        "EPREL-1273558": 0.540272373540856,
+        "EPREL-1546635": 0.2875,
+        "EPREL-2250705": 0.4569066147859919,
+        "IDX-BOSCH-SMD6ECX17E": 0.6,
+        "IDX-BOSCH-SMS6YCW15E": 0.6069066147859921,
+        "IDX-SIEMENS-SX65YX07CE": 0.6069066147859921
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-BOSCH-SMD6ECX17E",
+        "EPREL-1273558",
+        "EPREL-2250705",
+        "EPREL-1546635"
+      ],
+      "reference_top1": "IDX-BOSCH-SMS6YCW15E",
+      "feasible_ids": [
+        "EPREL-1273558",
+        "EPREL-1546635",
+        "EPREL-2250705",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    }
+  },
+  "S3-01": {
+    "base": {
+      "reference_score": {
+        "EPREL-2186751": 0.6682645325270055,
+        "EPREL-2250711": 0.4819885405026401,
+        "EPREL-415960": 0.29966256929380575,
+        "EPREL-581126": 0.25,
+        "IDX-AEG-GN851XT": 0.75,
+        "IDX-BOSCH-SMS8YCI04E": 0.5673420758561756,
+        "IDX-BOSCH-SMU6YCS0ME": 0.5673420758561756,
+        "IDX-SIEMENS-SN95EX16CE": 0.5553030303030303
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "EPREL-2186751",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SN95EX16CE",
+        "EPREL-2250711",
+        "EPREL-415960",
+        "EPREL-581126"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-2186751",
+        "EPREL-2250711",
+        "EPREL-415960",
+        "EPREL-581126",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-2186751": 0.6196418296092917,
+        "EPREL-2250711": 0.5701996521193917,
+        "EPREL-415960": 0.28277546025919126,
+        "EPREL-581126": 0.19615384615384615,
+        "IDX-AEG-GN851XT": 0.8038461538461538,
+        "IDX-BOSCH-SMS8YCI04E": 0.6371693490890887,
+        "IDX-BOSCH-SMU6YCS0ME": 0.6371693490890887,
+        "IDX-SIEMENS-SN95EX16CE": 0.651083916083916
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-SIEMENS-SN95EX16CE",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-2186751",
+        "EPREL-2250711",
+        "EPREL-415960",
+        "EPREL-581126"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-2186751",
+        "EPREL-2250711",
+        "EPREL-415960",
+        "EPREL-581126",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ]
+    }
+  },
+  "S3-02": {
+    "base": {
+      "reference_score": {
+        "EPREL-1656051": 0.359761388286334,
+        "EPREL-1682839": 0.2507592190889371,
+        "EPREL-227529": 0.4155355851668216,
+        "EPREL-581126": 0.22857142857142856,
+        "IDX-BOSCH-SBV6YCX0ME": 0.7120390455531452,
+        "IDX-SIEMENS-SX65EX16CE": 0.7,
+        "IDX-SIEMENS-SX65YX07CE": 0.7120390455531452,
+        "IDX-SIEMENS-SX87EX01CE": 0.7
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-SIEMENS-SX87EX01CE",
+        "EPREL-227529",
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-581126"
+      ],
+      "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+      "feasible_ids": [
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-227529",
+        "EPREL-581126",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-1656051": 0.47289671283163687,
+        "EPREL-1682839": 0.19721675287835808,
+        "EPREL-227529": 0.37369121117494214,
+        "EPREL-581126": 0.17934065934065935,
+        "IDX-BOSCH-SBV6YCX0ME": 0.7507008176205572,
+        "IDX-SIEMENS-SX65EX16CE": 0.7646153846153846,
+        "IDX-SIEMENS-SX65YX07CE": 0.7507008176205572,
+        "IDX-SIEMENS-SX87EX01CE": 0.7646153846153846
+      },
+      "reference_ranking": [
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-1656051",
+        "EPREL-227529",
+        "EPREL-1682839",
+        "EPREL-581126"
+      ],
+      "reference_top1": "IDX-SIEMENS-SX65EX16CE",
+      "feasible_ids": [
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-227529",
+        "EPREL-581126",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S3-03": {
+    "base": {
+      "reference_score": {
+        "EPREL-1656051": 0.5688844393592677,
+        "EPREL-1682839": 0.47171052631578947,
+        "EPREL-2253240": 0.37112318840579706,
+        "EPREL-415960": 0.4908202571646508,
+        "IDX-BOSCH-SMS8YCI04E": 0.7119565217391304,
+        "IDX-PHILCO-PD1467BIX": 0.5504821837201699,
+        "IDX-SIEMENS-SX65YX07CE": 0.7119565217391304,
+        "IDX-SIEMENS-SX87EX01CE": 0.7124999999999999
+      },
+      "reference_ranking": [
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-1656051",
+        "IDX-PHILCO-PD1467BIX",
+        "EPREL-415960",
+        "EPREL-1682839",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "IDX-SIEMENS-SX87EX01CE",
+      "feasible_ids": [
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-1656051": 0.636924045062489,
+        "EPREL-1682839": 0.37011133603238866,
+        "EPREL-2253240": 0.3862391304347826,
+        "EPREL-415960": 0.43239609475192997,
+        "IDX-BOSCH-SMS8YCI04E": 0.7505852842809363,
+        "IDX-PHILCO-PD1467BIX": 0.5255622752533506,
+        "IDX-SIEMENS-SX65YX07CE": 0.7505852842809363,
+        "IDX-SIEMENS-SX87EX01CE": 0.7744230769230769
+      },
+      "reference_ranking": [
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-1656051",
+        "IDX-PHILCO-PD1467BIX",
+        "EPREL-415960",
+        "EPREL-2253240",
+        "EPREL-1682839"
+      ],
+      "reference_top1": "IDX-SIEMENS-SX87EX01CE",
+      "feasible_ids": [
+        "EPREL-1656051",
+        "EPREL-1682839",
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S3-04": {
+    "base": {
+      "reference_score": {
+        "EPREL-1405065": 0.3396358543417367,
+        "EPREL-1580699": 0.32229328824805414,
+        "EPREL-1641027": 0.6034836277244087,
+        "EPREL-2064127": 0.5252976190476191,
+        "IDX-AEG-GN851XT": 0.8889466632640042,
+        "IDX-BOSCH-SMS6YCI15E": 0.7641159609179896,
+        "IDX-BOSCH-SMS8YCI04E": 0.7641159609179896,
+        "IDX-BOSCH-SMU6YCS0ME": 0.7641159609179896
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "EPREL-1405065",
+        "EPREL-1580699"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-1405065",
+        "EPREL-1580699",
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-1405065": 0.2664835164835165,
+        "EPREL-1580699": 0.3005318705156015,
+        "EPREL-1641027": 0.5716170055540988,
+        "EPREL-2064127": 0.6275412087912088,
+        "IDX-AEG-GN851XT": 0.9123986317370265,
+        "IDX-BOSCH-SMS6YCI15E": 0.7910939548520893,
+        "IDX-BOSCH-SMS8YCI04E": 0.7910939548520893,
+        "IDX-BOSCH-SMU6YCS0ME": 0.7910939548520893
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-2064127",
+        "EPREL-1641027",
+        "EPREL-1580699",
+        "EPREL-1405065"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-1405065",
+        "EPREL-1580699",
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMU6YCS0ME"
+      ]
+    }
+  },
+  "S3-05": {
+    "base": {
+      "reference_score": {
+        "EPREL-1546635": 0.2764344262295082,
+        "EPREL-2186751": 0.5548076923076922,
+        "EPREL-2350311": 0.8149590163934426,
+        "IDX-BOSCH-SMS4EVW11E": 0.47313656657918945,
+        "IDX-BOSCH-SMS6YCI15E": 0.5258835758835757,
+        "IDX-SIEMENS-SN55ES16CE": 0.5184511434511434,
+        "IDX-SIEMENS-SN65YX07CE": 0.5258835758835757,
+        "IDX-SIEMENS-SX87EX01CE": 0.5184511434511434
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "EPREL-2186751",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-1546635"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1546635",
+        "EPREL-2186751",
+        "EPREL-2350311",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-1546635": 0.21689470365699873,
+        "EPREL-2186751": 0.43531065088757387,
+        "EPREL-2350311": 0.8548139974779319,
+        "IDX-BOSCH-SMS4EVW11E": 0.4518955098274139,
+        "IDX-BOSCH-SMS6YCI15E": 0.5847577162961777,
+        "IDX-SIEMENS-SN55ES16CE": 0.6205061570446185,
+        "IDX-SIEMENS-SN65YX07CE": 0.5847577162961777,
+        "IDX-SIEMENS-SX87EX01CE": 0.6205061570446185
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-2186751",
+        "EPREL-1546635"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1546635",
+        "EPREL-2186751",
+        "EPREL-2350311",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S3-06": {
+    "base": {
+      "reference_score": {
+        "EPREL-2253240": 0.3494428969359331,
+        "EPREL-415960": 0.3886792452830189,
+        "IDX-AEG-GN851XT": 0.75,
+        "IDX-BOSCH-SMS6YCW15E": 0.6466308403847164,
+        "IDX-BOSCH-SMS8YCI04E": 0.6466308403847164,
+        "IDX-NEFF-S189ECX0ME": 0.6766308403847164,
+        "IDX-NEFF-S289ECX0ME": 0.6766308403847164,
+        "IDX-SIEMENS-SX65YX07CE": 0.6466308403847164
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-415960",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-2253240": 0.3353739018641525,
+        "EPREL-415960": 0.3049637155297533,
+        "IDX-AEG-GN851XT": 0.8038461538461538,
+        "IDX-BOSCH-SMS6YCW15E": 0.6927432636213315,
+        "IDX-BOSCH-SMS8YCI04E": 0.6927432636213315,
+        "IDX-NEFF-S189ECX0ME": 0.716281725159793,
+        "IDX-NEFF-S289ECX0ME": 0.716281725159793,
+        "IDX-SIEMENS-SX65YX07CE": 0.6927432636213315
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-2253240",
+        "EPREL-415960"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    }
+  },
+  "S3-07": {
+    "base": {
+      "reference_score": {
+        "EPREL-1656051": 0.658612653610351,
+        "EPREL-2064127": 0.6092105263157894,
+        "EPREL-2253240": 0.2540229885057471,
+        "IDX-BOSCH-SMS4EVW11E": 0.6555424029278892,
+        "IDX-BOSCH-SMU6YCS0ME": 0.7884251158003087,
+        "IDX-NEFF-S289ECX0ME": 0.8184251158003087,
+        "IDX-PHILCO-PD1467BIX": 0.4348363445928253,
+        "IDX-SIEMENS-SX65EX16CE": 0.8254749242294275
+      },
+      "reference_ranking": [
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-1656051",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-2064127",
+        "IDX-PHILCO-PD1467BIX",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "IDX-SIEMENS-SX65EX16CE",
+      "feasible_ids": [
+        "EPREL-1656051",
+        "EPREL-2064127",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-1656051": 0.6875799016921534,
+        "EPREL-2064127": 0.6933805668016194,
+        "EPREL-2253240": 0.20178603006189214,
+        "IDX-BOSCH-SMS4EVW11E": 0.59687149574849,
+        "IDX-BOSCH-SMU6YCS0ME": 0.791908441875503,
+        "IDX-NEFF-S289ECX0ME": 0.8154469034139645,
+        "IDX-PHILCO-PD1467BIX": 0.3411792857574475,
+        "IDX-SIEMENS-SX65EX16CE": 0.8622397121378078
+      },
+      "reference_ranking": [
+        "IDX-SIEMENS-SX65EX16CE",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "EPREL-2064127",
+        "EPREL-1656051",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-PHILCO-PD1467BIX",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "IDX-SIEMENS-SX65EX16CE",
+      "feasible_ids": [
+        "EPREL-1656051",
+        "EPREL-2064127",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ]
+    }
+  },
+  "S3-08": {
+    "base": {
+      "reference_score": {
+        "EPREL-1580699": 0.29037313432835826,
+        "EPREL-1586891": 0.8991902430743219,
+        "EPREL-2064127": 0.58375,
+        "EPREL-2250705": 0.7244700938205906,
+        "EPREL-2253240": 0.3484679665738161,
+        "IDX-BOSCH-SMS4EVW11E": 0.6694789977688161,
+        "IDX-SIEMENS-SN65YX07CE": 0.7770944719300433,
+        "IDX-SIEMENS-SX87EX01CE": 0.7883409900358929
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-SIEMENS-SN65YX07CE",
+        "EPREL-2250705",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-2064127",
+        "EPREL-2253240",
+        "EPREL-1580699"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1580699",
+        "EPREL-1586891",
+        "EPREL-2064127",
+        "EPREL-2250705",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    },
+    "shocked": {
+      "reference_score": {
+        "EPREL-1580699": 0.22783122847301954,
+        "EPREL-1586891": 0.8903052993549501,
+        "EPREL-2064127": 0.6734038461538462,
+        "EPREL-2250705": 0.7532171822481762,
+        "EPREL-2253240": 0.33400899935718875,
+        "IDX-BOSCH-SMS4EVW11E": 0.6440750362180953,
+        "IDX-SIEMENS-SN65YX07CE": 0.7945070789186699,
+        "IDX-SIEMENS-SX87EX01CE": 0.8333291273437825
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "IDX-SIEMENS-SX87EX01CE",
+        "IDX-SIEMENS-SN65YX07CE",
+        "EPREL-2250705",
+        "EPREL-2064127",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-2253240",
+        "EPREL-1580699"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1580699",
+        "EPREL-1586891",
+        "EPREL-2064127",
+        "EPREL-2250705",
+        "EPREL-2253240",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S4-01": {
+    "base": {
+      "reference_score": {
+        "EPREL-2038560": 0.707010009489118,
+        "EPREL-2088104": 0.707010009489118,
+        "EPREL-2250705": 0.6435669578918368,
+        "EPREL-2253240": 0.3494428969359331,
+        "EPREL-415960": 0.42278195488721804,
+        "IDX-BOSCH-SMD6ECX17E": 0.69,
+        "IDX-NEFF-S289ECX0ME": 0.7012534818941504,
+        "IDX-SIEMENS-SN95EX16CE": 0.69
+      },
+      "reference_ranking": [
+        "EPREL-2038560",
+        "EPREL-2088104",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-SIEMENS-SN95EX16CE",
+        "EPREL-2250705",
+        "EPREL-415960",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "EPREL-2038560",
+      "feasible_ids": [
+        "EPREL-2038560",
+        "EPREL-2088104",
+        "EPREL-2250705",
+        "EPREL-2253240",
+        "EPREL-415960",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN95EX16CE"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "EPREL-2038560",
+        "reference_ranking": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-SIEMENS-SN95EX16CE",
+          "EPREL-2250705",
+          "EPREL-415960",
+          "EPREL-2253240"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.6991830575681014,
+          "EPREL-2088104": 0.6991830575681014,
+          "EPREL-2250705": 0.6318738737946049,
+          "EPREL-2253240": 0.3529601457038783,
+          "EPREL-415960": 0.4455471370734529,
+          "IDX-BOSCH-SMD6ECX17E": 0.6733076923076923,
+          "IDX-NEFF-S289ECX0ME": 0.6926665952431968,
+          "IDX-SIEMENS-SN95EX16CE": 0.6733076923076923
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "EPREL-2250705",
+          "EPREL-2253240",
+          "EPREL-415960",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN95EX16CE"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "EPREL-2038560",
+        "reference_ranking": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-SIEMENS-SN95EX16CE",
+          "EPREL-2250705",
+          "EPREL-415960",
+          "EPREL-2253240"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.7148369614101348,
+          "EPREL-2088104": 0.7148369614101348,
+          "EPREL-2250705": 0.6552600419890688,
+          "EPREL-2253240": 0.345925648167988,
+          "EPREL-415960": 0.40001677270098324,
+          "IDX-BOSCH-SMD6ECX17E": 0.7066923076923077,
+          "IDX-NEFF-S289ECX0ME": 0.7098403685451039,
+          "IDX-SIEMENS-SN95EX16CE": 0.7066923076923077
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "EPREL-2250705",
+          "EPREL-2253240",
+          "EPREL-415960",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN95EX16CE"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "EPREL-2038560",
+        "reference_ranking": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-SIEMENS-SN95EX16CE",
+          "EPREL-2250705",
+          "EPREL-415960",
+          "EPREL-2253240"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.6913561056470847,
+          "EPREL-2088104": 0.6913561056470847,
+          "EPREL-2250705": 0.6201807896973729,
+          "EPREL-2253240": 0.35647739447182336,
+          "EPREL-415960": 0.46831231925968764,
+          "IDX-BOSCH-SMD6ECX17E": 0.6566153846153845,
+          "IDX-NEFF-S289ECX0ME": 0.6840797085922433,
+          "IDX-SIEMENS-SN95EX16CE": 0.6566153846153845
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "EPREL-2250705",
+          "EPREL-2253240",
+          "EPREL-415960",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN95EX16CE"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "IDX-BOSCH-SMD6ECX17E",
+        "reference_ranking": [
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-SIEMENS-SN95EX16CE",
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2250705",
+          "EPREL-415960",
+          "EPREL-2253240"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.7226639133311513,
+          "EPREL-2088104": 0.7226639133311513,
+          "EPREL-2250705": 0.6669531260863008,
+          "EPREL-2253240": 0.34240839940004286,
+          "EPREL-415960": 0.37725159051474844,
+          "IDX-BOSCH-SMD6ECX17E": 0.7233846153846154,
+          "IDX-NEFF-S289ECX0ME": 0.7184272551960573,
+          "IDX-SIEMENS-SN95EX16CE": 0.7233846153846154
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2088104",
+          "EPREL-2250705",
+          "EPREL-2253240",
+          "EPREL-415960",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN95EX16CE"
+        ]
+      }
+    ]
+  },
+  "S4-02": {
+    "base": {
+      "reference_score": {
+        "EPREL-1405065": 0.25,
+        "EPREL-1656051": 0.34717391304347817,
+        "EPREL-2180764": 0.6541847826086956,
+        "EPREL-295434": 0.6597826086956522,
+        "IDX-BOSCH-SMD6ECX17E": 0.6333333333333334,
+        "IDX-BOSCH-SMU6YCS0ME": 0.6327898550724638,
+        "IDX-NEFF-S289ECX0ME": 0.6702898550724639,
+        "IDX-SIEMENS-SN65YX07CE": 0.6327898550724638
+      },
+      "reference_ranking": [
+        "IDX-NEFF-S289ECX0ME",
+        "EPREL-295434",
+        "EPREL-2180764",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SN65YX07CE",
+        "EPREL-1656051",
+        "EPREL-1405065"
+      ],
+      "reference_top1": "IDX-NEFF-S289ECX0ME",
+      "feasible_ids": [
+        "EPREL-1405065",
+        "EPREL-1656051",
+        "EPREL-2180764",
+        "EPREL-295434",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-SIEMENS-SN65YX07CE"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "EPREL-295434",
+        "reference_ranking": [
+          "EPREL-295434",
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2180764",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-BOSCH-SMD6ECX17E",
+          "EPREL-1656051",
+          "EPREL-1405065"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.26346153846153847,
+          "EPREL-1656051": 0.31822575250836116,
+          "EPREL-2180764": 0.6416509197324414,
+          "EPREL-295434": 0.6707274247491639,
+          "IDX-BOSCH-SMD6ECX17E": 0.6135897435897437,
+          "IDX-BOSCH-SMU6YCS0ME": 0.6188698439241919,
+          "IDX-NEFF-S289ECX0ME": 0.6583890746934227,
+          "IDX-SIEMENS-SN65YX07CE": 0.6188698439241919
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-295434",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "IDX-NEFF-S289ECX0ME",
+        "reference_ranking": [
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2180764",
+          "IDX-BOSCH-SMD6ECX17E",
+          "EPREL-295434",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-SIEMENS-SN65YX07CE",
+          "EPREL-1656051",
+          "EPREL-1405065"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.23653846153846153,
+          "EPREL-1656051": 0.3761220735785953,
+          "EPREL-2180764": 0.6667186454849499,
+          "EPREL-295434": 0.6488377926421405,
+          "IDX-BOSCH-SMD6ECX17E": 0.6530769230769231,
+          "IDX-BOSCH-SMU6YCS0ME": 0.6467098662207358,
+          "IDX-NEFF-S289ECX0ME": 0.682190635451505,
+          "IDX-SIEMENS-SN65YX07CE": 0.6467098662207358
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-295434",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "EPREL-295434",
+        "reference_ranking": [
+          "EPREL-295434",
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2180764",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-BOSCH-SMD6ECX17E",
+          "EPREL-1656051",
+          "EPREL-1405065"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.2769230769230769,
+          "EPREL-1656051": 0.28927759197324415,
+          "EPREL-2180764": 0.6291170568561872,
+          "EPREL-295434": 0.6816722408026755,
+          "IDX-BOSCH-SMD6ECX17E": 0.5938461538461539,
+          "IDX-BOSCH-SMU6YCS0ME": 0.6049498327759197,
+          "IDX-NEFF-S289ECX0ME": 0.6464882943143813,
+          "IDX-SIEMENS-SN65YX07CE": 0.6049498327759197
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-295434",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "IDX-NEFF-S289ECX0ME",
+        "reference_ranking": [
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2180764",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-SIEMENS-SN65YX07CE",
+          "EPREL-295434",
+          "EPREL-1656051",
+          "EPREL-1405065"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.2230769230769231,
+          "EPREL-1656051": 0.40507023411371235,
+          "EPREL-2180764": 0.679252508361204,
+          "EPREL-295434": 0.6378929765886288,
+          "IDX-BOSCH-SMD6ECX17E": 0.6728205128205129,
+          "IDX-BOSCH-SMU6YCS0ME": 0.6606298773690079,
+          "IDX-NEFF-S289ECX0ME": 0.6940914158305463,
+          "IDX-SIEMENS-SN65YX07CE": 0.6606298773690079
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-295434",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-BOSCH-SMU6YCS0ME",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-SIEMENS-SN65YX07CE"
+        ]
+      }
+    ]
+  },
+  "S4-03": {
+    "base": {
+      "reference_score": {
+        "EPREL-1580699": 0.2014182194616977,
+        "EPREL-1682839": 0.36904761904761907,
+        "EPREL-2186751": 0.6627898550724638,
+        "EPREL-415960": 0.40065734989648033,
+        "IDX-AEG-GU8200A2SNW": 0.7714803312629399,
+        "IDX-BOSCH-SMS6YCW15E": 0.640527950310559,
+        "IDX-SIEMENS-SN55ES16CE": 0.6285714285714286,
+        "IDX-SIEMENS-SX65YX07CE": 0.640527950310559
+      },
+      "reference_ranking": [
+        "IDX-AEG-GU8200A2SNW",
+        "EPREL-2186751",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SN55ES16CE",
+        "EPREL-415960",
+        "EPREL-1682839",
+        "EPREL-1580699"
+      ],
+      "reference_top1": "IDX-AEG-GU8200A2SNW",
+      "feasible_ids": [
+        "EPREL-1580699",
+        "EPREL-1682839",
+        "EPREL-2186751",
+        "EPREL-415960",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SN55ES16CE",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "IDX-AEG-GU8200A2SNW",
+        "reference_ranking": [
+          "IDX-AEG-GU8200A2SNW",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SX65YX07CE",
+          "IDX-SIEMENS-SN55ES16CE",
+          "EPREL-415960",
+          "EPREL-1682839",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1580699": 0.200324016563147,
+          "EPREL-1682839": 0.388919413919414,
+          "EPREL-2186751": 0.6747159977703456,
+          "EPREL-415960": 0.4104084647236822,
+          "IDX-AEG-GU8200A2SNW": 0.7650282688326167,
+          "IDX-BOSCH-SMS6YCW15E": 0.6270246058289537,
+          "IDX-SIEMENS-SN55ES16CE": 0.6085714285714287,
+          "IDX-SIEMENS-SX65YX07CE": 0.6270246058289537
+        },
+        "feasible_ids": [
+          "EPREL-1580699",
+          "EPREL-1682839",
+          "EPREL-2186751",
+          "EPREL-415960",
+          "IDX-AEG-GU8200A2SNW",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SN55ES16CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "IDX-AEG-GU8200A2SNW",
+        "reference_ranking": [
+          "IDX-AEG-GU8200A2SNW",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SX65YX07CE",
+          "EPREL-2186751",
+          "IDX-SIEMENS-SN55ES16CE",
+          "EPREL-415960",
+          "EPREL-1682839",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1580699": 0.2025124223602484,
+          "EPREL-1682839": 0.34917582417582416,
+          "EPREL-2186751": 0.650863712374582,
+          "EPREL-415960": 0.3909062350692786,
+          "IDX-AEG-GU8200A2SNW": 0.7779323936932633,
+          "IDX-BOSCH-SMS6YCW15E": 0.6540312947921644,
+          "IDX-SIEMENS-SN55ES16CE": 0.6485714285714286,
+          "IDX-SIEMENS-SX65YX07CE": 0.6540312947921644
+        },
+        "feasible_ids": [
+          "EPREL-1580699",
+          "EPREL-1682839",
+          "EPREL-2186751",
+          "EPREL-415960",
+          "IDX-AEG-GU8200A2SNW",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SN55ES16CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "IDX-AEG-GU8200A2SNW",
+        "reference_ranking": [
+          "IDX-AEG-GU8200A2SNW",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SX65YX07CE",
+          "IDX-SIEMENS-SN55ES16CE",
+          "EPREL-415960",
+          "EPREL-1682839",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1580699": 0.19922981366459624,
+          "EPREL-1682839": 0.4087912087912088,
+          "EPREL-2186751": 0.6866421404682275,
+          "EPREL-415960": 0.4201595795508839,
+          "IDX-AEG-GU8200A2SNW": 0.7585762064022932,
+          "IDX-BOSCH-SMS6YCW15E": 0.6135212613473483,
+          "IDX-SIEMENS-SN55ES16CE": 0.5885714285714286,
+          "IDX-SIEMENS-SX65YX07CE": 0.6135212613473483
+        },
+        "feasible_ids": [
+          "EPREL-1580699",
+          "EPREL-1682839",
+          "EPREL-2186751",
+          "EPREL-415960",
+          "IDX-AEG-GU8200A2SNW",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SN55ES16CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "IDX-AEG-GU8200A2SNW",
+        "reference_ranking": [
+          "IDX-AEG-GU8200A2SNW",
+          "IDX-SIEMENS-SN55ES16CE",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SX65YX07CE",
+          "EPREL-2186751",
+          "EPREL-415960",
+          "EPREL-1682839",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1580699": 0.20360662525879916,
+          "EPREL-1682839": 0.32930402930402936,
+          "EPREL-2186751": 0.6389375696767001,
+          "EPREL-415960": 0.38115512024207676,
+          "IDX-AEG-GU8200A2SNW": 0.7843844561235865,
+          "IDX-BOSCH-SMS6YCW15E": 0.6675346392737697,
+          "IDX-SIEMENS-SN55ES16CE": 0.6685714285714286,
+          "IDX-SIEMENS-SX65YX07CE": 0.6675346392737697
+        },
+        "feasible_ids": [
+          "EPREL-1580699",
+          "EPREL-1682839",
+          "EPREL-2186751",
+          "EPREL-415960",
+          "IDX-AEG-GU8200A2SNW",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-SIEMENS-SN55ES16CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      }
+    ]
+  },
+  "S4-04": {
+    "base": {
+      "reference_score": {
+        "EPREL-1405065": 0.29092261904761907,
+        "EPREL-1580699": 0.2588586956521739,
+        "EPREL-415960": 0.48339544513457555,
+        "IDX-AEG-GN851XT": 0.75,
+        "IDX-BOSCH-SMI6ECS17E": 0.6504464285714285,
+        "IDX-BOSCH-SMS6YCI15E": 0.6499029503105589,
+        "IDX-SIEMENS-SN65YX07CE": 0.6499029503105589,
+        "IDX-SIEMENS-SX65YX07CE": 0.6499029503105589
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-415960",
+        "EPREL-1405065",
+        "EPREL-1580699"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-1405065",
+        "EPREL-1580699",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "IDX-AEG-GN851XT",
+        "reference_ranking": [
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE",
+          "IDX-BOSCH-SMI6ECS17E",
+          "EPREL-415960",
+          "EPREL-1405065",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.30658768315018314,
+          "EPREL-1580699": 0.26085744147157186,
+          "EPREL-415960": 0.49760168816690564,
+          "IDX-AEG-GN851XT": 0.7365384615384616,
+          "IDX-BOSCH-SMI6ECS17E": 0.6316243131868132,
+          "IDX-BOSCH-SMS6YCI15E": 0.6369044135212614,
+          "IDX-SIEMENS-SN65YX07CE": 0.6369044135212614,
+          "IDX-SIEMENS-SX65YX07CE": 0.6369044135212614
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1580699",
+          "EPREL-415960",
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "IDX-AEG-GN851XT",
+        "reference_ranking": [
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE",
+          "EPREL-415960",
+          "EPREL-1405065",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.275257554945055,
+          "EPREL-1580699": 0.2568599498327759,
+          "EPREL-415960": 0.4691892021022456,
+          "IDX-AEG-GN851XT": 0.7634615384615385,
+          "IDX-BOSCH-SMI6ECS17E": 0.669268543956044,
+          "IDX-BOSCH-SMS6YCI15E": 0.6629014870998566,
+          "IDX-SIEMENS-SN65YX07CE": 0.6629014870998566,
+          "IDX-SIEMENS-SX65YX07CE": 0.6629014870998566
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1580699",
+          "EPREL-415960",
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "IDX-AEG-GN851XT",
+        "reference_ranking": [
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE",
+          "IDX-BOSCH-SMI6ECS17E",
+          "EPREL-415960",
+          "EPREL-1405065",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.3222527472527472,
+          "EPREL-1580699": 0.2628561872909699,
+          "EPREL-415960": 0.5118079311992355,
+          "IDX-AEG-GN851XT": 0.723076923076923,
+          "IDX-BOSCH-SMI6ECS17E": 0.6128021978021979,
+          "IDX-BOSCH-SMS6YCI15E": 0.6239058767319637,
+          "IDX-SIEMENS-SN65YX07CE": 0.6239058767319637,
+          "IDX-SIEMENS-SX65YX07CE": 0.6239058767319637
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1580699",
+          "EPREL-415960",
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "IDX-AEG-GN851XT",
+        "reference_ranking": [
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE",
+          "EPREL-415960",
+          "EPREL-1405065",
+          "EPREL-1580699"
+        ],
+        "reference_score": {
+          "EPREL-1405065": 0.25959249084249086,
+          "EPREL-1580699": 0.2548612040133779,
+          "EPREL-415960": 0.4549829590699156,
+          "IDX-AEG-GN851XT": 0.7769230769230769,
+          "IDX-BOSCH-SMI6ECS17E": 0.6880906593406593,
+          "IDX-BOSCH-SMS6YCI15E": 0.6759000238891543,
+          "IDX-SIEMENS-SN65YX07CE": 0.6759000238891543,
+          "IDX-SIEMENS-SX65YX07CE": 0.6759000238891543
+        },
+        "feasible_ids": [
+          "EPREL-1405065",
+          "EPREL-1580699",
+          "EPREL-415960",
+          "IDX-AEG-GN851XT",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCI15E",
+          "IDX-SIEMENS-SN65YX07CE",
+          "IDX-SIEMENS-SX65YX07CE"
+        ]
+      }
+    ]
+  },
+  "S4-05": {
+    "base": {
+      "reference_score": {
+        "EPREL-2038560": 0.6858286908077993,
+        "EPREL-2250705": 0.5512534818941504,
+        "EPREL-227529": 0.4187500000000001,
+        "IDX-BOSCH-SBV6YCX0ME": 0.7012534818941504,
+        "IDX-BOSCH-SMI6ECS17E": 0.6749999999999999,
+        "IDX-BOSCH-SMS6YCW15E": 0.7012534818941504,
+        "IDX-PHILCO-PD1467BIX": 0.28401810584958215,
+        "IDX-SIEMENS-SX65EX16CE": 0.6749999999999999
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCW15E",
+        "EPREL-2038560",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-SIEMENS-SX65EX16CE",
+        "EPREL-2250705",
+        "EPREL-227529",
+        "IDX-PHILCO-PD1467BIX"
+      ],
+      "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+      "feasible_ids": [
+        "EPREL-2038560",
+        "EPREL-2250705",
+        "EPREL-227529",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-PHILCO-PD1467BIX",
+        "IDX-SIEMENS-SX65EX16CE"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+        "reference_ranking": [
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2038560",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-SIEMENS-SX65EX16CE",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-PHILCO-PD1467BIX"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.676861206342404,
+          "EPREL-2250705": 0.5345896721662737,
+          "EPREL-227529": 0.4412980769230771,
+          "IDX-BOSCH-SBV6YCX0ME": 0.6926665952431968,
+          "IDX-BOSCH-SMI6ECS17E": 0.6575,
+          "IDX-BOSCH-SMS6YCW15E": 0.6926665952431968,
+          "IDX-PHILCO-PD1467BIX": 0.2844624491107778,
+          "IDX-SIEMENS-SX65EX16CE": 0.6575
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-PHILCO-PD1467BIX",
+          "IDX-SIEMENS-SX65EX16CE"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+        "reference_ranking": [
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2038560",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-SIEMENS-SX65EX16CE",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-PHILCO-PD1467BIX"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.6947961752731947,
+          "EPREL-2250705": 0.5679172916220269,
+          "EPREL-227529": 0.3962019230769232,
+          "IDX-BOSCH-SBV6YCX0ME": 0.7098403685451039,
+          "IDX-BOSCH-SMI6ECS17E": 0.6925,
+          "IDX-BOSCH-SMS6YCW15E": 0.7098403685451039,
+          "IDX-PHILCO-PD1467BIX": 0.2835737625883865,
+          "IDX-SIEMENS-SX65EX16CE": 0.6925
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-PHILCO-PD1467BIX",
+          "IDX-SIEMENS-SX65EX16CE"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+        "reference_ranking": [
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2038560",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-SIEMENS-SX65EX16CE",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-PHILCO-PD1467BIX"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.6678937218770087,
+          "EPREL-2250705": 0.5179258624383972,
+          "EPREL-227529": 0.4638461538461539,
+          "IDX-BOSCH-SBV6YCX0ME": 0.6840797085922433,
+          "IDX-BOSCH-SMI6ECS17E": 0.6399999999999999,
+          "IDX-BOSCH-SMS6YCW15E": 0.6840797085922433,
+          "IDX-PHILCO-PD1467BIX": 0.2849067923719734,
+          "IDX-SIEMENS-SX65EX16CE": 0.6399999999999999
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-PHILCO-PD1467BIX",
+          "IDX-SIEMENS-SX65EX16CE"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "IDX-BOSCH-SBV6YCX0ME",
+        "reference_ranking": [
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-SIEMENS-SX65EX16CE",
+          "EPREL-2038560",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-PHILCO-PD1467BIX"
+        ],
+        "reference_score": {
+          "EPREL-2038560": 0.7037636597385901,
+          "EPREL-2250705": 0.5845811013499035,
+          "EPREL-227529": 0.37365384615384634,
+          "IDX-BOSCH-SBV6YCX0ME": 0.7184272551960573,
+          "IDX-BOSCH-SMI6ECS17E": 0.71,
+          "IDX-BOSCH-SMS6YCW15E": 0.7184272551960573,
+          "IDX-PHILCO-PD1467BIX": 0.28312941932719093,
+          "IDX-SIEMENS-SX65EX16CE": 0.71
+        },
+        "feasible_ids": [
+          "EPREL-2038560",
+          "EPREL-2250705",
+          "EPREL-227529",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMI6ECS17E",
+          "IDX-BOSCH-SMS6YCW15E",
+          "IDX-PHILCO-PD1467BIX",
+          "IDX-SIEMENS-SX65EX16CE"
+        ]
+      }
+    ]
+  },
+  "S4-06": {
+    "base": {
+      "reference_score": {
+        "EPREL-1806358": 0.591134541134541,
+        "EPREL-2180764": 0.48774131274131266,
+        "EPREL-2186751": 0.4686469780219779,
+        "EPREL-2350311": 0.7638392857142857,
+        "EPREL-295434": 0.24046907484407473,
+        "IDX-BOSCH-SBV6YCX0ME": 0.4830264330264329,
+        "IDX-BOSCH-SMD6ECX17E": 0.5077368577368577,
+        "IDX-NEFF-S289ECX0ME": 0.5258835758835757
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "EPREL-1806358",
+        "IDX-NEFF-S289ECX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "EPREL-2180764",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "EPREL-2186751",
+        "EPREL-295434"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-1806358",
+        "EPREL-2180764",
+        "EPREL-2186751",
+        "EPREL-2350311",
+        "EPREL-295434",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-NEFF-S289ECX0ME"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "EPREL-2350311",
+        "reference_ranking": [
+          "EPREL-2350311",
+          "EPREL-1806358",
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMD6ECX17E",
+          "EPREL-2180764",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "EPREL-295434"
+        ],
+        "reference_score": {
+          "EPREL-1806358": 0.601759041374426,
+          "EPREL-2180764": 0.4713847638847638,
+          "EPREL-2186751": 0.49388181530008446,
+          "EPREL-2350311": 0.7511229395604395,
+          "EPREL-295434": 0.2519621081880696,
+          "IDX-BOSCH-SBV6YCX0ME": 0.4660002056155901,
+          "IDX-BOSCH-SMD6ECX17E": 0.48164618126156583,
+          "IDX-NEFF-S289ECX0ME": 0.5111650407804252
+        },
+        "feasible_ids": [
+          "EPREL-1806358",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2350311",
+          "EPREL-295434",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "EPREL-2350311",
+        "reference_ranking": [
+          "EPREL-2350311",
+          "EPREL-1806358",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "EPREL-2180764",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "EPREL-2186751",
+          "EPREL-295434"
+        ],
+        "reference_score": {
+          "EPREL-1806358": 0.5805100408946562,
+          "EPREL-2180764": 0.5040978615978615,
+          "EPREL-2186751": 0.44341214074387136,
+          "EPREL-2350311": 0.7765556318681319,
+          "EPREL-295434": 0.22897604150007983,
+          "IDX-BOSCH-SBV6YCX0ME": 0.5000526604372757,
+          "IDX-BOSCH-SMD6ECX17E": 0.5338275342121496,
+          "IDX-NEFF-S289ECX0ME": 0.5406021109867263
+        },
+        "feasible_ids": [
+          "EPREL-1806358",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2350311",
+          "EPREL-295434",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "EPREL-2350311",
+        "reference_ranking": [
+          "EPREL-2350311",
+          "EPREL-1806358",
+          "EPREL-2186751",
+          "IDX-NEFF-S289ECX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "EPREL-2180764",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "EPREL-295434"
+        ],
+        "reference_score": {
+          "EPREL-1806358": 0.6123835416143106,
+          "EPREL-2180764": 0.455028215028215,
+          "EPREL-2186751": 0.5191166525781908,
+          "EPREL-2350311": 0.7384065934065933,
+          "EPREL-295434": 0.2634551415320644,
+          "IDX-BOSCH-SBV6YCX0ME": 0.4489739782047473,
+          "IDX-BOSCH-SMD6ECX17E": 0.455555504786274,
+          "IDX-NEFF-S289ECX0ME": 0.4964465056772748
+        },
+        "feasible_ids": [
+          "EPREL-1806358",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2350311",
+          "EPREL-295434",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "EPREL-2350311",
+        "reference_ranking": [
+          "EPREL-2350311",
+          "EPREL-1806358",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME",
+          "EPREL-2180764",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "EPREL-2186751",
+          "EPREL-295434"
+        ],
+        "reference_score": {
+          "EPREL-1806358": 0.5698855406547714,
+          "EPREL-2180764": 0.5204544104544104,
+          "EPREL-2186751": 0.4181773034657649,
+          "EPREL-2350311": 0.789271978021978,
+          "EPREL-295434": 0.21748300815608498,
+          "IDX-BOSCH-SBV6YCX0ME": 0.5170788878481185,
+          "IDX-BOSCH-SMD6ECX17E": 0.5599182106874414,
+          "IDX-NEFF-S289ECX0ME": 0.5553206460898767
+        },
+        "feasible_ids": [
+          "EPREL-1806358",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2350311",
+          "EPREL-295434",
+          "IDX-BOSCH-SBV6YCX0ME",
+          "IDX-BOSCH-SMD6ECX17E",
+          "IDX-NEFF-S289ECX0ME"
+        ]
+      }
+    ]
+  },
+  "S4-07": {
+    "base": {
+      "reference_score": {
+        "EPREL-1546635": 0.4195559610705596,
+        "EPREL-1586891": 0.9291666666666666,
+        "EPREL-1656051": 0.34744525547445254,
+        "EPREL-2180764": 0.5941301703163017,
+        "EPREL-2186751": 0.7168286883432871,
+        "EPREL-2250705": 0.5143939393939393,
+        "EPREL-581126": 0.25,
+        "IDX-BOSCH-SMS6YCW15E": 0.6136363636363636
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "EPREL-2186751",
+        "IDX-BOSCH-SMS6YCW15E",
+        "EPREL-2180764",
+        "EPREL-2250705",
+        "EPREL-1546635",
+        "EPREL-1656051",
+        "EPREL-581126"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1546635",
+        "EPREL-1586891",
+        "EPREL-1656051",
+        "EPREL-2180764",
+        "EPREL-2186751",
+        "EPREL-2250705",
+        "EPREL-581126",
+        "IDX-BOSCH-SMS6YCW15E"
+      ]
+    },
+    "perturbations": [
+      {
+        "perturbation_index": 1,
+        "energy_weight": 0.315,
+        "reference_top1": "EPREL-1586891",
+        "reference_ranking": [
+          "EPREL-1586891",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2180764",
+          "EPREL-2250705",
+          "EPREL-1546635",
+          "EPREL-1656051",
+          "EPREL-581126"
+        ],
+        "reference_score": {
+          "EPREL-1546635": 0.4154208777840165,
+          "EPREL-1586891": 0.9253525641025642,
+          "EPREL-1656051": 0.3127007299270073,
+          "EPREL-2180764": 0.5725376661051844,
+          "EPREL-2186751": 0.7287005980637369,
+          "EPREL-2250705": 0.4882459207459207,
+          "EPREL-581126": 0.26346153846153847,
+          "IDX-BOSCH-SMS6YCW15E": 0.5928321678321679
+        },
+        "feasible_ids": [
+          "EPREL-1546635",
+          "EPREL-1586891",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2250705",
+          "EPREL-581126",
+          "IDX-BOSCH-SMS6YCW15E"
+        ]
+      },
+      {
+        "perturbation_index": 2,
+        "energy_weight": 0.385,
+        "reference_top1": "EPREL-1586891",
+        "reference_ranking": [
+          "EPREL-1586891",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2180764",
+          "EPREL-2250705",
+          "EPREL-1546635",
+          "EPREL-1656051",
+          "EPREL-581126"
+        ],
+        "reference_score": {
+          "EPREL-1546635": 0.4236910443571027,
+          "EPREL-1586891": 0.9329807692307692,
+          "EPREL-1656051": 0.3821897810218978,
+          "EPREL-2180764": 0.615722674527419,
+          "EPREL-2186751": 0.704956778622837,
+          "EPREL-2250705": 0.5405419580419579,
+          "EPREL-581126": 0.23653846153846153,
+          "IDX-BOSCH-SMS6YCW15E": 0.6344405594405594
+        },
+        "feasible_ids": [
+          "EPREL-1546635",
+          "EPREL-1586891",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2250705",
+          "EPREL-581126",
+          "IDX-BOSCH-SMS6YCW15E"
+        ]
+      },
+      {
+        "perturbation_index": 3,
+        "energy_weight": 0.28,
+        "reference_top1": "EPREL-1586891",
+        "reference_ranking": [
+          "EPREL-1586891",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2180764",
+          "EPREL-2250705",
+          "EPREL-1546635",
+          "EPREL-1656051",
+          "EPREL-581126"
+        ],
+        "reference_score": {
+          "EPREL-1546635": 0.4112857944974733,
+          "EPREL-1586891": 0.9215384615384614,
+          "EPREL-1656051": 0.2779562043795621,
+          "EPREL-2180764": 0.550945161894067,
+          "EPREL-2186751": 0.7405725077841866,
+          "EPREL-2250705": 0.462097902097902,
+          "EPREL-581126": 0.2769230769230769,
+          "IDX-BOSCH-SMS6YCW15E": 0.5720279720279721
+        },
+        "feasible_ids": [
+          "EPREL-1546635",
+          "EPREL-1586891",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2250705",
+          "EPREL-581126",
+          "IDX-BOSCH-SMS6YCW15E"
+        ]
+      },
+      {
+        "perturbation_index": 4,
+        "energy_weight": 0.42,
+        "reference_top1": "EPREL-1586891",
+        "reference_ranking": [
+          "EPREL-1586891",
+          "EPREL-2186751",
+          "IDX-BOSCH-SMS6YCW15E",
+          "EPREL-2180764",
+          "EPREL-2250705",
+          "EPREL-1546635",
+          "EPREL-1656051",
+          "EPREL-581126"
+        ],
+        "reference_score": {
+          "EPREL-1546635": 0.42782612764364586,
+          "EPREL-1586891": 0.9367948717948719,
+          "EPREL-1656051": 0.41693430656934305,
+          "EPREL-2180764": 0.6373151787385365,
+          "EPREL-2186751": 0.6930848689023872,
+          "EPREL-2250705": 0.5666899766899766,
+          "EPREL-581126": 0.2230769230769231,
+          "IDX-BOSCH-SMS6YCW15E": 0.6552447552447552
+        },
+        "feasible_ids": [
+          "EPREL-1546635",
+          "EPREL-1586891",
+          "EPREL-1656051",
+          "EPREL-2180764",
+          "EPREL-2186751",
+          "EPREL-2250705",
+          "EPREL-581126",
+          "IDX-BOSCH-SMS6YCW15E"
+        ]
+      }
+    ]
+  },
+  "S5-01": {
+    "base": {
+      "reference_score": {
+        "EPREL-295434": 0.3867948717948718,
+        "IDX-BOSCH-SMI6ECS17E": 0.6365079365079366,
+        "IDX-BOSCH-SMS4EVW11E": 0.5782661782661783,
+        "IDX-BOSCH-SMS6ECI13E": 0.6549145299145299,
+        "IDX-BOSCH-SMS8YCI04E": 0.612057387057387,
+        "IDX-PHILCO-PD1467BIX": 0.2714285714285714
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-BOSCH-SMS4EVW11E",
+        "EPREL-295434",
+        "IDX-PHILCO-PD1467BIX"
+      ],
+      "reference_top1": "IDX-BOSCH-SMS6ECI13E",
+      "feasible_ids": [
+        "EPREL-295434",
+        "IDX-BOSCH-SMI6ECS17E",
+        "IDX-BOSCH-SMS4EVW11E",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS8YCI04E",
+        "IDX-PHILCO-PD1467BIX"
+      ]
+    }
+  },
+  "S5-02": {
+    "base": {
+      "reference_score": {
+        "EPREL-1641027": 0.3383531746031746,
+        "EPREL-2064127": 0.35,
+        "EPREL-227529": 0.28,
+        "IDX-BOSCH-SMS6ECI13E": 0.8313690476190475,
+        "IDX-BOSCH-SMS6YCW15E": 0.7713690476190475,
+        "IDX-SIEMENS-SN65YX07CE": 0.7713690476190475
+      },
+      "reference_ranking": [
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SN65YX07CE",
+        "EPREL-2064127",
+        "EPREL-1641027",
+        "EPREL-227529"
+      ],
+      "reference_top1": "IDX-BOSCH-SMS6ECI13E",
+      "feasible_ids": [
+        "EPREL-1641027",
+        "EPREL-2064127",
+        "EPREL-227529",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-SIEMENS-SN65YX07CE"
+      ]
+    }
+  },
+  "S5-03": {
+    "base": {
+      "reference_score": {
+        "EPREL-1586891": 0.7947826397826396,
+        "EPREL-2253240": 0.25,
+        "EPREL-2350311": 0.7736813186813186,
+        "IDX-AEG-GU8200A2SNW": 0.6998925298925297,
+        "IDX-BOSCH-SMS6YCW15E": 0.5756556556556556,
+        "IDX-NEFF-S189ECX0ME": 0.6056556556556556
+      },
+      "reference_ranking": [
+        "EPREL-1586891",
+        "EPREL-2350311",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-NEFF-S189ECX0ME",
+        "IDX-BOSCH-SMS6YCW15E",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "EPREL-1586891",
+      "feasible_ids": [
+        "EPREL-1586891",
+        "EPREL-2253240",
+        "EPREL-2350311",
+        "IDX-AEG-GU8200A2SNW",
+        "IDX-BOSCH-SMS6YCW15E",
+        "IDX-NEFF-S189ECX0ME"
+      ]
+    }
+  },
+  "S5-04": {
+    "base": {
+      "reference_score": {
+        "EPREL-581126": 0.25,
+        "IDX-AEG-GN851XT": 0.75,
+        "IDX-BOSCH-SMS6ECI13E": 0.6173420758561756,
+        "IDX-BOSCH-SMU6YCS0ME": 0.5673420758561756,
+        "IDX-SIEMENS-SX65YX07CE": 0.5673420758561756,
+        "IDX-SIEMENS-SX87EX01CE": 0.5553030303030303
+      },
+      "reference_ranking": [
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE",
+        "EPREL-581126"
+      ],
+      "reference_top1": "IDX-AEG-GN851XT",
+      "feasible_ids": [
+        "EPREL-581126",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMS6ECI13E",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S5-05": {
+    "base": {
+      "reference_score": {
+        "EPREL-2088104": 0.7090023303544704,
+        "EPREL-2253240": 0.25,
+        "IDX-BOSCH-SBV6YCX0ME": 0.6819066147859921,
+        "IDX-BOSCH-SMS6YCI15E": 0.6819066147859921,
+        "IDX-SIEMENS-SX65YX07CE": 0.6819066147859921,
+        "IDX-SIEMENS-SX87EX01CE": 0.7124999999999999
+      },
+      "reference_ranking": [
+        "IDX-SIEMENS-SX87EX01CE",
+        "EPREL-2088104",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "EPREL-2253240"
+      ],
+      "reference_top1": "IDX-SIEMENS-SX87EX01CE",
+      "feasible_ids": [
+        "EPREL-2088104",
+        "EPREL-2253240",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMS6YCI15E",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S5-06": {
+    "base": {
+      "reference_score": {
+        "EPREL-227529": 0.3,
+        "EPREL-2350311": 0.7619565217391304,
+        "EPREL-415960": 0.17391304347826086,
+        "IDX-AEG-GN851XT": 0.7095994033667162,
+        "IDX-BOSCH-SMU6YCS0ME": 0.5283470293406459,
+        "IDX-SIEMENS-SX87EX01CE": 0.5268234836342748
+      },
+      "reference_ranking": [
+        "EPREL-2350311",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX87EX01CE",
+        "EPREL-227529",
+        "EPREL-415960"
+      ],
+      "reference_top1": "EPREL-2350311",
+      "feasible_ids": [
+        "EPREL-227529",
+        "EPREL-2350311",
+        "EPREL-415960",
+        "IDX-AEG-GN851XT",
+        "IDX-BOSCH-SMU6YCS0ME",
+        "IDX-SIEMENS-SX87EX01CE"
+      ]
+    }
+  },
+  "S5-07": {
+    "base": {
+      "reference_score": {
+        "EPREL-1806358": 0.6738857938718663,
+        "EPREL-2186751": 0.5769428969359331,
+        "EPREL-227529": 0.25,
+        "IDX-BOSCH-SBV6YCX0ME": 0.5762534818941504,
+        "IDX-BOSCH-SMD6ECX17E": 0.475,
+        "IDX-SIEMENS-SX65YX07CE": 0.5762534818941504
+      },
+      "reference_ranking": [
+        "EPREL-1806358",
+        "EPREL-2186751",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-SIEMENS-SX65YX07CE",
+        "IDX-BOSCH-SMD6ECX17E",
+        "EPREL-227529"
+      ],
+      "reference_top1": "EPREL-1806358",
+      "feasible_ids": [
+        "EPREL-1806358",
+        "EPREL-2186751",
+        "EPREL-227529",
+        "IDX-BOSCH-SBV6YCX0ME",
+        "IDX-BOSCH-SMD6ECX17E",
+        "IDX-SIEMENS-SX65YX07CE"
+      ]
+    }
+  }
+}

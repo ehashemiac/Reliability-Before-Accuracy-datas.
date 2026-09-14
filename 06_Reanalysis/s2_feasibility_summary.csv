@@ -1,0 +1,9 @@
+instance_id,feasible_candidates,candidate_slots,feasible_fraction
+S2-01,7,8,0.875
+S2-02,3,8,0.375
+S2-03,6,8,0.75
+S2-04,6,8,0.75
+S2-05,8,8,1.0
+S2-06,5,8,0.625
+S2-07,5,8,0.625
+S2-08,6,8,0.75

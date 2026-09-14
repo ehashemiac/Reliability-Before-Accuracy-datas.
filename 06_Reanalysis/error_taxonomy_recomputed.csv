@@ -1,0 +1,7 @@
+category,count,rate
+JSON parsing/malformed,84,0.2625
+invalid/unknown recommendation,70,0.21875
+completed local pipeline,68,0.2125
+protocol/state failure with no explicit error,47,0.146875
+empty output,30,0.09375
+other protocol/runtime,21,0.065625

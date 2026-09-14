@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "unique_conditions": 320,
+    "local_completion_n": 68,
+    "local_completion_rate": 0.2125,
+    "protocol_failure_n": 252,
+    "duplicate_condition_records": 0
+  },
+  "overlap": {
+    "n_instances": 40,
+    "pair_count": 780,
+    "mean": 0.10404902789518174,
+    "median": 0.06666666666666667,
+    "min": 0.0,
+    "max": 0.3333333333333333
+  },
+  "raw_502_text_mentions": 40,
+  "raw_502_examples": [
+    "S1-01__A__nvidia_nemotron-3-super-120b-a12b_free.json",
+    "S5-04__D__nvidia_nemotron-3-ultra-550b-a55b_free.json",
+    "S2-03__B__nvidia_nemotron-3-super-120b-a12b_free.json",
+    "S3-03__D__nvidia_nemotron-3-ultra-550b-a55b_free.json",
+    "S1-06__C__nvidia_nemotron-3-super-120b-a12b_free.json",
+    "S1-08__A__nvidia_nemotron-3-ultra-550b-a55b_free.json",
+    "S5-05__D__nvidia_nemotron-3-ultra-550b-a55b_free.json",
+    "S3-06__A__nvidia_nemotron-3-ultra-550b-a55b_free.json",
+    "S2-06__D__nvidia_nemotron-3-super-120b-a12b_free.json",
+    "S1-06__D__nvidia_nemotron-3-ultra-550b-a55b_free.json"
+  ],
+  "recommendation_observability": {
+    "recommendation_tokens": 35,
+    "valid_candidate_ids": 19,
+    "fully_evaluable": 18,
+    "exact_top1": 9,
+    "exact_top1_rate_conditional": 0.5,
+    "recommendation_coverage_unconditional": 0.05625,
+    "exact_top1_coverage_unconditional": 0.028125,
+    "mean_rank": 2.6666666666666665,
+    "median_rank": 1.5,
+    "mean_normalized_regret": 0.10320496828169395,
+    "median_normalized_regret": 0.0008058106735114,
+    "regret_le_0_01": 10,
+    "regret_le_0_05": 13,
+    "regret_le_0_10": 13
+  },
+  "grounding": {
+    "claims": 36,
+    "supported": 27,
+    "precision": 0.75
+  }
+}

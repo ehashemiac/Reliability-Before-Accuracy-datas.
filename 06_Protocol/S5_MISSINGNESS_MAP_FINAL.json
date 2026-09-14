@@ -1,0 +1,51 @@
+{
+  "S5-01": {
+    "excluded_candidate_ids": [
+      "EPREL-1656051",
+      "EPREL-2250711"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  },
+  "S5-02": {
+    "excluded_candidate_ids": [
+      "EPREL-1273558",
+      "EPREL-1576176"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  },
+  "S5-03": {
+    "excluded_candidate_ids": [
+      "EPREL-1405065",
+      "EPREL-1576176"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  },
+  "S5-04": {
+    "excluded_candidate_ids": [
+      "EPREL-1580699",
+      "EPREL-1656051"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  },
+  "S5-05": {
+    "excluded_candidate_ids": [
+      "EPREL-1580699",
+      "EPREL-1806358"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  },
+  "S5-06": {
+    "excluded_candidate_ids": [
+      "EPREL-1546635",
+      "EPREL-2253240"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  },
+  "S5-07": {
+    "excluded_candidate_ids": [
+      "EPREL-1273558",
+      "EPREL-1586891"
+    ],
+    "reason": "one scored field intentionally removed from each of two candidates in the frozen S5 task prompt"
+  }
+}
