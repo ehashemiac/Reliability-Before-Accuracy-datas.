@@ -1,0 +1,61 @@
+{
+  "response_body": {
+    "id": "gen-1788963377-04UCpKcgSGxEYuopfVcL",
+    "object": "chat.completion",
+    "created": 1788963377,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "RECOMMENDATION: IDX-BOSCH-SMS6ECI13E",
+          "refusal": null,
+          "reasoning": "The user wants me to make a decision from the supplied records without inventing data. I need to rank these dishwashers based on the available fields and provide a recommendation.\n\nLet me analyze the data:\n\nAll have capacity_ps=14 (same)\n\nKey metrics (lower is better for all):\n- energy_per_cycle_kwh\n- water_per_cycle_l\n- noise_dba\n- programme_duration_min\n\nLet me compare:\n\nEPREL-1273558 (Whirlpool): energy=0.644, water=9.5, noise=38, duration=255\nEPREL-1576176 (Siemens): energy=0.645, water=9.0, noise=42, duration=255\nEPREL-1641027 (IKEA ÖSTVEDA): energy=0.74, water=9.5, noise=42, duration=235\nEPREL-2064127 (LG): energy=0.489, water=9.5, noise=43, duration=405\nEPREL-227529 (IKEA DISKAD): energy=0.849, water=9.5, noise=42, duration=195\nIDX-BOSCH-SMS6ECI13E (Bosch): energy=0.54, water=9.0, noise=38, duration=295\nIDX-BOSCH-SMS6YCW15E (Bosch): energy=0.54, water=9.0, noise=40, duration=295\nIDX-SIEMENS-SN65YX07CE (Siemens): energy=0.54, water=9.0, noise=40, duration=295\n\nThe Bosch SMS6ECI13E has:\n- Lowest energy (tied at 0.54)\n- Lowest water (tied at 9.0)\n- Lowest noise (tied at 38)\n- Middle duration (295)\n\nThe Whirlpool has noise=38 but higher energy (0.644) and water (9.5).\n\nThe LG has best energy (0.489) but worst noise (43) and much longer duration (405).\n\nThe Bosch SMS6ECI13E seems to be the best overall balance - it's tied for best on energy, water, and noise, with a reasonable duration.\n\nI'll recommend the Bosch SMS6ECI13E.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to make a decision from the supplied records without inventing data. I need to rank these dishwashers based on the available fields and provide a recommendation.\n\nLet me analyze the data:\n\nAll have capacity_ps=14 (same)\n\nKey metrics (lower is better for all):\n- energy_per_cycle_kwh\n- water_per_cycle_l\n- noise_dba\n- programme_duration_min\n\nLet me compare:\n\nEPREL-1273558 (Whirlpool): energy=0.644, water=9.5, noise=38, duration=255\nEPREL-1576176 (Siemens): energy=0.645, water=9.0, noise=42, duration=255\nEPREL-1641027 (IKEA ÖSTVEDA): energy=0.74, water=9.5, noise=42, duration=235\nEPREL-2064127 (LG): energy=0.489, water=9.5, noise=43, duration=405\nEPREL-227529 (IKEA DISKAD): energy=0.849, water=9.5, noise=42, duration=195\nIDX-BOSCH-SMS6ECI13E (Bosch): energy=0.54, water=9.0, noise=38, duration=295\nIDX-BOSCH-SMS6YCW15E (Bosch): energy=0.54, water=9.0, noise=40, duration=295\nIDX-SIEMENS-SN65YX07CE (Siemens): energy=0.54, water=9.0, noise=40, duration=295\n\nThe Bosch SMS6ECI13E has:\n- Lowest energy (tied at 0.54)\n- Lowest water (tied at 9.0)\n- Lowest noise (tied at 38)\n- Middle duration (295)\n\nThe Whirlpool has noise=38 but higher energy (0.644) and water (9.5).\n\nThe LG has best energy (0.489) but worst noise (43) and much longer duration (405).\n\nThe Bosch SMS6ECI13E seems to be the best overall balance - it's tied for best on energy, water, and noise, with a reasonable duration.\n\nI'll recommend the Bosch SMS6ECI13E.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 687,
+      "completion_tokens": 607,
+      "total_tokens": 1294,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 372,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "raw_text": "RECOMMENDATION: IDX-BOSCH-SMS6ECI13E",
+  "meta": {
+    "attempt": 1,
+    "provider": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "response_body": {
+    "id": "gen-1788961296-MgbPZ6ue74mQNR7njKvI",
+    "object": "chat.completion",
+    "created": 1788961296,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "length",
+        "native_finish_reason": "length",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"recommendation_id\": \"robustness_scenario_001\",\n  \"claims\": [\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.543\"\n    },\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.0\"\n    },\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"42\"\n    },\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"programme_duration_min\",\n      \"cited_value\": \"270\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.4\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"42\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"programme_duration_min\",\n      \"cited_value\": \"275\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.849\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.5\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"42\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"programme_duration_min\",\n      \"cited_value\": \"195\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.0\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"40\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\":",
+          "refusal": null,
+          "reasoning": "The user wants a robustness scenario analysis using the provided candidate records. They mention \"stated base preferences\" but I don't see any explicit preferences in the input. The instruction says \"Use the stated base preferences\" and \"The perturbation analysis is performed outside the model; do not invent new weights unless explicitly represented in the input.\"\n\nLooking at the input, there are no explicit preferences or weights provided. The user just gave candidate records. The task seems to be to perform some kind of robustness analysis, but without base preferences, I cannot compute scores or rankings.\n\nWait, the system prompt says \"Return only the JSON schema requested.\" But the user didn't specify a JSON schema. They just said \"Robustness scenario. Use the stated base preferences.\"\n\nPerhaps the user expects me to infer something? Or maybe there's a standard format? The instruction says \"do not invent new weights unless explicitly represented in the input.\" Since no weights are given, I should not invent any.\n\nMaybe the task is to output the candidate records in a structured JSON format for further analysis? Or perhaps to compute some basic statistics?\n\nLet me re-read: \"Robustness scenario. Use the stated base preferences. The perturbation analysis is performed outside the model; do not invent new weights unless explicitly represented in the input.\"\n\nThis suggests that the base preferences are stated elsewhere, but in this conversation, they are not provided. The user might have forgotten to include them. However, as an AI, I must work with what's given.\n\nI could output a JSON with the candidates and perhaps note that no preferences were provided. But the instruction says \"Return only the JSON schema requested.\" No schema was requested.\n\nPerhaps the expected output is a JSON object containing the candidates and maybe a placeholder for preferences? Or maybe the robustness scenario is to show how rankings change with different weights, but without weights, I can't.\n\nGiven the ambiguity, I think the safest is to output the candidate data in a structured JSON format, as that's the only data provided. The user might be expecting a specific schema from a previous context, but there is none.\n\nI'll output a JSON with the list of candidates, each with their attributes. That seems like a reasonable \"robustness scenario\" input for an external perturbation analysis.\n\nI'll create a JSON array of objects.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants a robustness scenario analysis using the provided candidate records. They mention \"stated base preferences\" but I don't see any explicit preferences in the input. The instruction says \"Use the stated base preferences\" and \"The perturbation analysis is performed outside the model; do not invent new weights unless explicitly represented in the input.\"\n\nLooking at the input, there are no explicit preferences or weights provided. The user just gave candidate records. The task seems to be to perform some kind of robustness analysis, but without base preferences, I cannot compute scores or rankings.\n\nWait, the system prompt says \"Return only the JSON schema requested.\" But the user didn't specify a JSON schema. They just said \"Robustness scenario. Use the stated base preferences.\"\n\nPerhaps the user expects me to infer something? Or maybe there's a standard format? The instruction says \"do not invent new weights unless explicitly represented in the input.\" Since no weights are given, I should not invent any.\n\nMaybe the task is to output the candidate records in a structured JSON format for further analysis? Or perhaps to compute some basic statistics?\n\nLet me re-read: \"Robustness scenario. Use the stated base preferences. The perturbation analysis is performed outside the model; do not invent new weights unless explicitly represented in the input.\"\n\nThis suggests that the base preferences are stated elsewhere, but in this conversation, they are not provided. The user might have forgotten to include them. However, as an AI, I must work with what's given.\n\nI could output a JSON with the candidates and perhaps note that no preferences were provided. But the instruction says \"Return only the JSON schema requested.\" No schema was requested.\n\nPerhaps the expected output is a JSON object containing the candidates and maybe a placeholder for preferences? Or maybe the robustness scenario is to show how rankings change with different weights, but without weights, I can't.\n\nGiven the ambiguity, I think the safest is to output the candidate data in a structured JSON format, as that's the only data provided. The user might be expecting a specific schema from a previous context, but there is none.\n\nI'll output a JSON with the list of candidates, each with their attributes. That seems like a reasonable \"robustness scenario\" input for an external perturbation analysis.\n\nI'll create a JSON array of objects.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 669,
+      "completion_tokens": 1200,
+      "total_tokens": 1869,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 616,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "raw_text": "{\n  \"recommendation_id\": \"robustness_scenario_001\",\n  \"claims\": [\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.543\"\n    },\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.0\"\n    },\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"42\"\n    },\n    {\n      \"record_id\": \"EPREL-2038560\",\n      \"field_name\": \"programme_duration_min\",\n      \"cited_value\": \"270\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.4\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"42\"\n    },\n    {\n      \"record_id\": \"EPREL-2250705\",\n      \"field_name\": \"programme_duration_min\",\n      \"cited_value\": \"275\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.849\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.5\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"42\"\n    },\n    {\n      \"record_id\": \"EPREL-227529\",\n      \"field_name\": \"programme_duration_min\",\n      \"cited_value\": \"195\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\": \"water_per_cycle_l\",\n      \"cited_value\": \"9.0\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\": \"noise_dba\",\n      \"cited_value\": \"40\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SBV6YCX0ME\",\n      \"field_name\":",
+  "meta": {
+    "attempt": 1,
+    "provider": null
+  }
+}

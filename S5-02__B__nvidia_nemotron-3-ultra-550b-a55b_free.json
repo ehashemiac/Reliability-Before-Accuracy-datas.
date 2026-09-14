@@ -1,0 +1,61 @@
+{
+  "response_body": {
+    "id": "gen-1788963492-wLHuxkaMCqwXjmtz1IRL",
+    "object": "chat.completion",
+    "created": 1788963492,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "length",
+        "native_finish_reason": "length",
+        "message": {
+          "role": "assistant",
+          "content": "{\n {\"recommendation_id\": \"rec-001\", \"claims\": [{\"record_id\": \"EPREL-1273558\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.644\"}, {\"record_id\": \"EPREL-1576176\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.645\"}, {\"record_id\": \"EPREL-1641027\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.74\"}, {\"record_id\": \"EPREL-2064127\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.489\"}, {\"record_id\": \"EPREL-227529\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.849\"}, {\"record_id\": \"IDX-BOSCH-SMS6ECI13E\", \"field_name\": \"energy_per_cycle_kwh",
+          "refusal": null,
+          "reasoning": "The user wants me to rank these dishwasher models based on the provided data. However, they mention \"incomplete-information stress test\" and \"abstain when missing information prevents a defensible ranking.\" I need to check if there's enough information to rank them.\n\nLooking at the data, all records have: brand, model, capacity_ps (all 14), energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min. All fields are present for all records. No missing values. So I can rank them.\n\nBut the user says \"Some fields are intentionally missing.\" Yet in the provided data, all fields appear present. Maybe they mean that in general some fields might be missing, but here they are all there. Or perhaps they want me to consider that some criteria might be missing for a full ranking (like price, reliability, etc.). However, the instruction: \"Use only the supplied structured records. Never invent missing values. Return only the JSON schema requested.\" They didn't specify a JSON schema. The user didn't provide a schema. They just gave candidate records and said \"Incomplete-information stress test.\" Possibly they want me to output a ranking in JSON format? But no schema given.\n\nMaybe the task is to rank them based on some criteria, but since no criteria specified, I should abstain? The user says \"Do not invent values. Abstain when missing information prevents a defensible ranking.\" Since no ranking criteria are given, I cannot defensibly rank them. I should abstain.\n\nBut perhaps the implied criteria are energy efficiency, water usage, noise, duration. However, without weights, ranking is subjective. The user might expect me to note that ranking is not possible without weights.\n\nI need to output JSON. What schema? The user didn't specify. Perhaps they want a list of models with some ranking? But they said \"Return only the JSON schema requested.\" No schema requested. Might be an error.\n\nI'll assume they want a ranking based on the available metrics, but since no weights, I'll abstain and output a JSON indicating abstention.\n\nLet me think: The instruction: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\" This suggests that in the data, some fields might be missing for some records. But looking at the data, all fields are present for all records. Wait, check each record:\n\nEPREL-1273558: all fields present.\nEPREL-1576176: all present.\nEPREL-1641027: all present.\nEPREL-2064127: all present.\nEPREL-227529: all present.\nIDX-BOSCH-SMS6ECI13E: all present.\nIDX-BOSCH-SMS6YCW15E: all present.\nIDX-SIEMENS-SN65YX07CE: all present.\n\nNo missing fields. So maybe the test is that there is no missing information, so I can rank. But the user says \"Some fields are intentionally missing.\" Could be a generic statement.\n\nMaybe the missing field is \"price\" or \"reliability\" which are not provided. So ranking cannot be defensible without those. I should abstain.\n\nI'll output a JSON with an abstention message.\n\nBut the user said \"Return only the JSON schema requested.\" No schema requested. Perhaps they want me to define a schema? That seems odd.\n\nMaybe the task is to output a ranking in a specific JSON format that they have in mind but didn't specify. Could be a standard format like:\n\n{\n  \"ranking\": [\n    {\"model\": \"...\", \"score\": ...},\n    ...\n  ]\n}\n\nBut without criteria, I cannot.\n\nGiven the ambiguity, I'll output a JSON indicating that ranking is not possible due to missing criteria weights.\n\nLet me produce:\n\n{\n  \"abstain\": true,\n  \"reason\": \"No ranking criteria or weights provided; cannot defensibly rank models based solely on raw metrics without knowing user preferences.\"\n}\n\nBut the user might expect a ranking based on energy efficiency, water, noise, duration. However, they said \"Abstain when missing information prevents a defensible ranking.\" The missing information could be the weighting of criteria. So I'll abstain.\n\nI'll output that.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to rank these dishwasher models based on the provided data. However, they mention \"incomplete-information stress test\" and \"abstain when missing information prevents a defensible ranking.\" I need to check if there's enough information to rank them.\n\nLooking at the data, all records have: brand, model, capacity_ps (all 14), energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min. All fields are present for all records. No missing values. So I can rank them.\n\nBut the user says \"Some fields are intentionally missing.\" Yet in the provided data, all fields appear present. Maybe they mean that in general some fields might be missing, but here they are all there. Or perhaps they want me to consider that some criteria might be missing for a full ranking (like price, reliability, etc.). However, the instruction: \"Use only the supplied structured records. Never invent missing values. Return only the JSON schema requested.\" They didn't specify a JSON schema. The user didn't provide a schema. They just gave candidate records and said \"Incomplete-information stress test.\" Possibly they want me to output a ranking in JSON format? But no schema given.\n\nMaybe the task is to rank them based on some criteria, but since no criteria specified, I should abstain? The user says \"Do not invent values. Abstain when missing information prevents a defensible ranking.\" Since no ranking criteria are given, I cannot defensibly rank them. I should abstain.\n\nBut perhaps the implied criteria are energy efficiency, water usage, noise, duration. However, without weights, ranking is subjective. The user might expect me to note that ranking is not possible without weights.\n\nI need to output JSON. What schema? The user didn't specify. Perhaps they want a list of models with some ranking? But they said \"Return only the JSON schema requested.\" No schema requested. Might be an error.\n\nI'll assume they want a ranking based on the available metrics, but since no weights, I'll abstain and output a JSON indicating abstention.\n\nLet me think: The instruction: \"Incomplete-information stress test. Some fields are intentionally missing. Do not invent values. Abstain when missing information prevents a defensible ranking.\" This suggests that in the data, some fields might be missing for some records. But looking at the data, all fields are present for all records. Wait, check each record:\n\nEPREL-1273558: all fields present.\nEPREL-1576176: all present.\nEPREL-1641027: all present.\nEPREL-2064127: all present.\nEPREL-227529: all present.\nIDX-BOSCH-SMS6ECI13E: all present.\nIDX-BOSCH-SMS6YCW15E: all present.\nIDX-SIEMENS-SN65YX07CE: all present.\n\nNo missing fields. So maybe the test is that there is no missing information, so I can rank. But the user says \"Some fields are intentionally missing.\" Could be a generic statement.\n\nMaybe the missing field is \"price\" or \"reliability\" which are not provided. So ranking cannot be defensible without those. I should abstain.\n\nI'll output a JSON with an abstention message.\n\nBut the user said \"Return only the JSON schema requested.\" No schema requested. Perhaps they want me to define a schema? That seems odd.\n\nMaybe the task is to output a ranking in a specific JSON format that they have in mind but didn't specify. Could be a standard format like:\n\n{\n  \"ranking\": [\n    {\"model\": \"...\", \"score\": ...},\n    ...\n  ]\n}\n\nBut without criteria, I cannot.\n\nGiven the ambiguity, I'll output a JSON indicating that ranking is not possible due to missing criteria weights.\n\nLet me produce:\n\n{\n  \"abstain\": true,\n  \"reason\": \"No ranking criteria or weights provided; cannot defensibly rank models based solely on raw metrics without knowing user preferences.\"\n}\n\nBut the user might expect a ranking based on energy efficiency, water, noise, duration. However, they said \"Abstain when missing information prevents a defensible ranking.\" The missing information could be the weighting of criteria. So I'll abstain.\n\nI'll output that.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 672,
+      "completion_tokens": 1200,
+      "total_tokens": 1872,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 1014,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "raw_text": "{\n {\"recommendation_id\": \"rec-001\", \"claims\": [{\"record_id\": \"EPREL-1273558\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.644\"}, {\"record_id\": \"EPREL-1576176\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.645\"}, {\"record_id\": \"EPREL-1641027\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.74\"}, {\"record_id\": \"EPREL-2064127\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.489\"}, {\"record_id\": \"EPREL-227529\", \"field_name\": \"energy_per_cycle_kwh\", \"cited_value\": \"0.849\"}, {\"record_id\": \"IDX-BOSCH-SMS6ECI13E\", \"field_name\": \"energy_per_cycle_kwh",
+  "meta": {
+    "attempt": 1,
+    "provider": null
+  }
+}

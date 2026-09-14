@@ -1,0 +1,61 @@
+{
+  "response_body": {
+    "id": "gen-1788962940-f3ae6iCDzi7otiHZYduf",
+    "object": "chat.completion",
+    "created": 1788962940,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "provider": "Nvidia",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "length",
+        "native_finish_reason": "length",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"{\n  \"recommendation_id\": \"rec-20250827-001\",\n  \"claims\": [\n    {\n      \"record_id\": \"EPREL-1656051\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.543\"\n    },\n    {\n      \"record_id\": \"EPREL-2250711\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"EPREL-295434\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.74\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMI6ECS17E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.49\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMS4EVW11E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.65\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMS6ECI13E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMS8YCI04E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"IDX-PHILCO-PD1467BIX\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.75\"\n    }\n  ],\n  \"explanation\": \"All eight candidate records contain complete data for the seven supplied fields (brand, model, capacity_ps, energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min). No fields are missing from the provided records. However, the user has not specified any ranking criteria, weighting scheme, or decision framework (e.g., whether lower energy,",
+          "refusal": null,
+          "reasoning": "The user wants me to rank these dishwasher models based on the provided data. However, they mention \"Incomplete-information stress test\" and \"Abstain when missing information prevents a defensible ranking.\" I need to check if there's enough information to rank them.\n\nLooking at the data, all records have the same fields: brand, model, capacity_ps, energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min. All fields are present for all 8 models. No missing values.\n\nBut the user says \"Some fields are intentionally missing.\" Yet in the provided data, all fields appear complete. Maybe they mean that in general some fields might be missing, but here they're all present? Or perhaps I should consider that there might be missing fields not shown? The instruction says \"Use only the supplied structured records. Never invent missing values.\"\n\nSince all records have the same fields and all values are present, I can rank them. But I need to decide on ranking criteria. The user didn't specify ranking criteria. They just said \"defensible ranking.\" I need to infer what ranking they want. Probably based on energy efficiency, water usage, noise, duration, etc. But without explicit criteria, any ranking would be arbitrary.\n\nThe user might expect me to rank based on some standard metric like energy efficiency class, but that's not provided. The data includes energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min. I could create a composite score, but that would be inventing a methodology.\n\nThe instruction: \"Abstain when missing information prevents a defensible ranking.\" Here, information is complete, but ranking criteria are missing. That might be considered missing information for a defensible ranking. However, the user might want me to rank based on the available metrics, perhaps assuming lower energy, lower water, lower noise, shorter duration are better.\n\nBut I should not invent a weighting scheme. The safe approach is to abstain because no ranking criteria are specified. However, the user might expect a ranking based on the data provided, perhaps using a Pareto efficiency or something.\n\nLet me think: The user is testing if I'll invent values or criteria. They said \"Do not invent missing values.\" Ranking criteria are not values but methodology. I think I should abstain because without explicit criteria, any ranking is subjective.\n\nBut the prompt says \"Incomplete-information stress test. Some fields are intentionally missing.\" Yet all fields are present. Maybe there are missing fields like price, energy class, etc. But they're not in the records. The records only have those fields.\n\nI'll output a JSON with an abstention. The schema isn't specified, but the user said \"Return only the JSON schema requested.\" They didn't specify a schema. Perhaps they want a ranking JSON. I need to infer.\n\nMaybe they want a list of models ranked by energy_per_cycle_kwh ascending. But that's just one metric.\n\nI'll respond with a JSON indicating that ranking is not possible due to missing criteria. Let's see.\n\nI'll output: {\"ranking\": \"abstain\", \"reason\": \"No ranking criteria specified; cannot defensibly rank without explicit weighting of energy, water, noise, and duration.\"}\n\nBut the user might expect a specific schema. Since not specified, I'll output a simple JSON.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The user wants me to rank these dishwasher models based on the provided data. However, they mention \"Incomplete-information stress test\" and \"Abstain when missing information prevents a defensible ranking.\" I need to check if there's enough information to rank them.\n\nLooking at the data, all records have the same fields: brand, model, capacity_ps, energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min. All fields are present for all 8 models. No missing values.\n\nBut the user says \"Some fields are intentionally missing.\" Yet in the provided data, all fields appear complete. Maybe they mean that in general some fields might be missing, but here they're all present? Or perhaps I should consider that there might be missing fields not shown? The instruction says \"Use only the supplied structured records. Never invent missing values.\"\n\nSince all records have the same fields and all values are present, I can rank them. But I need to decide on ranking criteria. The user didn't specify ranking criteria. They just said \"defensible ranking.\" I need to infer what ranking they want. Probably based on energy efficiency, water usage, noise, duration, etc. But without explicit criteria, any ranking would be arbitrary.\n\nThe user might expect me to rank based on some standard metric like energy efficiency class, but that's not provided. The data includes energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min. I could create a composite score, but that would be inventing a methodology.\n\nThe instruction: \"Abstain when missing information prevents a defensible ranking.\" Here, information is complete, but ranking criteria are missing. That might be considered missing information for a defensible ranking. However, the user might want me to rank based on the available metrics, perhaps assuming lower energy, lower water, lower noise, shorter duration are better.\n\nBut I should not invent a weighting scheme. The safe approach is to abstain because no ranking criteria are specified. However, the user might expect a ranking based on the data provided, perhaps using a Pareto efficiency or something.\n\nLet me think: The user is testing if I'll invent values or criteria. They said \"Do not invent missing values.\" Ranking criteria are not values but methodology. I think I should abstain because without explicit criteria, any ranking is subjective.\n\nBut the prompt says \"Incomplete-information stress test. Some fields are intentionally missing.\" Yet all fields are present. Maybe there are missing fields like price, energy class, etc. But they're not in the records. The records only have those fields.\n\nI'll output a JSON with an abstention. The schema isn't specified, but the user said \"Return only the JSON schema requested.\" They didn't specify a schema. Perhaps they want a ranking JSON. I need to infer.\n\nMaybe they want a list of models ranked by energy_per_cycle_kwh ascending. But that's just one metric.\n\nI'll respond with a JSON indicating that ranking is not possible due to missing criteria. Let's see.\n\nI'll output: {\"ranking\": \"abstain\", \"reason\": \"No ranking criteria specified; cannot defensibly rank without explicit weighting of energy, water, noise, and duration.\"}\n\nBut the user might expect a specific schema. Since not specified, I'll output a simple JSON.",
+              "format": "unknown",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 654,
+      "completion_tokens": 1200,
+      "total_tokens": 1854,
+      "cost": 0,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0,
+        "upstream_inference_prompt_cost": 0,
+        "upstream_inference_completions_cost": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 839,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "raw_text": "{\n  \"{\n  \"recommendation_id\": \"rec-20250827-001\",\n  \"claims\": [\n    {\n      \"record_id\": \"EPREL-1656051\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.543\"\n    },\n    {\n      \"record_id\": \"EPREL-2250711\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"EPREL-295434\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.74\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMI6ECS17E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.49\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMS4EVW11E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.65\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMS6ECI13E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"IDX-BOSCH-SMS8YCI04E\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.54\"\n    },\n    {\n      \"record_id\": \"IDX-PHILCO-PD1467BIX\",\n      \"field_name\": \"energy_per_cycle_kwh\",\n      \"cited_value\": \"0.75\"\n    }\n  ],\n  \"explanation\": \"All eight candidate records contain complete data for the seven supplied fields (brand, model, capacity_ps, energy_per_cycle_kwh, water_per_cycle_l, noise_dba, programme_duration_min). No fields are missing from the provided records. However, the user has not specified any ranking criteria, weighting scheme, or decision framework (e.g., whether lower energy,",
+  "meta": {
+    "attempt": 1,
+    "provider": null
+  }
+}
